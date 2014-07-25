@@ -2,100 +2,100 @@
   {
     "name": "抓拍",
     "description": "随时随地抓拍。",
-    "cover": "/assets/images/gallery/others/IMG_0595.jpg",
+    "cover": "/assets/images/gallery/others/IMG_0595.JPG",
     "type": "photo",
     "photos": [
         {
             "name": "IMG_0576",
-            "url": "/assets/images/gallery/others/IMG_0576.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0576.jpg"
+            "url": "/assets/images/gallery/others/IMG_0576.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0576.JPG"
         },
         {
             "name": "IMG_0577",
-            "url": "/assets/images/gallery/others/IMG_0577.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0577.jpg"
+            "url": "/assets/images/gallery/others/IMG_0577.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0577.JPG"
         },
         {
             "name": "IMG_0579",
-            "url": "/assets/images/gallery/others/IMG_0579.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0579.jpg"
+            "url": "/assets/images/gallery/others/IMG_0579.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0579.JPG"
         },
         {
             "name": "IMG_0584",
-            "url": "/assets/images/gallery/others/IMG_0584.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0584.jpg"
+            "url": "/assets/images/gallery/others/IMG_0584.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0584.JPG"
         },
         {
             "name": "IMG_0586",
-            "url": "/assets/images/gallery/others/IMG_0586.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0586.jpg"
+            "url": "/assets/images/gallery/others/IMG_0586.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0586.JPG"
         },
         {
             "name": "IMG_0595",
-            "url": "/assets/images/gallery/others/IMG_0595.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0595.jpg"
+            "url": "/assets/images/gallery/others/IMG_0595.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0595.JPG"
         },
         {
             "name": "IMG_0604",
-            "url": "/assets/images/gallery/others/IMG_0604.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0604.jpg"
+            "url": "/assets/images/gallery/others/IMG_0604.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0604.JPG"
         },
         {
             "name": "IMG_0608",
-            "url": "/assets/images/gallery/others/IMG_0608.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0608.jpg"
+            "url": "/assets/images/gallery/others/IMG_0608.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0608.JPG"
         },
         {
             "name": "IMG_0619",
-            "url": "/assets/images/gallery/others/IMG_0619.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0619.jpg"
+            "url": "/assets/images/gallery/others/IMG_0619.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0619.JPG"
         },
         {
             "name": "IMG_0621",
-            "url": "/assets/images/gallery/others/IMG_0621.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0621.jpg"
+            "url": "/assets/images/gallery/others/IMG_0621.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0621.JPG"
         },
         {
             "name": "IMG_0624",
-            "url": "/assets/images/gallery/others/IMG_0624.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0624.jpg"
+            "url": "/assets/images/gallery/others/IMG_0624.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0624.JPG"
         },
         {
             "name": "IMG_0625",
-            "url": "/assets/images/gallery/others/IMG_0625.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0625.jpg"
+            "url": "/assets/images/gallery/others/IMG_0625.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0625.JPG"
         },
         {
             "name": "IMG_0650",
-            "url": "/assets/images/gallery/others/IMG_0650.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0650.jpg"
+            "url": "/assets/images/gallery/others/IMG_0650.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0650.JPG"
         },
         {
             "name": "IMG_0651",
-            "url": "/assets/images/gallery/others/IMG_0651.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0651.jpg"
+            "url": "/assets/images/gallery/others/IMG_0651.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0651.JPG"
         },
         {
             "name": "IMG_0660",
-            "url": "/assets/images/gallery/others/IMG_0660.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0660.jpg"
+            "url": "/assets/images/gallery/others/IMG_0660.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0660.JPG"
         },
         {
             "name": "IMG_0671",
-            "url": "/assets/images/gallery/others/IMG_0671.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0671.jpg"
+            "url": "/assets/images/gallery/others/IMG_0671.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0671.JPG"
         },
         {
             "name": "IMG_0704",
-            "url": "/assets/images/gallery/others/IMG_0704.jpg",
-            "thumbnail": "/assets/images/gallery/others/IMG_0704.jpg"
+            "url": "/assets/images/gallery/others/IMG_0704.JPG",
+            "thumbnail": "/assets/images/gallery/others/IMG_0704.JPG"
         }
     ]
   },
   {
     "name": "视频",
     "description": "短视频",
-    "cover": "/assets/images/gallery/others/IMG_0845.jpg",
+    "cover": "/assets/images/gallery/others/IMG_0845.JPG",
     "type": "video",
     "photos":[
         {

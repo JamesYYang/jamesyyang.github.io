@@ -62,7 +62,7 @@ angular.module("chineseMedicine",[])
     isYang: false
     cIndex: [0,11]
   ,
-    earth: "寅"
+    name: "寅"
     qi: "少阳相火"
     order: 1
     isYang: true

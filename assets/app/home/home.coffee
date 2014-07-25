@@ -7,6 +7,6 @@ angular.module("home",[])
         controller: "homeCtrl")
   ])
 
-.controller("homeCtrl", ["$scope", ($scope)->
-
+.controller("homeCtrl", ["$scope", "$rootScope", ($scope, $rootScope)->
+    $rootScope.isSubPage = false
 ])

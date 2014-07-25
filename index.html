@@ -28,7 +28,20 @@
   </head>
 
   <body>
-
+    <div class="parallax-overlay" ng-if="isSubPage"></div>
+    <div class="nav" ng-if="isSubPage">
+        <ul>
+            <li>
+                <a href="/">首页</a>
+            </li>
+            <li>
+                <a href="/gallery">看朵朵</a>
+            </li>
+            <li>
+                <a href="/chinese-medicine">看运气</a>
+            </li>
+        </ul>
+    </div>
     <div class="col-xs-12">
         <div class="page-content" ng-view></div>
     </div>

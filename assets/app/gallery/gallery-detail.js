@@ -15,8 +15,9 @@
       });
     }
   ]).controller('GalleryDetailCtrl', [
-    "$scope", "$timeout", "$route", "galleryData", function($scope, $timeout, $route, galleryData) {
+    "$scope", "$timeout", "$route", "galleryData", "$rootScope", function($scope, $timeout, $route, galleryData, $rootScope) {
       var g, i, j, _i, _len;
+      $rootScope.isSubPage = true;
       for (_i = 0, _len = galleryData.length; _i < _len; _i++) {
         g = galleryData[_i];
         if (g.name === $route.current.params.name) {

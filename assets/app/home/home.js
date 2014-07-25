@@ -7,7 +7,11 @@
         controller: "homeCtrl"
       });
     }
-  ]).controller("homeCtrl", ["$scope", function($scope) {}]);
+  ]).controller("homeCtrl", [
+    "$scope", "$rootScope", function($scope, $rootScope) {
+      return $rootScope.isSubPage = false;
+    }
+  ]);
 
 }).call(this);
 

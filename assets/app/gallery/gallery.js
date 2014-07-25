@@ -15,8 +15,9 @@
       });
     }
   ]).controller("galleryCtrl", [
-    "$scope", "galleryData", function($scope, galleryData) {
-      return $scope.galleries = galleryData;
+    "$scope", "galleryData", "$rootScope", function($scope, galleryData, $rootScope) {
+      $scope.galleries = galleryData;
+      return $rootScope.isSubPage = true;
     }
   ]);
 

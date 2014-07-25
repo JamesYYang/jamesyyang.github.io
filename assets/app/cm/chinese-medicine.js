@@ -8,8 +8,9 @@
       });
     }
   ]).controller("chineseMedicineCtrl", [
-    "$scope", function($scope) {
+    "$scope", "$rootScope", function($scope, $rootScope) {
       var earth, generate, getCustom, getEarth, getPrimary, getQuan, getSky, primary, sky;
+      $rootScope.isSubPage = true;
       sky = [
         {
           name: "甲",

@@ -12,7 +12,8 @@ angular.module('gallery-detail', [])
   ])
 
 .controller('GalleryDetailCtrl',
-["$scope","$timeout", "$route", "galleryData", ($scope,$timeout, $route, galleryData) ->
+["$scope","$timeout", "$route", "galleryData", "$rootScope", ($scope,$timeout, $route, galleryData, $rootScope) ->
+  $rootScope.isSubPage = true
   $scope.gallery = g for g in galleryData when g.name is $route.current.params.name
 
   #TODO:改为指令加载相册

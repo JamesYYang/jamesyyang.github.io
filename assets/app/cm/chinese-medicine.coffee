@@ -7,7 +7,8 @@ angular.module("chineseMedicine",[])
       controller: "chineseMedicineCtrl")
 ])
 
-.controller("chineseMedicineCtrl", ["$scope", ($scope)->
+.controller("chineseMedicineCtrl", ["$scope", "$rootScope", ($scope, $rootScope)->
+  $rootScope.isSubPage = true
   sky = [
     name: "甲"
     yun: "土"

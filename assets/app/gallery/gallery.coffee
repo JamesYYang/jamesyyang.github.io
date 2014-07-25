@@ -12,6 +12,7 @@ angular.module("gallery",[])
       )
   ])
 
-.controller("galleryCtrl", ["$scope", "galleryData", ($scope, galleryData)->
+.controller("galleryCtrl", ["$scope", "galleryData", "$rootScope", ($scope, galleryData, $rootScope)->
   $scope.galleries = galleryData
+  $rootScope.isSubPage = true
 ])

@@ -1,5 +1,5 @@
 html {
-    background: url(/assets/images/bg_1.jpg) no-repeat center center fixed;
+    background: url(/assets/images/bg_2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,33 +8,10 @@ html {
 body{
     font-family: arial, sans-serif;
     font-size: 15px;
-    color: #686868;
+    color: #fff;
     background: transparent;
 }
-.navbar{
-    background: #438eb9;
-}
-.navbar-container{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.navbar .navbar-brand {
-    color: #ffffff;
-    font-size: 24px;
-    text-shadow: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: auto;
-}
 
-.nav-header li {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: top;
-}
-.nav-header a{
-    color: #fff;
-}
 
 .inline {
     display: inline-block !important;
@@ -43,7 +20,7 @@ body{
 .home{
     text-align: left;
     width:600px;
-    margin: 350px auto;
+    margin: 350px auto 0px auto;
 }
 
 h1.homeTitle{
@@ -66,11 +43,49 @@ h1.homeTitle{
 
 .well{
     background: transparent;
-    border: 2px solid #686868;
+    border: 2px solid #fff;
 }
 
 .container{
     margin-top: 50px;
+}
+
+.parallax-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-color: rgba(44,62,80,0.6);
+    z-index: -1;
+}
+
+.col-xs-12{
+    z-index: 2;
+}
+
+input[type=date]{
+    color: #000;
+}
+
+.nav{
+    z-index: 3;
+    margin-top: 10px;
+    text-align: right;
+}
+.nav li{
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+}
+
+.nav a {
+    color: #bfbfbf;
+}
+
+.nav a:hover {
+    color: #fff;
 }
 
 

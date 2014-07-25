@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" ng-repeat="gallery in galleries">
+            <div class="view view-tenth">
+                <img class="img-responsive" ng-src="{{gallery.cover}}" alt="" />
+                <div class="mask">
+                    <h2>{{gallery.name}}</h2>
+                    <p>{{gallery.description}}</p>
+                    <a href="/gallery/{{gallery.name}}" class="info">详细</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pull-right">
+        <a href="/" class="btn btn-lg btn-home">返回</a>
+    </div>
+</div>

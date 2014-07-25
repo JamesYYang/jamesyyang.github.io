@@ -1,0 +1,20 @@
+﻿<div class="container">
+    <blockquote class="hero" ng-show="gallery.description">
+        <p>{{gallery.description}}</p>
+    </blockquote>
+    <div class='gallery'>
+        <ul>
+            <li ng-repeat="photo in gallery.photos">
+                <a ng-href="{{photo.url}}" ng-if="gallery.type == 'photo'">
+                    <img ng-src="{{photo.thumbnail}}" alt="{{photo.name}}">
+                </a>
+                <a ng-href="{{photo.url}}" ng-if="gallery.type == 'video'" rel="video">
+                    <img ng-src="{{photo.thumbnail}}" alt="{{photo.name}}">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="row pull-right">
+        <a href="/gallery" class="btn btn-lg btn-home">返回</a>
+    </div>
+</div>

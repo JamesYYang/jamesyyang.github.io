@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>James Yang</title>
     <link rel="stylesheet" href="assets/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="assets/js/photobox/photobox.css">
+    <link rel="stylesheet" href="assets/stylesheets/portfolio-v1.css">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <script src="assets/js/jQuery/jquery-2.0.3.js"></script>
     <script src="assets/js/angular/angular.js"></script>
@@ -16,40 +18,20 @@
     <script src="assets/js/angular/angular-sanitize.js"></script>
     <script src="assets/js/moment.js"></script>
     <script src="assets/js/moment-range.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/chinese-medicine.js"></script>
-
+    <script src="assets/js/photobox/jquery.photobox.js"></script>
+    <script src="assets/app/app.js"></script>
+    <script src="assets/app/services/galleryService.js"></script>
+    <script src="assets/app/cm/chinese-medicine.js"></script>
+    <script src="assets/app/gallery/gallery.js"></script>
+    <script src="assets/app/gallery/gallery-detail.js"></script>
+    <script src="assets/app/home/home.js"></script>
   </head>
 
   <body>
 
-    <!-- Header -->
-
-    <div class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-header pull-left">
-
-                    <a class="navbar-brand" href="index">Welcome</a>
-
-            </div>
-            <div class="nav-header pull-right">
-                <ul>
-                    <li><a href="index.html">Home</a></li><!--
-          <li><a href="chinese-medicine">Chinese Medicine</a></li>-->
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hero -->
-
-
     <div class="col-xs-12">
         <div class="page-content" ng-view></div>
     </div>
-
-
-
 
   </body>
 </html>

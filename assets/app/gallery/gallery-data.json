@@ -42,6 +42,44 @@
         }
     ]
   },
+  {
+    "name": "2个月",
+    "description": "2个月的朵朵已经开始迅速成长了哦",
+    "cover": "http://xintong.qiniudn.com/2month_4.JPG",
+    "type": "photo",
+    "photos":[
+        {
+            "name": "1",
+            "url": "http://xintong.qiniudn.com/2month_4.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/2month_4.JPG"
+        },
+        {
+            "name": "2",
+            "url": "http://xintong.qiniudn.com/2month_1.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/2month_1.JPG"
+        },
+		{
+            "name": "3",
+            "url": "http://xintong.qiniudn.com/2month_2.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/2month_2.JPG"
+        },
+		{
+            "name": "4",
+            "url": "http://xintong.qiniudn.com/2month_3.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/2month_3.JPG"
+        },
+		{
+            "name": "5",
+            "url": "http://xintong.qiniudn.com/2month_5.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/2month_5.JPG"
+        },
+		{
+            "name": "6",
+            "url": "http://xintong.qiniudn.com/2month_6.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/2month_6.JPG"
+        }
+    ]
+  }，
 	{
 		"name": "100天",
 		"description": "朵朵100天艺术照",

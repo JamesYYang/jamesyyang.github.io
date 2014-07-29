@@ -7,7 +7,7 @@ angular.module("app",
 "home"
 ])
 .config(["$locationProvider",($locationProvider) ->
-    $locationProvider.html5Mode(true)
+    $locationProvider.html5Mode(false).hashPrefix('!')
 ])
 .config(["$routeProvider",($routeProvider) ->
     $routeProvider.otherwise redirectTo: "/"

@@ -2,7 +2,7 @@
 (function() {
   angular.module("app", ["ngRoute", "chineseMedicine", "gallery", "gallery-detail", "GalleryService", "home"]).config([
     "$locationProvider", function($locationProvider) {
-      return $locationProvider.html5Mode(true);
+      return $locationProvider.html5Mode(false).hashPrefix('!');
     }
   ]).config([
     "$routeProvider", function($routeProvider) {

@@ -1,5 +1,5 @@
 html {
-    background: url(http://jamesgit.qiniudn.com/bg_2.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_3.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,8 +9,12 @@ html {
 body {
     font-family: arial, sans-serif;
     font-size: 15px;
-    color: #fff;
+    color: #384B8B;
     background: transparent;
+}
+
+::selection {
+    background: #3D9C78; /* WebKit/Blink Browsers */
 }
 
 .inline {
@@ -29,15 +33,15 @@ h1.homeTitle {
 
 .btn-home {
     background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #E2F1EC;
+    color: #384B8B;
     letter-spacing: 2px;
 }
 
 .btn-home:hover {
     background-color: #fff;
-    border: 2px solid #fff;
-    color: #000;
+    border: 2px solid #E2F1EC;
+    color: #2C7157;
     letter-spacing: 1px;
 }
 
@@ -50,11 +54,16 @@ h1.homeTitle {
     margin-top: 50px;
 }
 
+blockquote{
+    border-left: 5px solid #D53E42 !important;
+}
+
 .parallax-overlay {
+    top: 0px;
     position: absolute;
     width: 100%;
     height: 2000px;
-    background-color: rgba(44, 62, 80, 0.6);
+    background-color: rgba(252, 240, 249, 0.6);
     z-index: -1;
 }
 
@@ -78,17 +87,18 @@ input[type=date] {
     vertical-align: top;
 }
 
-.nav a {
-    color: #bfbfbf;
+a {
+    color: #2C7157;
 }
 
-.nav a:hover {
-    color: #fff;
+a:hover {
+    color: #344682;
 }
 
-.row {
-    margin-top: 10px;
+hr{
+    border-top: 1px solid #E2F1EC;
 }
+
 
 .gallery {
     overflow: hidden;

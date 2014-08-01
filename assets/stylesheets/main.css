@@ -9,7 +9,7 @@ html {
 body {
     font-family: arial, sans-serif;
     font-size: 15px;
-    color: #384B8B;
+    color: #164573;
     background: transparent;
 }
 
@@ -23,8 +23,8 @@ body {
 
 .home {
     text-align: left;
-    width: 600px;
-    margin: 350px auto 0px auto;
+    margin-top: 350px;
+    margin-left: 200px;
 }
 
 h1.homeTitle {
@@ -34,7 +34,7 @@ h1.homeTitle {
 .btn-home {
     background-color: transparent;
     border: 2px solid #E2F1EC;
-    color: #384B8B;
+    color: #164573;
     letter-spacing: 2px;
 }
 

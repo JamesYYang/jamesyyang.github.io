@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-class="bgName">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-<div ng-class="{'parallax-overlay': isSubPage}"></div>
+<div ng-class="{'parallax-overlay-sub': isSubPage, 'parallax-overlay-main': !isSubPage}" class="parallax-overlay"></div>
 <div class="nav" ng-if="isSubPage">
     <ul>
         <li>

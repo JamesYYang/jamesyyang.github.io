@@ -31,7 +31,8 @@
                 engine.rain([ [1, 0, 1000], [3, 3, 1] ], 100);
             };
             image.crossOrigin = 'anonymous';
-            image.src = 'http://jamesgit.qiniudn.com/bg_3.jpg';
+            var num = Math.floor(Math.random() * 7) + 1
+            image.src = 'http://jamesgit.qiniudn.com/bg_' + num + '.jpg';
         }
     </script>
 </head>

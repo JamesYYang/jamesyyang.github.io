@@ -10,6 +10,24 @@
         redirectTo: "/"
       });
     }
+  ]).run([
+    "$rootScope", "$location", function($rootScope, $location) {
+      var bgNames, randomShuffle;
+      bgNames = ["root-bg-1", "root-bg-2", "root-bg-3", "root-bg-4", "root-bg-5", "root-bg-6", "root-bg-7"];
+      randomShuffle = function(array) {
+        var currentIndex, randomIndex, tempValue;
+        currentIndex = array.length;
+        while (currentIndex !== 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+          tempValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = tempValue;
+        }
+        return array;
+      };
+      return $rootScope.bgName = randomShuffle(bgNames)[0];
+    }
   ]);
 
 }).call(this);

@@ -1,5 +1,5 @@
 .root-bg-1{
-    background: url(http://jamesgit.qiniudn.com/bg_1.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_1.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -7,7 +7,7 @@
 }
 
 .root-bg-2{
-    background: url(http://jamesgit.qiniudn.com/bg_2.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_2.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,35 +15,35 @@
 }
 
 .root-bg-3{
-    background: url(http://jamesgit.qiniudn.com/bg_3.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_3.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .root-bg-4{
-    background: url(http://jamesgit.qiniudn.com/bg_4.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_4.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .root-bg-5{
-    background: url(http://jamesgit.qiniudn.com/bg_5.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_5.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .root-bg-6{
-    background: url(http://jamesgit.qiniudn.com/bg_6.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_6.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .root-bg-7{
-    background: url(http://jamesgit.qiniudn.com/bg_7.jpg) no-repeat center center fixed;
+    background: url(http://jamesgit.qiniudn.com/bg_7.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -106,7 +106,7 @@ blockquote{
     top: 0px;
     position: absolute;
     width: 100%;
-    height: 2000px;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -260,5 +260,11 @@ hr{
     .gallery ul li.loaded:hover {
         transform: none;
         -webkit-transform: none;
+    }
+
+    .home {
+        text-align: left;
+        margin-top: 100px;
+        margin-left: 50px;
     }
 }

@@ -1,107 +1,107 @@
-.root-bg-1{
+.root-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.bg-1{
     background: url(http://jamesgit.qiniudn.com/bg_1.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
-.root-bg-2{
+.bg-2{
     background: url(http://jamesgit.qiniudn.com/bg_2.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
-.root-bg-3{
+.bg-3{
     background: url(http://jamesgit.qiniudn.com/bg_3.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
-.root-bg-4{
+.bg-4{
     background: url(http://jamesgit.qiniudn.com/bg_4.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
-.root-bg-5{
+.bg-5{
     background: url(http://jamesgit.qiniudn.com/bg_5.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
-.root-bg-6{
+.bg-6{
     background: url(http://jamesgit.qiniudn.com/bg_6.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
-.root-bg-7{
+.bg-7{
     background: url(http://jamesgit.qiniudn.com/bg_7.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
-.root-bg-8{
+.bg-8{
     background: url(http://jamesgit.qiniudn.com/bg_8.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
-.root-bg-9{
+.bg-9{
     background: url(http://jamesgit.qiniudn.com/bg_9.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
-.root-bg-10{
+.bg-10{
     background: url(http://jamesgit.qiniudn.com/bg_10.jpg) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+}
+
+.bg-11{
+    background: url(http://jamesgit.qiniudn.com/bg_11.jpg) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-12{
+    background: url(http://jamesgit.qiniudn.com/bg_12.jpg) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-13{
+    background: url(http://jamesgit.qiniudn.com/bg_13.jpg) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {

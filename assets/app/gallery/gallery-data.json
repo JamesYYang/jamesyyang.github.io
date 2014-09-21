@@ -492,6 +492,44 @@
         }
     ]
   },
+{
+    "name": "5个月",
+    "description": "我们5个月了",
+    "cover": "http://xintong.qiniudn.com/5m_4.JPG",
+    "type": "photo",
+    "photos":[
+        {
+            "name": "1",
+            "url": "http://xintong.qiniudn.com/5m_1.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/5m_1.JPG"
+        },
+        {
+            "name": "2",
+            "url": "http://xintong.qiniudn.com/5m_2.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/5m_2.JPG"
+        },
+		{
+            "name": "3",
+            "url": "http://xintong.qiniudn.com/5m_3.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/5m_3.JPG"
+        },
+		{
+            "name": "4",
+            "url": "http://xintong.qiniudn.com/5m_4.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/5m_4.JPG"
+        },
+		{
+            "name": "5",
+            "url": "http://xintong.qiniudn.com/5m_5.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/5m_5.JPG"
+        },
+		{
+            "name": "6",
+            "url": "http://xintong.qiniudn.com/5m_6.JPG",
+            "thumbnail": "http://xintong.qiniudn.com/5m_6.JPG"
+        }
+    ]
+  },
   {
     "name": "视频",
     "description": "短视频",
@@ -522,6 +560,11 @@
             "name": "精神还不错",
             "url": "http://mvvideo1.meitudata.com/53a7cf6c4c06c5552.mp4",
             "thumbnail": "http://mvimg1.meitudata.com/53a7cf8f2e5652833.jpg"
+        },
+       {
+            "name": "吃米布",
+            "url": "http://xintong.qiniudn.com/mibu.AVI",
+            "thumbnail": "http://xintong.qiniudn.com/mibu.JPG"
         }
     ]
   }

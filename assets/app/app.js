@@ -12,21 +12,27 @@
     }
   ]).run([
     "$rootScope", "$location", function($rootScope, $location) {
-      var bgNames, randomShuffle;
-      bgNames = ["bg-1", "bg-2", "bg-3", "bg-4", "bg-5", "bg-6", "bg-7", "bg-8", "bg-9", "bg-10", "bg-11", "bg-12", "bg-13"];
-      randomShuffle = function(array) {
-        var currentIndex, randomIndex, tempValue;
-        currentIndex = array.length;
-        while (currentIndex !== 0) {
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex--;
-          tempValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = tempValue;
-        }
-        return array;
-      };
-      return $rootScope.bgName = randomShuffle(bgNames)[0];
+      var bgNames, date, randomShuffle;
+      date = new Date();
+      if (date.getMonth() === 8 && date.getDate() === 23) {
+        $rootScope.bgName = "birthday";
+        return $rootScope.birthday = true;
+      } else {
+        bgNames = ["bg-1", "bg-2", "bg-3", "bg-4", "bg-5", "bg-6", "bg-7", "bg-8", "bg-9", "bg-10", "bg-11", "bg-12", "bg-13"];
+        randomShuffle = function(array) {
+          var currentIndex, randomIndex, tempValue;
+          currentIndex = array.length;
+          while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            tempValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = tempValue;
+          }
+          return array;
+        };
+        return $rootScope.bgName = randomShuffle(bgNames)[0];
+      }
     }
   ]);
 

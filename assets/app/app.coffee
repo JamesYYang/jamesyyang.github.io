@@ -13,18 +13,23 @@ angular.module("app",
     $routeProvider.otherwise redirectTo: "/"
 ])
 .run(["$rootScope","$location", ($rootScope,$location) ->
-    bgNames = ["bg-1", "bg-2", "bg-3", "bg-4", "bg-5", "bg-6", "bg-7", "bg-8", "bg-9", "bg-10", "bg-11", "bg-12", "bg-13"]
+    date = new Date()
+    if date.getMonth() is 8 and date.getDate() is 23
+      $rootScope.bgName = "birthday"
+      $rootScope.birthday = true
+    else
+      bgNames = ["bg-1", "bg-2", "bg-3", "bg-4", "bg-5", "bg-6", "bg-7", "bg-8", "bg-9", "bg-10", "bg-11", "bg-12", "bg-13"]
 
-    randomShuffle = (array)->
-      currentIndex = array.length
-      while currentIndex isnt 0
-        randomIndex = Math.floor(Math.random() * currentIndex)
-        currentIndex--
-        tempValue = array[currentIndex]
-        array[currentIndex] = array[randomIndex]
-        array[randomIndex] = tempValue
+      randomShuffle = (array)->
+        currentIndex = array.length
+        while currentIndex isnt 0
+          randomIndex = Math.floor(Math.random() * currentIndex)
+          currentIndex--
+          tempValue = array[currentIndex]
+          array[currentIndex] = array[randomIndex]
+          array[randomIndex] = tempValue
 
-      array
+        array
 
-    $rootScope.bgName = randomShuffle(bgNames)[0]
+      $rootScope.bgName = randomShuffle(bgNames)[0]
 ])

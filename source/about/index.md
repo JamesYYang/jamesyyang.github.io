@@ -1,4 +1,4 @@
-![](/images/avatar.png)
+{% img /images/avatar.png 300 %}
 
 一件事情：
 

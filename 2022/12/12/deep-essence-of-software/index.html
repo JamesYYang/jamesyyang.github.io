@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="软件研发中的本质"/>
+
+
+
+
+  <meta name="keywords" content="本质," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="老杨说" >
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://jamesyyang.github.io/2022/12/12/deep-essence-of-software/"/>
+
+
+<meta name="description" content="什么是优秀的软件设计？什么是敏捷？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件研发中的本质">
+<meta property="og:url" content="https://jamesyyang.github.io/2022/12/12/deep-essence-of-software/index.html">
+<meta property="og:site_name" content="老杨说">
+<meta property="og:description" content="什么是优秀的软件设计？什么是敏捷？">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-12-12T04:54:04.000Z">
+<meta property="article:modified_time" content="2023-02-04T01:12:45.096Z">
+<meta property="article:author" content="James Yang">
+<meta property="article:tag" content="本质">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?75499164864a64af46a799af7f74dd36";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+    <title> 软件研发中的本质 - 老杨说 </title>
+  <meta name="generator" content="Hexo 5.4.2"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">老杨说</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          软件研发中的本质
+        
+      </h1>
+
+      <time class="post-time">
+          12月 12 2022
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p>什么是优秀的软件设计？什么是敏捷？</p>
+<span id="more"></span>
+
+<blockquote><p>摘自《程序员修炼之道》</p>
+</blockquote>
+
+<h2 id="优秀软件设计的本质"><a href="#优秀软件设计的本质" class="headerlink" title="优秀软件设计的本质"></a>优秀软件设计的本质</h2><p>谈起怎样设计软件，世界上到处都是上师和大神，一个个都渴望向世间传授那些来之不易的智慧。有各种缩略词、列表(好像大多是五条)、模式、图表、视频、演讲甚至(互联网上无奇不有)好像还有一个超酷的系列，是用形意舞的形式来讲解得墨忒耳法则。</p>
+<p>真是惭愧，拙著也未能免俗。不过作为补偿，我们会与时俱进地讲解一些东西，它们可是最近才明显被认可使用的。首先是总体概述：</p>
+<p><code>优秀的设计比糟糕的设计更容易变更</code>。</p>
+<p>能适应使用者的就是好的设计。对代码而言，就是要顺应变化。因此要信奉ETC原则(Easier To Change,更容易变更)——就该如此。</p>
+<p>据我们所知，<code>无论是什么设计原则，都是ETC的一个特例</code>。</p>
+<p>为什么解耦很好？因为通过隔离关注焦点，可让每一部分都容易变更——此谓ETC。</p>
+<p>为什么单一职责原则很有用？因为一个需求变化仅体现为某个单一模块上的一个对应变化——此谓ETC。</p>
+<p>为什么命名很重要？因为好的命名可以使代码更容易阅读，而你需要通过阅读来变更代码——此谓ETC。</p>
+<p><code>ETC 是一种价值观念，不是一条规则</code>。</p>
+<p><code>价值观念是帮助你做决定的：我应该做这个，还是做那个</code>？当你在软件领域思考时，ETC是个向导，它能帮助你在不同的路线中选出一条。就像其他一些价值观念一样，你应该让它漂浮在意识思维之下，让它微妙地将你推向正确的方向。</p>
+<p>那么怎样才能做到？我们的经验是，一开始需要一点有意识的强化。你可能需要花一个星期左右的时间来有意识地问自己：“我刚刚做的事情是让整个系统更容易改变还是更难改变？”当你保存文件时问一遍，当你写测试时问一遍，当你修复Bug时也问一遍。</p>
+<p>ETC里有一个隐含的前提。多条路线中的哪一条更易于将来的变更，ETC假定我们有能力辨别。很多时候，常识通常就不会错，你完全可以据此推断。</p>
+<p>然而有时你找不到线索。这也没关系。这种情况下，我们觉得你可以做两件事。</p>
+<p>第一件事，假设不确定什么形式的改变会发生，你也总是可以回到终极的“容易变更”的道路上：试着让你写的东西可替换。这样，无论未来发生什么，这块代码都不会成为路障。这似乎有点极端，但不管怎样，实际上你一直应该这样做。做起来并不难，想着一直保持代码的解耦和内聚就够了。</p>
+<p>第二件事，把它当作培养直觉的一种方式。在工程日志中记下你面临的处境：你有哪些选择，以及关于改变的一些猜熟，在源码中留个标签，以便之后必须修改这块代码时，进行回顾并给自己留下反锁记录，下一次在行进的通路上再碰到类似的分盆口时，这会有所帮助。</p>
+<h2 id="敏捷的本质"><a href="#敏捷的本质" class="headerlink" title="敏捷的本质"></a>敏捷的本质</h2><p><code>敏捷是一个形容词：它指向你做事情的方式</code>。你可以成为一名敏捷的开发人员。你可以加入一个采用敏捷实践的团队，一个对变化和挫折做出敏捷反应的团队。敏捷指你的风格，并不指你这个人。</p>
+<p><code>敏捷不是一个名词；敏捷有关你如何做事</code>。</p>
+<p>在我们写这篇文章的时候，敏捷软件开发宣言已经诞生将近20年了，我们看到敏捷的价值在许多开发人员身上成功体现，也看到很多优秀团队在获取和利用这一价值上颇有心得，包括指导所做的事情，以及指导如何对所做的事情加以改变。</p>
+<p>然而，我们也看到了敏捷的另一面——很多团队和公司渴望现成的解决方案：让敏捷开箱即用。他们想要的这个东西，也正是许多咨询公司和咨询师很乐意推销的。结果这些公司采用了更多层的管理、更正式的报告、更专业的开发人员和更花哨的岗位头衔，这类头衔的背后其实就是一些“拿着笔记板和秒表的人”。</p>
+<p>我们觉得很多人已经忽视了敏捷的真正含义，因而希望看到人们回归到最基本的东西。</p>
+<p>记住宣言中的价值观：</p>
+<p>我们一直在实践中探寻更好的软件开发方法，身体力行的同时也帮助他人。由此我们建立了如下价值观：</p>
+<ul>
+<li>个体和互动高于流程和工具</li>
+<li>工作的软件高于详尽的文档</li>
+<li>客户合作高于合同谈判</li>
+<li>响应变化高于遵循计划</li>
+</ul>
+<p>也就是说，尽管右项有其价值，我们更重视左项的价值。</p>
+<p>如果有人向你兜售一些东西，而这些东西让你觉得右边的事情比左边的事情更重要，那么这样的人，对于我们和其他宣言作者重视的东西，显然不会认同。</p>
+<p>任何向你推销“开箱即用方案”的人都没有读过这份介绍性声明。这些价值观，是由不断发现更好软件生产方法的行为，所激发和显露出来的。这不是一份静态的文档，它是对生产过程的建议。</p>
+<p><code>永远不可能有一个叫敏捷的工艺流程</code>。</p>
+<p>事实上，无论什么时候有人说，“这么干，你就敏捷了”，显然都是错的。</p>
+<p>因为无论是物理世界中的敏捷，还是软件开发中的敏捷，谈的都是<code>对变化的响应</code>，对开始后所遇到的未知事情做出的响应。奔跑中的羚羊不会沿直线前进，体操运动员一秒钟要纠正数百个错误，因为他们要对环境的变化和脚部位置的微小偏差做出反应。无论是对团队还是对个人开发者，都是如此。在开发软件时，并没有单一的计划可以遵循。在敏捷宣言的四条价值观中，有三条谈的都是这一点，都是关于收集和回应反馈的。</p>
+<p>这些价值观不会告诉你该做什么。当你自己决定要做点什么的时候，它们会告诉你要去追寻什么。</p>
+<p>这些决策总是与环境相关：它们取决于你是谁、团队的性质、你的应用程序、你用的工具、你的公司、你的客户以及外部世界；有很多因素，有重要的也有不重要的。任何固定的、静态的计划，都无法经受这种不确定性。</p>
+<p>那么我们应该做什么？</p>
+<p>没有人能告诉你该做什么。而我们打算告诉你的，是做事时该有的精神。<code>它完全可以归结为如何处理不确定性</code>。敏捷宣言建议你通过收集反馈并采取行动来做到这一点。所以下面是我们以敏捷方式工作的秘诀：</p>
+<ol>
+<li>弄清楚你在哪里。</li>
+<li>朝想去的方向迈出有意义的最小一步。</li>
+<li>评估在哪里终结，把弄坏的东西修好。</li>
+</ol>
+<p>重复这些步骤，直到完成。在每一件事的每个层面上递归地使用这些步骤。有时候，当你收集反馈时，即使是最不起眼的决定也会变得重要起来。</p>
+<p>现在我的代码需要获得账户所有者。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="title function_">accountOwner</span>(accountID);</span><br></pre></td></tr></table></figure>
+
+<p>嗯……user是个没意义的名字，应该换成owner。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> owner = <span class="title function_">accountowner</span>(accountID);</span><br></pre></td></tr></table></figure>
+
+<p>但现在它显得有些累赘。我到底想做什么？在这个情景下，我是要给这个人发一封电子邮件，所以需要找到他们的电子邮件地址。也许我根本不需要账户所有者的全部信息。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> email = <span class="title function_">emailOfAccountOwner</span>(accountID);</span><br></pre></td></tr></table></figure>
+
+<p>通过在非常底层的层面上(对变量的命名)应用反馈循环，我们实际上改进了整个系统的设计，减少了这部分代码与处理账户的代码之间的耦合。</p>
+<p>反馈循环也适用于项目的最高层级。我们最成功的一些工作成果，是在开始处理客户需求时偶然产生的。当我们迈出一小步时，就意识到将要做的事情并不是必须要做的，最好的解决方案甚至不涉及软件。</p>
+<p>此循环不仅仅能用于单个项目。团队应该应用它来回顾流程及其起到的效果，不持续对流程做实验的团队，不是敏捷团队。</p>
+<p><code>还可以用来驱动设计</code>。</p>
+<p>在上一章节中，我们曾断言，设计的衡量标准是对设计出的结果进行变更的容易程度：优秀的设计比糟糕的设计更容易变更。</p>
+<p>关于敏捷的讨论解释了为什么会这样。</p>
+<p>你做出了一个改变，后来发现自己并不喜欢。根据清单上的第三步，我们必须能够修复我们破坏了的东西。为了使反馈循环更有效，修复必须尽可能地简单。如果不够简单，我们就只会耸耸肩，而不去修它。为了使整个工作敏捷起来，需要实践优秀的设计，因为优秀的设计使事情容易改变。如果它很容易改变，就可以在每个层面做调整，不会有任何犹豫。</p>
+<p>这就是敏捷。</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/%E6%9C%AC%E8%B4%A8/">本质</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2022/12/09/cognition-meditation/">
+        <span class="next-text nav-default">打坐科学吗？</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2017 -
+    
+    2023
+    <span class="footer-author">
+        <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/JamesYYang">James Yang</a>. 
+    </span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

@@ -5,6 +5,8 @@ categories:
   - 随想杂谈
 ---
 
+每个开发者都应该知道的5条定律
+<!--more-->
 ### Murphy 定律
 {% blockquote %}
 "If anything can go wrong, it will."

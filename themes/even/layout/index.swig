@@ -2,7 +2,7 @@
 {%- import '_macro/post.swig' as post_template -%}
 {%- import '_macro/archive.swig' as archive_template -%}
 
-{%- block title -%} {{ config.title }} {%- endblock -%}
+{%- block title -%} {{ config.title }} - {{ config.description }} {%- endblock -%}
 
 {%- block content -%}
   {%- set mode = theme.mode.toLowerCase() -%}

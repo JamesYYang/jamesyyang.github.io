@@ -1,6 +1,8 @@
 ---
 title: 怎么看ChatGPT
 date: 2023-03-01 13:25:26
+tags: 
+  - ChatGPT
 categories:
   - 随想杂谈
 ---

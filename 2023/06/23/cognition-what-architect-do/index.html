@@ -13,8 +13,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<meta name="description" content="从产品架构谈开拓新业务"/><link rel="alternate" href="/atom.xml" title="老杨说" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
-<link rel="canonical" href="https://jamesyyang.github.io/2023/06/21/product-info-architec/"/>
+<meta name="description" content="架构师到底是干什么的？"/><meta name="keywords" content="架构, 老杨说" /><link rel="alternate" href="/atom.xml" title="老杨说" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="https://jamesyyang.github.io/2023/06/23/cognition-what-architect-do/"/>
 
 <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
@@ -34,7 +34,7 @@
   window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":true};
 </script>
 
-    <title>从产品架构谈开拓新业务 - 老杨说</title>
+    <title>架构师到底是干什么的？ - 老杨说</title>
   <meta name="generator" content="Hexo 5.4.2"></head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -95,43 +95,34 @@
         <div class="content-wrapper">
           <div id="content" class="content"><article class="post">
     <header class="post-header">
-      <h1 class="post-title">从产品架构谈开拓新业务
+      <h1 class="post-title">架构师到底是干什么的？
         </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2023-06-21
+          2023-06-23
         </span><span class="post-category">
-            <a href="/categories/%E4%BA%A7%E5%93%81%E5%BE%AE%E8%A8%80/">产品微言</a>
+            <a href="/categories/%E8%AE%A4%E7%9F%A5%E6%9D%82%E8%AF%B4/">认知杂说</a>
             </span>
         </div>
     </header>
 
-    <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E6%9E%B6%E6%9E%84"><span class="toc-text">产品架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%8B%93%E4%BA%A7%E5%93%81%E6%96%B0%E4%B8%9A%E5%8A%A1"><span class="toc-text">开拓产品新业务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol>
-    </div>
-  </div><div class="post-content"><p>我们做技术的经常讨论技术架构，那么产品也有架构吗？</p>
+    <div class="post-content"><p>可能每个软件公司都会有一个岗位：架构师。那么到底架构师是干什么的呢？今天我们来简单探讨一下。</p>
 <span id="more"></span>
 
-<h2 id="产品架构"><a href="#产品架构" class="headerlink" title="产品架构"></a>产品架构</h2><p>任何产品都是一类信息的承载工具，那么产品架构就是说：<code>你的产品将以何种方式向用户呈现信息</code>。</p>
-<p>当然呈现的方式一定和你的产品目标有非常紧密的关系，产品提供什么服务？产品创造何种用户价值？</p>
-<p>这两点决定了用户使用产品的方式，如何一层一层深入到产品功能里。也就是<code>用户路径</code>。</p>
-<p>可以想象，如果没有这样的架构，一股脑的把产品所有信息，所有功能抛到用户面前，用户会是什么感受？打开了一个百宝箱？</p>
-<h2 id="开拓产品新业务"><a href="#开拓产品新业务" class="headerlink" title="开拓产品新业务"></a>开拓产品新业务</h2><p>那么产品架构和开拓新业务有什么关系吗？</p>
-<p>有的，非常紧密。</p>
-<p>当老板说我们要做一个新业务的时候，你是不是也会问自己或者问老板，这个新业务合理吗？是拍脑壳拍出来的吗？</p>
-<p>所以，有了产品架构后，这个问题就有了思考的依据，至少可以从两点来思考：</p>
-<p><strong>第一，这个新业务在我们产品架构上属于哪个路径上的分支吗？</strong></p>
-<p>如果是，那么至少逻辑上是合理的，并且如果和主路径耦合很深，那么这个合理性就会越强。同时，这个新业务可以自然的导入产品的流量。</p>
-<p>这样的情况是最好的，可以让我们的产品逐步丰满起来，同时就像一个大树一样，是一个自然生长的过程，不太容易出现熵增的情况。</p>
-<p><strong>第二，这个新业务是用户在产品主路径之外的活跃行为。</strong></p>
-<p>举个栗子，微信的产品经理发现用户经常会把一个图片发给多个自己的好友，于是孵化了朋友圈这个功能。（这个是我编的）</p>
-<p>那么，在以上两点之外的新业务，就要十分小心了，可能是拍脑壳拍出来的。因为需求并不来自于现有产品架构里的任何分支。</p>
-<p>相当于是从无到有造一个新的产品出来。在今天这个情况下，几乎能想到的需求都有不止一个产品能够使用，所以不存在<code>价值洼地</code>。</p>
-<p>并且，这个全新产品可能无法分享到主产品的流量，就需要一个冷启动的过程，不确定性非常高。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>互联网时代的大跃进已经结束，任何业务都要讲ROI，良好的产品架构是基础。</p>
+<p>我在<a href="/2023/04/08/cognition-how-communication-architecture/" title="如何说清楚软件架构">如何说清楚软件架构</a>这篇文章里曾经说过一个观点：<code>软件架构是用来说清楚一个事物的结构的</code>。</p>
+<p>我们稍微深入一下。</p>
+<p>这里的<code>事物</code>通常就是指一个<code>系统</code>。<code>结构</code>通常就是指系统里的<code>实体</code>以及他们之间的<code>关系</code>。那么就是说，<strong>架构师的职责就是做系统设计，明确系统中的实体以及实体间的关系。</strong></p>
+<p>当然，架构师肯定不会是做一个凭空的设计，设计的来源通常就是<code>产品的需求</code>，需求作为输入，架构作为输出。我们可以用下面这个图来做一个表示：</p>
+<img src="/images/architect-task.png" class="" width="800">
+
+<p>这个图的结构类似一个沙漏，上面的部分是一个从需求到目标的收拢过程。需求来自产品的各方利益相关者，架构师应该和产品经理一起逐步将需求明确，聚焦到几个具备可行性的目标上面。在这个过程中，应该保持和需求方的沟通，减少过程中的歧义。当然，少不了的重要工具，就是排优先级了。</p>
+<p>接下来就是提出<code>概念</code>的阶段。概念是一种最为简单的系统表示方式。是从需求中提炼出来的，因为这个时候还没开始做设计，我们需要有一些方式来统一表达我们即将要做的东西。</p>
+<p>那么为什么需要<code>创造力</code>呢？因为产品还没有做出来，这个东西有可能是一个全新的，也有可能是和某一个东西类似的。那么在这个阶段，架构师可以做一些头脑风暴，把系统中可能有的功能和可能的交互方式描述出来。所以，这其实就是一个<strong>需求细化</strong>的过程。</p>
+<p>最下面就是架构设计的过程了。它又会是一个<code>分解</code>的过程。这个就回到我们上一篇文章提到的那个逐步细化结构的过程。</p>
+<p>但是，这里要提到一个<code>复杂度</code>的概念。由于系统本身包含了那么多的实体，以及实体间的关系，所以任何复杂度是任何系统都必备的。而这个复杂度越高，人理解起来越困难。架构师的任务就是要管理这个复杂度，通过<code>分解、抽象、分层</code>等手段，将复杂度“隐藏”起来。</p>
+<p>所以，一个架构做的好与不好，也可以通过复杂度来对它进行一个衡量。所谓<strong>高内聚，低耦合</strong>其实就是在说这个事情。</p>
+<p>小结一下，架构师在一个公司里面其实就是扮演的一个<code>承上启下</code>的角色。是一个需求能否转化为落地方案的关键。</p>
 
       </div>
       <div class="post-copyright">
@@ -141,21 +132,19 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="https://jamesyyang.github.io/2023/06/21/product-info-architec/">https://jamesyyang.github.io/2023/06/21/product-info-architec/</a>
+      <a href="https://jamesyyang.github.io/2023/06/23/cognition-what-architect-do/">https://jamesyyang.github.io/2023/06/23/cognition-what-architect-do/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
     </p>
   </div>
       <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/%E6%9E%B6%E6%9E%84/">架构</a>
+            </div>
         
-        <nav class="post-nav"><a class="prev" href="/2023/06/23/cognition-what-architect-do/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">架构师到底是干什么的？</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
-    <a class="next" href="/2023/06/20/thinking-beyond-cycle/">
-        <span class="next-text nav-default">35岁危机是因为活久见？</span>
+        <nav class="post-nav"><a class="next" href="/2023/06/21/product-info-architec/">
+        <span class="next-text nav-default">从产品架构谈开拓新业务</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

@@ -1,0 +1,23 @@
+<!-- Social Links -->
+<%- partial ("./_footer/social.ejs") %>
+
+<div class="copyright">
+  
+
+  <span class="copyright-year">
+    <span>
+      <% var current = (new Date()).getFullYear(); %>
+      &copy;
+      <% if (theme.since && theme.since != current) { %>
+      <%- theme.since -%> - <%- current -%>
+      <% } else { %>
+      <%- current -%>
+      <% } %>
+    </span>
+
+    
+
+    <span class="author">by <%- config.author %></span>
+  </span>
+
+</div>

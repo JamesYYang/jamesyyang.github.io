@@ -184,102 +184,22 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/archive.swig' as archive_template -%}
 
-<section id="archive" class="archive">
-  
-  
-  <div class="archive-title category">
-    <h2 class="archive-name">AI</h2>
-  </div>
-  
-  
+{%- block title -%}
+  {%- if page.archive -%}
+    {{ __('menu.archives') }} - {{ config.title }}
+  {%- elif page.tag -%}
+    {{ page.tag }} · {{ config.title }}
+  {%- elif page.category -%}
+    {{ page.category }} · {{ config.title }}
+  {%- endif -%}
+{%- endblock -%}
 
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-09-07
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/09/07/ai-midjourney-region-md/" class="archive-post-link">
-        体验Midjourney局部重绘
-      </a>
-    </span>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-08-04
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/08/04/ai-midjourney-promot/" class="archive-post-link">
-        如何写Midjourney的Promot
-      </a>
-    </span>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-08-03
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/08/03/ai-midjourney-intro/" class="archive-post-link">
-        初识 Midjourney
-      </a>
-    </span>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-07-31
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/07/31/AI-how-to-use/" class="archive-post-link">
-        如何把握AI--Caoz
-      </a>
-    </span>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-07-31
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/07/31/AI-what-is/" class="archive-post-link">
-        对于AI的认识--Caoz
-      </a>
-    </span>
-  </div>
-  
-</section>
-
-  
-  <nav class="pagination">  
-      
-      
-  </nav>  
-  
+{%- block content -%}
+  {{ archive_template.render() }}
+{%- endblock -%}
 
         </div>
           

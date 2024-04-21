@@ -184,108 +184,22 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/archive.swig' as archive_template -%}
 
-<section id="archive" class="archive">
-  
-  
-  <div class="archive-title">
-    <span class="archive-post-counter">
-      目前共计 83 篇日志
-    </span>
-  </div>
-  
-  
+{%- block title -%}
+  {%- if page.archive -%}
+    {{ __('menu.archives') }} - {{ config.title }}
+  {%- elif page.tag -%}
+    {{ page.tag }} · {{ config.title }}
+  {%- elif page.category -%}
+    {{ page.category }} · {{ config.title }}
+  {%- endif -%}
+{%- endblock -%}
 
-  
-  
-  
-  
-  
-  
-  <div class="collection-title">
-    <h2 class="archive-year">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </h2>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      05-22
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/22/cognition-concepts/" class="archive-post-link">
-        概念和套路
-      </a>
-    </span>
-  </div>
-  
-  
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      05-21
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/21/cognition-reuse/" class="archive-post-link">
-        认知中的复用
-      </a>
-    </span>
-  </div>
-  
-  
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      05-20
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/20/cognition-scenario/" class="archive-post-link">
-        认知的场景
-      </a>
-    </span>
-  </div>
-  
-  
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      05-19
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/19/cognition-what-is/" class="archive-post-link">
-        什么是认知
-      </a>
-    </span>
-  </div>
-  
-</section>
-
-  
-  <nav class="pagination">  
-      
-      
-  </nav>  
-  
+{%- block content -%}
+  {{ archive_template.render() }}
+{%- endblock -%}
 
         </div>
           

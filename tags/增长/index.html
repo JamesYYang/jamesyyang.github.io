@@ -184,72 +184,22 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/archive.swig' as archive_template -%}
 
-<section id="archive" class="archive">
-  
-  
-  <div class="archive-title tag">
-    <h2 class="archive-name">增长</h2>
-  </div>
-  
-  
+{%- block title -%}
+  {%- if page.archive -%}
+    {{ __('menu.archives') }} - {{ config.title }}
+  {%- elif page.tag -%}
+    {{ page.tag }} · {{ config.title }}
+  {%- elif page.category -%}
+    {{ page.category }} · {{ config.title }}
+  {%- endif -%}
+{%- endblock -%}
 
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-12-01
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/12/01/thinking-tech-connect-business/" class="archive-post-link">
-        科技 连接 商业
-      </a>
-    </span>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2023-06-20
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2023/06/20/thinking-beyond-cycle/" class="archive-post-link">
-        35岁危机是因为活久见？
-      </a>
-    </span>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      2021-10-28
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2021/10/28/thinking-selling-redundancy/" class="archive-post-link">
-        变现你的冗余能力
-      </a>
-    </span>
-  </div>
-  
-</section>
-
-  
-  <nav class="pagination">  
-      
-      
-  </nav>  
-  
+{%- block content -%}
+  {{ archive_template.render() }}
+{%- endblock -%}
 
         </div>
           

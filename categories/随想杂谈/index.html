@@ -184,22 +184,327 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/archive.swig' as archive_template -%}
+          
 
-{%- block title -%}
-  {%- if page.archive -%}
-    {{ __('menu.archives') }} - {{ config.title }}
-  {%- elif page.tag -%}
-    {{ page.tag }} · {{ config.title }}
-  {%- elif page.category -%}
-    {{ page.category }} · {{ config.title }}
-  {%- endif -%}
-{%- endblock -%}
+<section id="archive" class="archive">
+  
+  
+  <div class="archive-title category">
+    <h2 class="archive-name">随想杂谈</h2>
+  </div>
+  
+  
 
-{%- block content -%}
-  {{ archive_template.render() }}
-{%- endblock -%}
+  
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2024-04-21
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2024/04/21/thinking-what-is-retail/" class="archive-post-link">
+        到底什么是零售
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2024-02-19
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2024/02/19/thinking-caoz-2023-final-1/" class="archive-post-link">
+        穿越周期的能力
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-12-01
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/12/01/thinking-tech-connect-business/" class="archive-post-link">
+        科技 连接 商业
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-08-26
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/08/26/thinking-great-work/" class="archive-post-link">
+        How to Do Great Work - 精简版
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-07-18
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/07/18/thinking-unix-philosophy/" class="archive-post-link">
+        Unix编程哲学
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-06-20
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/06/20/thinking-beyond-cycle/" class="archive-post-link">
+        35岁危机是因为活久见？
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-05-28
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/05/28/thinking-what-vp-should-do/" class="archive-post-link">
+        高管应该具备怎样的素质
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-05-04
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/05/04/thinking-digital-transformation/" class="archive-post-link">
+        关于数字化转型
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-03-18
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/03/18/thinking-why-chatgpt/" class="archive-post-link">
+        ChatGPT为什么是现在出来
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-03-01
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/03/01/thinking-chatgpt/" class="archive-post-link">
+        怎么看ChatGPT
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-02-24
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/02/24/thinking-how-achieve-object/" class="archive-post-link">
+        目标很好为什么无法落地
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2023-02-16
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2023/02/16/thinking-why-goals/" class="archive-post-link">
+        为什么制定目标
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2022-04-20
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2022/04/20/thinking-culture/" class="archive-post-link">
+        企业文化
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2021-12-03
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2021/12/03/thinking-kpi-or-okr/" class="archive-post-link">
+        KPI还是OKR
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2021-10-28
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2021/10/28/thinking-selling-redundancy/" class="archive-post-link">
+        变现你的冗余能力
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2021-08-12
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2021/08/12/thinking-5-laws/" class="archive-post-link">
+        每个开发者都应该知道的5条定律
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2021-07-09
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2021/07/09/thinking-wechat-product-view/" class="archive-post-link">
+        微信的产品观
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2020-03-12
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2020/03/12/thinking-how-to-solve-problem/" class="archive-post-link">
+        解决问题的关键
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2019-07-30
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2019/07/30/thinking-cmmi-sprint/" class="archive-post-link">
+        CMMI or Sprint
+      </a>
+    </span>
+  </div>
+  
+  
+
+  <div class="archive-post">
+    <span class="archive-post-time">
+      
+      2019-06-04
+      
+    </span>
+    <span class="archive-post-title">
+      <a href="/2019/06/04/thinking-about-share/" class="archive-post-link">
+        谈谈分享
+      </a>
+    </span>
+  </div>
+  
+</section>
+
+  
+  <nav class="pagination">  
+      
+      
+  </nav>  
+  
 
         </div>
           

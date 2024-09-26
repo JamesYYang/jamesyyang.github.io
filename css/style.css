@@ -749,7 +749,7 @@ h6 {
   width: 100%;
   margin-bottom: 20px;
   overflow: auto;
-  border: 3px double #ededed;
+  border: 3px double rgb(237.35, 237.35, 237.35);
 }
 .post .post-content table {
   width: 100%;
@@ -762,7 +762,7 @@ h6 {
 }
 .post .post-content table th, .post .post-content table td {
   padding: 5px 15px;
-  border: 1px double #ededed;
+  border: 1px double rgb(237.35, 237.35, 237.35);
 }
 .post .post-content code, .post .post-content pre {
   padding: 7px;
@@ -797,8 +797,8 @@ h6 {
   padding: 2px 7px;
   font-size: 13px;
   font-weight: bold;
-  color: #b1b1b1;
-  background: #ededed;
+  color: rgb(176.5, 176.5, 176.5);
+  background: rgb(237.35, 237.35, 237.35);
   content: "Code";
 }
 .post .post-content .highlight.html > table::after {
@@ -1006,8 +1006,8 @@ h6 {
   padding: 2px 7px;
   font-size: 13px;
   font-weight: bold;
-  color: #b1b1b1;
-  background: #ededed;
+  color: rgb(176.5, 176.5, 176.5);
+  background: rgb(237.35, 237.35, 237.35);
   z-index: 20;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -1328,10 +1328,10 @@ h6 {
   transform: translateX(4px);
 }
 .archive .archive-post:hover .archive-post-time {
-  color: #717171;
+  color: rgb(112.5, 112.5, 112.5);
 }
 .archive .archive-post:hover .archive-post-title .archive-post-link {
-  color: #106b1e;
+  color: rgb(15.5517241379, 107.4482758621, 30.3965517241);
 }
 
 @media screen and (max-width: 800px) {

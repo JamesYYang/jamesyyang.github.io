@@ -33,7 +33,9 @@
   <div class="scrollPercentage"></div>
   <%- partial('_partial/slideout.ejs') %>
   <div class="container" id="mobile-panel">
-    
+    <header id="header" class="header">
+      <%- partial('_partial/header.ejs') %>
+    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
@@ -42,7 +44,9 @@
         <%- partial('_partial/comments.ejs') %>
       </div>
     </main>
-    
+    <footer id="footer" class="footer">
+      <%- partial('_partial/footer.ejs') %>
+    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
   <%- partial('_script/comments.ejs') %>

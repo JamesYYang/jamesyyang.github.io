@@ -186,109 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      架构师到底是干什么的？
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-06-23
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E8%AE%A4%E7%9F%A5%E6%9D%82%E8%AF%B4/">认知杂说</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>可能每个软件公司都会有一个岗位：架构师。那么到底架构师是干什么的呢？今天我们来简单探讨一下。</p>
-<span id="more"></span>
-
-<p>我在<a href="/2023/04/08/cognition-how-communication-architecture/" title="如何说清楚软件架构">如何说清楚软件架构</a>这篇文章里曾经说过一个观点：<code>软件架构是用来说清楚一个事物的结构的</code>。</p>
-<p>我们稍微深入一下。</p>
-<p>这里的<code>事物</code>通常就是指一个<code>系统</code>。<code>结构</code>通常就是指系统里的<code>实体</code>以及他们之间的<code>关系</code>。那么就是说，<strong>架构师的职责就是做系统设计，明确系统中的实体以及实体间的关系。</strong></p>
-<p>当然，架构师肯定不会是做一个凭空的设计，设计的来源通常就是<code>产品的需求</code>，需求作为输入，架构作为输出。我们可以用下面这个图来做一个表示：</p>
-<img src="/images/architect-task.png" class="" width="800">
-
-<p>这个图的结构类似一个沙漏，上面的部分是一个从需求到目标的收拢过程。需求来自产品的各方利益相关者，架构师应该和产品经理一起逐步将需求明确，聚焦到几个具备可行性的目标上面。在这个过程中，应该保持和需求方的沟通，减少过程中的歧义。当然，少不了的重要工具，就是排优先级了。</p>
-<p>接下来就是提出<code>概念</code>的阶段。概念是一种最为简单的系统表示方式。是从需求中提炼出来的，因为这个时候还没开始做设计，我们需要有一些方式来统一表达我们即将要做的东西。</p>
-<p>那么为什么需要<code>创造力</code>呢？因为产品还没有做出来，这个东西有可能是一个全新的，也有可能是和某一个东西类似的。那么在这个阶段，架构师可以做一些头脑风暴，把系统中可能有的功能和可能的交互方式描述出来。所以，这其实就是一个<strong>需求细化</strong>的过程。</p>
-<p>最下面就是架构设计的过程了。它又会是一个<code>分解</code>的过程。这个就回到我们上一篇文章提到的那个逐步细化结构的过程。</p>
-<p>但是，这里要提到一个<code>复杂度</code>的概念。由于系统本身包含了那么多的实体，以及实体间的关系，所以任何复杂度是任何系统都必备的。而这个复杂度越高，人理解起来越困难。架构师的任务就是要管理这个复杂度，通过<code>分解、抽象、分层</code>等手段，将复杂度“隐藏”起来。</p>
-<p>所以，一个架构做的好与不好，也可以通过复杂度来对它进行一个衡量。所谓<strong>高内聚，低耦合</strong>其实就是在说这个事情。</p>
-<p>小结一下，架构师在一个公司里面其实就是扮演的一个<code>承上启下</code>的角色。是一个需求能否转化为落地方案的关键。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/06/23/cognition-what-architect-do/">https://jamesyyang.github.io/2023/06/23/cognition-what-architect-do/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E6%9E%B6%E6%9E%84/">架构</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/06/26/azure-subscription-ad/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">Azure订阅和租户的关系</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/06/21/product-info-architec/">  
-        <span class="next-text nav-default">从产品架构谈开拓新业务</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

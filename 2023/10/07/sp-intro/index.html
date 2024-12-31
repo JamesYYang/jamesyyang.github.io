@@ -186,97 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      社会心理学——导论
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-10-07
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E7%A4%BE%E4%BC%9A%E5%BF%83%E7%90%86%E5%AD%A6/">社会心理学</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>最近抽空浏览了一下《社会心理学》，随手记一点笔记。</p>
-<span id="more"></span>
-
-<p>第一部分，导论。</p>
-<img src="/images/sp-1.png" class="">
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/10/07/sp-intro/">https://jamesyyang.github.io/2023/10/07/sp-intro/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E8%AE%A4%E7%9F%A5/">认知</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/10/08/sp-social-thoughts/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">社会心理学——社会思维</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/09/28/team-management-chunyin/">  
-        <span class="next-text nav-default">纯银谈管理经验</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

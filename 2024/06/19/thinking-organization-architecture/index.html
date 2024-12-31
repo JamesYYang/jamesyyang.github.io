@@ -184,116 +184,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      组织结构和系统架构
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2024-06-19
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <a href="/2024/05/26/product-make-it-happen/" title="如何从无到有做一个产品">上一篇文章</a>里提到了架构，也提到了团队，感觉这个话题没说透（牢骚没发完）。今天再深入聊聊。
-
-<span id="more"></span>
-
-<p>在项目的过程中，由于时间压力还是比较大，所以任务重的时候，就会跟领导说：可能做不完呀。领导回复两个字：<code>加人</code>。</p>
-<p>相信同行的朋友对这两个字可能并不陌生，做不完就加人嘛。但是，加人真的有用吗？</p>
-<p>答案肯定是否定的，软件行业是一个<code>知识密集型</code>行业，又不是劳动力密集型。而且，往往加人后会对整个系统带来负作用。因为加人最大的影响就是可能会改变组织结构，而组织结构和系统架构是有关系的。</p>
-<p>最早说清楚这两者关系的就是<code>康威定律</code>。康威定律里最著名的一句话：</p>
-<blockquote>
-<p>Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations. - Melvin Conway(1967)</p>
-</blockquote>
-<p>中文直译大概的意思就是：设计系统的组织，其产生的设计等同于组织之内、组织之间的沟通结构。</p>
-<p>用通俗的说法就是：<code>组织形式等同系统设计</code>。举例来说：如果有四个小组合作开发一个编译器，那么你将得到一款具有四个步骤的编译器。</p>
-<p>那么问题来了，如何能够完美的实现一个系统架构呢？逆康威定律来了，它是ThoughtWorks技术总监James Lewis提出的概念。它强调<code>应该根据理想的软件架构来设计团队结构，而不是盲目遵循已有的组织结构</code>。</p>
-<p>综合康威定律和逆康威定律，我们可以大概明白，要很好的落地一个产品大概就是三个步骤：</p>
-<ul>
-<li>设计产品架构</li>
-<li>根据产品架构设计系统架构</li>
-<li>根据系统架构调整组织架构</li>
-</ul>
-<p>回过头来看我们这个产品，是完全反过来的</p>
-<ul>
-<li>想到一个功能，找一个团队来做</li>
-<li>又想到一个功能，然后团队说做不完，就加了一个团队来做（系统架构已破坏）</li>
-<li>新加入的团队又想到一个功能，往系统里硬塞</li>
-<li>根据上面硬塞的功能，又想到一个功能，但是团队承接不了，就又加一个团队进来</li>
-</ul>
-<p>如此恶性循环，最终产品面目全非。</p>
-<p>推荐一本书《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35528423/">高效能团队模式</a>》，讲解了团队的结构，以康威定律为基础，值得看看。</p>
-<img src="/images/Team-Topologies.jpg" class="">
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2024/06/19/thinking-organization-architecture/">https://jamesyyang.github.io/2024/06/19/thinking-organization-architecture/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2024/06/23/thinking-confusion-golden-crown-Ecommerce/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">好文共享--金冠电商们，困在品类定位里</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2024/05/26/product-make-it-happen/">  
-        <span class="next-text nav-default">如何从无到有做一个产品</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

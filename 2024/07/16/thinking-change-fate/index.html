@@ -184,119 +184,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      你想改命吗？
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2024-07-16
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BA%E5%A4%84"><span class="toc-number">1.</span> <span class="toc-text">出处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E8%AF%BB"><span class="toc-number">2.</span> <span class="toc-text">解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%91%BD"><span class="toc-number">2.1.</span> <span class="toc-text">一命</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%90"><span class="toc-number">2.2.</span> <span class="toc-text">二运</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E9%A3%8E%E6%B0%B4"><span class="toc-number">2.3.</span> <span class="toc-text">三风水</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E7%A7%AF%E9%98%B4%E5%BE%B7"><span class="toc-number">2.4.</span> <span class="toc-text">四积阴德</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E8%AF%BB%E4%B9%A6"><span class="toc-number">2.5.</span> <span class="toc-text">五读书</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>前几天看了一篇风叔的文章，里面提到了中国人熟悉的一句话：<code>一命二运三风水，四积阴德五读书</code>，今天我也说说我对这句话的看法。</p>
-<span id="more"></span>
-
-<h2 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h2><p>这句话最早出现在清代，出自清代满族文学家文康所著的《儿女英雄传》。是形容人的一生受哪些因素所影响，命中的成功与失败需要注意的一些事情。后来，随着在民间不断传播，人们在后面又加上了“六名，七相，八敬神，九交贵人，十养生，十一择业与择偶，十二趋吉及避凶，十三逢苦要无怨，十四不固执善恶，十五荣光因缘来”等，可到底是谁加的，目前无法考证。</p>
-<p>当然，越靠近前面的，当然权重是越大的。所以，我们重点还是看原文的前五点。</p>
-<h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><h3 id="一命"><a href="#一命" class="headerlink" title="一命"></a>一命</h3><p>命就是先天的，不可更改的。</p>
-<p>比如，你一出生家里就有两个矿，所以就算从出生就躺平，可能也比大部分人过得好；比如，你天生身体就不好，稍微一用功就挂了，那么也只能躺平。</p>
-<p>这些都是先天的，我们得<code>认命</code>。也就是孔子说的：三十而立，四十不惑，五十而知天命。想要逆天改命，也没什么必要。坦然接受就好。</p>
-<h3 id="二运"><a href="#二运" class="headerlink" title="二运"></a>二运</h3><p>从第二点开始，就是我们后天可以介入的因数了。</p>
-<p>什么是运？绝对不是运气，而是运势，趋势。中国人自古就是以变化的眼光来看待自然的发展，所以俗话说三十年河东，三十年河西。时来运转、否极泰来，都是常有的事。 </p>
-<p>比如，中国在2012-2021的互联网黄金十年，就是一个大的趋势，如果你看准了，上了车。那么不管你能力如何，至少都会比其他行业的人多享受到一些社会的红利。</p>
-<p>所以，老子说的：<code>顺势而为</code>，就是这个意思。胳膊扭不过大腿，借力打力才是正确之道。</p>
-<p>那么怎么才能看准大势呢？这个其实比较难。你会发现不少成功人士，其实当初都是被逼无奈，破釜沉舟的。也就是没啥选择，只能一条路走到黑，结果成功了。那些选择一大把的人，往往碌碌无为。因为一旦你有选择，基本上都会基于当时的情况选一个对自己最有利的选择。但是，那个时候最有利，不代表这个利会一直持续下去。</p>
-<p>历史都有一定的必然和偶然。我们要了解历史，才能知道现在的位置在哪。但是我们也要知道世事无常，不确定性才是生活的主旋律，所以我们做选择的时候一定要明白我们都是在<code>选择概率</code>。</p>
-<h3 id="三风水"><a href="#三风水" class="headerlink" title="三风水"></a>三风水</h3><p>在知道了趋势，做了选择后，那么就可以改风水了。</p>
-<p>风水其实就是环境学。一句俗话就说清楚了：<code>近朱者赤，近墨者黑。</code>你身边是什么人，你也往往就会变成什么人。</p>
-<p>所以，你想变优秀，那么就得和优秀的人在一起。你已经看好了趋势，选好了行业，那么就想办法和这个行业最优秀的人在一起。</p>
-<p>即使不能一起工作，还可以关注他的公众号嘛，买他的付费课程嘛。互联网时代，最大的意义就是<code>拉近了陌生人的距离，疏远了身边人的感情</code>。</p>
-<h3 id="四积阴德"><a href="#四积阴德" class="headerlink" title="四积阴德"></a>四积阴德</h3><p>积德行善。</p>
-<p>不管来生怎么样，但是至少可以让自己变成一个招人喜欢的人。积攒一定的人缘，指不定哪天就派上用场了。这个道理是非常简单的。</p>
-<p>往大了说，树立一个坚实的个人IP，说不定就变网红了，对吧？</p>
-<h3 id="五读书"><a href="#五读书" class="headerlink" title="五读书"></a>五读书</h3><p>阅读是一个非常好的习惯，绝对比刷视频更利于大脑的发展。</p>
-<p>当然，也不一定非得捧着一本书才叫读书，与时俱进嘛，电子书，公众号等等都是很好的阅读媒介。</p>
-<p>但是，一定要有选择的阅读，古代的书那当然是选择经典即可。当代的书，那就选择行业大佬的。其他的就不用看了，免得误导自己。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>尽人事，听天命。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2024/07/16/thinking-change-fate/">https://jamesyyang.github.io/2024/07/16/thinking-change-fate/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2024/08/02/thinking-about-layoff/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">关于裁员</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2024/06/23/thinking-confusion-golden-crown-Ecommerce/">  
-        <span class="next-text nav-default">好文共享--金冠电商们，困在品类定位里</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

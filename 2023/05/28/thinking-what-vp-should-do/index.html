@@ -186,129 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      高管应该具备怎样的素质
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-05-28
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%AF%E9%93%B6%E5%8E%9F%E6%96%87"><span class="toc-number">1.</span> <span class="toc-text">纯银原文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E6%9D%A8%E7%82%B9%E8%AF%84"><span class="toc-number">2.</span> <span class="toc-text">老杨点评</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>今天看到纯银在微博上的一个总结，挺好的，分享给大家。</p>
-<span id="more"></span>
-
-
-<h2 id="纯银原文"><a href="#纯银原文" class="headerlink" title="纯银原文"></a>纯银原文</h2><p>如果是我佩服的产品高管（大厂VP这个级别），应该具备怎样的素质呢？</p>
-<p>常见的观点是，大项目的管理能力，大团队的组织建设能力，协调调动能力，战略规划能力，面对大老板的向上管理能力等等。</p>
-<p>但我的看法不太一样，因为具备这些能力的高管，我见过的那几个，一样暮气沉沉。</p>
-<p>而我看重这个位置上的两样能力。</p>
-<p>1、<strong>嫡减的能力</strong></p>
-<p>我前几天发了一篇微博讲大企业的嫡增，怎样才能减缓嫡增的速度？怎样才能延迟堕入大酱汤一般的官僚主义？这是我看重的.自我要求极高的极聪明的人才能做到这一点，而嫡减对于大团队长期保持好状态是至关重要的。</p>
-<p>2、<strong>洞察力</strong></p>
-<p>这么讲很虚，那我换个角度描述，内部投资的能力。</p>
-<p>到了管理几百几千人的高管位置，手握大量的资源，角色就像一个手握二百亿的投资机构一样，决定资源投给谁，投多少。尤其是：</p>
-<ul>
-<li>哪些项目是值得重点投入的</li>
-<li>哪些业务是在当前约束下合理的</li>
-<li>哪些业绩是有价值的，哪些是蒙混过关</li>
-</ul>
-<p>内部投资的战功，在过去更依赖时代红利和公司基因，2020年以后，则更依赖高管的洞察力，按我的风险偏好，在没有明确机遇的时候，更愿意投给长期价值，投给“有市场信号，有演变概率”的事情。</p>
-<p>但很显然，大多数高管并不是这么做的。全行业疯批一样去抄小红书。</p>
-<p>所以姚晓光对QQ频道的投资，我是很佩服的。短期内可能没有大的收益，但长期来看，值得投资这一笔长期价值。</p>
-<p>更精彩的案例，则是纳德拉对OPENAI的天文数字投资。</p>
-<p>如果一个高管，既能控制好嫡减，又能有深刻的洞察力，在市场机遇好的时候找到投入产出比最高的项目，在市场机遇差的时候进行长期价值投资，他就是我心目中的英雄.</p>
-<h2 id="老杨点评"><a href="#老杨点评" class="headerlink" title="老杨点评"></a>老杨点评</h2><p>熵增定律在旧文<a href="/2023/02/16/thinking-why-goals/" title="为什么制定目标">为什么制定目标</a>里已经介绍过。</p>
-<p>熵增是大自然的规律，其结果就是无序、混乱。而一个组织上下目标一致就是非常好的对抗熵增的办法。</p>
-<p>但是，目标管理只是一种手段，而最难的是决定要干什么，这就需要洞察力了。</p>
-<p>一个优秀的高管，就是在企业中能指引方向，带领公司更上一层楼的那个人。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/05/28/thinking-what-vp-should-do/">https://jamesyyang.github.io/2023/05/28/thinking-what-vp-should-do/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E7%AE%A1%E7%90%86/">管理</a>
-      
-      <a href="/tags/%E7%86%B5%E5%A2%9E/">熵增</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/06/05/product-content-based/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">内容产品</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/05/04/thinking-digital-transformation/">  
-        <span class="next-text nav-default">关于数字化转型</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

@@ -186,122 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      为什么制定目标
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-02-16
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>前几天一个正在做绩效的同学问我一个问题：为什么要制定目标？</p>
-<span id="more"></span>
-
-<p>这是一个有意思的问题，大家平时关注的是如何制定目标，不管是用KPI还是OKR，他们本质都是在做目标管理，但是可能很少有人思考过为什么要制定目标。</p>
-<p>要想彻底回答这个问题，我们可以从一个物理定律开始：<code>熵增定律</code>。</p>
-<blockquote><p>如果物理学只能留一条定律，我会留熵增定律。</p>
-</blockquote>
-<p>说这句话的人叫吴国盛，清华大学的科学史系主任。为什么选这条定律？因为它揭示了宇宙演化的终极规律。</p>
-<p>这个规律包括<code>我们所有生命和非生命的演化规律</code>，生命里又包含着个人和群体的演化规律。</p>
-<ul>
-<li>非生命：比如物质总是向着熵增演化，屋子不收拾会变乱，手机会越来越卡，耳机线会凌乱，热水会慢慢变凉，太阳会不断燃烧衰变……直到宇宙的尽头——热寂。</li>
-<li>生命与个人：比如自律总是比懒散痛苦，放弃总是比坚持轻松，变坏总是比变好容易。只有少部分意志坚定的人能做到自我管理，大多数人都是作息不规律，饮食不规律，学习不规律。</li>
-<li>生命与群体：比如大公司的组织架构会变得臃肿，员工会变得官僚化，整体效率和创新能力也会下降；封闭的国家会被世界淘汰。</li>
-</ul>
-<p>这些所有的现象都可以用一个定律来解释——熵增定律。它的定义：<code>在一个孤立系统里，如果没有外力做功，其总混乱度（熵）会不断增大</code>。</p>
-<p>事物总是向着熵增的方向发展，所以<code>一切符合熵增的，都非常的容易和舒适</code>，比如懒散。</p>
-<p>如果要详细了解熵增定律，大家可以自行搜索一下。</p>
-<p>那么怎么解决呢？其实从它的定律里已经可以看到解法：<code>打破孤立，主动做功</code>。怎么理解？</p>
-<p>其实生命的进化史就是努力对抗熵增的过程：</p>
-<ul>
-<li>生命每天的新陈代谢就是在打破孤立。新陈代谢的过程就是在排除体内的冗余的熵，呼吸和饮食就是在吸收新的可用的物质和能量。</li>
-<li>而生命的进化就是在主动做功，通过适应环境的变化，主动进化出一些新的能力，让自己的生命得以延续。</li>
-</ul>
-<p>好的，回到我们今天的主题，为什么要制定目标呢？相信你可能已经有答案了。</p>
-<p>不管是个人还是团队，通过制定目标实现主动做功，让我们远离舒适区。良好的目标管理可以让组织内部目标得以对齐，从而达到有序。</p>
-<p>同时，通过对目标达成率进行优胜劣汰，可以排除组织内部冗余的熵，从而有能力吸收新的能量。</p>
-<p>说到这里，你也可以马上回顾一下你的目标，设定的合理吗？能有效避免熵增吗？</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/02/16/thinking-why-goals/">https://jamesyyang.github.io/2023/02/16/thinking-why-goals/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E7%9B%AE%E6%A0%87/">目标</a>
-      
-      <a href="/tags/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B/">熵增定律</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/02/24/thinking-how-achieve-object/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">目标很好为什么无法落地</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/02/15/deep-micro-service/">  
-        <span class="next-text nav-default">白话微服务</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

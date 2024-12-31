@@ -186,127 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      如何写Midjourney的Promot
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-08-04
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/AI/">AI</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Promot"><span class="toc-number">1.</span> <span class="toc-text">Promot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>要想用好Midjourney，Promot绝对是非常重要的，有一定的技巧在里面。今天我们就尝试一下。</p>
-<span id="more"></span>
-
-<h2 id="Promot"><a href="#Promot" class="headerlink" title="Promot"></a>Promot</h2><p>和ChatGPT不同，Midjourney没有上下文，所以需要一次说清楚你想画什么。</p>
-<p>但是，不要用<code>复杂的长句子</code>来描述。</p>
-<p>你可以把Promot想象成调用Midjourney API的参数。参数越多，越详细，那么就可能获得你期望的效果。</p>
-<p>所以，Midjourney的Promot需要的是尽可能详细的一组<code>短词</code>作为入参。那么，这组短词应该如何来构成呢？如果你学过摄影，那么你应该很容易理解，其实就是从构图、颜色、光线等等方面来进行描述。如果非要公式化，可以参考下面这个：</p>
-<p><code>摄影类型 - 主体 - 主体修饰 - 背景 - 光线模式 - 全局光照 - 全局反射 - 写实/科幻/卡通/幻想</code>。</p>
-<p>不过，很不幸，Midjourney不接受中文，所以每个部分你都需要英文来描述。很多同学就取巧先用中文描述后，让ChatGPT去翻译为英文，不过其实效果也不大好。我找到了一个表格，希望有帮助吧</p>
-<img src="/images/mj-promot-p1.jpg" class="">
-
-<img src="/images/mj-promot-p2.jpg" class="">
-
-<img src="/images/mj-promot-p3.jpg" class="">
-
-<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>接下来看参数，其实常用的不多，如下：</p>
-<ul>
-<li><code>--niji</code>：这个参数可以让用户生成动漫和插画风格的图像，这个模型是Midjourney和Spellbrush合作开发的，对动漫、动漫风格和动漫美学有着更深入的了解。</li>
-<li><code>--aspect</code>或<code>--ar</code>：这个参数可以让用户改变生成图像的宽高比，例如，<code>--aspect 16:9</code>可以获得16:9的纵横比。</li>
-<li><code>--seed</code>：这个参数可以让用户设置随机种子，这可以帮助在几代图像之间保持更稳定/可重复性。也就是能够基于已经生成好的图片做微调，保持更好的一致性。</li>
-<li><code>--no</code>：这个参数可以让用户给某些内容添加负面权重，让AI尝试移除或避免它们。例如，<code>--no plants</code>会尝试移除植物。</li>
-<li><code>--c</code>：[0-100] Chaos，混乱程度，随机性。</li>
-<li><code>--s</code>：[0-1000] Stylize，风格化越高艺术性越强。</li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>来看看我画的一个示例，Promot如下</p>
-<p><code>a full body shot of a 10yo little boy, cute, rectangle glasses, black shot hair, standing under big tree, looking to sky, add background of starry sky, nature noon light, realistic photograph, global illumination, depth of view, side-angle view</code></p>
-<p>图片如下：</p>
-<img src="/images/mj-sample-1.png" class="">
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/08/04/ai-midjourney-promot/">https://jamesyyang.github.io/2023/08/04/ai-midjourney-promot/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/midjourney/">midjourney</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/08/26/thinking-great-work/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">How to Do Great Work - 精简版</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/08/03/ai-midjourney-intro/">  
-        <span class="next-text nav-default">初识 Midjourney</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

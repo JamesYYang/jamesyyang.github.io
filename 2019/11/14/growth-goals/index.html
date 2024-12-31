@@ -186,120 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      增长的目标
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2019-11-14
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E7%95%A5%E8%AF%B4%E5%A2%9E%E9%95%BF/">略说增长</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>有了自己的定位后，我们可以选择增长的方向和目标了。</p>
-<p>当然，任何目标的实现都是依托于产品的，这个产品可以广义一点来看，包括有形的和无形的。</p>
-<span id="more"></span>
-
-
-<p>如果对于这个产品你还没有想法，那么可以参考我另外一篇文章：<a href="/2019/09/20/team-objective/" title="有价值的目标">有价值的目标</a> 。一句话总结就是：<code>顺势而为</code>。</p>
-<p>不过，稍微多说一点，你如何来判断大势呢？<code>靠你的认知高度</code>。</p>
-<p>什么是认知？简单来说就是人对客观事物的感知和理解，这里提到了两个层次，知其然（感知）和知其所以然（理解）。知道了这个事，不去思考背后的原由，那么这不叫认知，最多叫知道。</p>
-<p>我们经常用的词：刷，刷微博，刷朋友圈，刷抖音……这都是停留在感知层面。</p>
-<p>当然，我们身处信息社会，每天面对的信息量非常大，如果要求每个信息点都去理解他，这有点强人所难，所以，需要选择性的去阅读，并且在一个方向上持续去认知，那么你才有可能提高你的认知高度。</p>
-<p>那么，首先你需要组织好你每天获取信息的信息源，微信公众号，朋友圈，微博，付费平台都是可以的，你最好屏蔽那些会干扰你的信息源，这样可以让自己的注意力保留在你想深入了解的信息上。</p>
-<p>当然，随着你的认知高度持续提高，你需要经常重组你的信息源。</p>
-<p>经过一段时间的阅读和理解，你会发现你的认知在逐步提升，对很多趋势的判断也会逐步准确，那么你看到机会的能力也会比别人强。</p>
-<p>好的，花了点时间来说认知的问题，总之是想强调，<code>通过提升你的认知高度，发现大势，从而顺势而为找到你的增长机会</code>。</p>
-<p>另外，对于那些已经确定了产品的组织，那么增长的目标可能不是去发现新的机会，新的产品，而是去做好<code>产品的护城河</code>。</p>
-<p>什么意思？就是需要让自己在现有产品的基础上把根扎稳，不会轻易被竞争对手打垮，不会轻易自己垮掉。</p>
-<p>如何做？这里我想说两点最重要的，<code>一个是效率，一个是品牌</code>。</p>
-<p>首先说效率。天下武功，唯快不破。</p>
-<p>你在做的产品一定有竞争对手在做，只有当你拥有更高的效率时，你才有生存下来的理由。</p>
-<p>当然，这个效率不仅仅是光有速度，<code>效率应该是指：高质量，低成本，短时间</code>。</p>
-<p>如果你能做到持续提升效率，那么实际上你也是在持续的创新。创新不一定是要有新的东西，大部分的<code>创新就是在持续的提升效率</code>。</p>
-<p>其次说一下品牌。品牌做得越好，产品的溢价能力越强。比如苹果，卖得再贵都有人买。比如茅台，虽然大家都知道市场上90%的茅台都是勾兑的，依然要买。</p>
-<p>为什么？人为什么会买一个产品？除了功能的需求外，也有情感的需求。</p>
-<p>当然，在仅仅满足温饱的时代，我们只会考虑功能需求。当社会逐步富裕了，人都会开始追求情感需求。</p>
-<p>所以，为什么现在国货都开始树立品牌了，这是一个趋势。</p>
-<p>那么品牌到底传递了什么？我认为<code>品牌传递的就是企业的价值观，对外是品牌，对内就是企业文化</code>。消费者认可你的价值观，也就接受了你的品牌。</p>
-<p>所以，品牌的建设，宜早不宜迟。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2019/11/14/growth-goals/">https://jamesyyang.github.io/2019/11/14/growth-goals/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E7%9B%AE%E6%A0%87/">目标</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2019/11/16/growth-pattern/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">增长的模式</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2019/11/13/growth-position/">  
-        <span class="next-text nav-default">增长的起点</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

@@ -186,123 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      纯银谈管理经验
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-09-28
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%B8%A6/">团队如何带</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>看到最近<code>纯银</code>写的他的管理经验，觉得总结的挺好的，分享大家看看。</p>
-<span id="more"></span>
-
-<hr>
-<p>7月，在顾问的公司跟产品leader讲管理经验，讲着讲着，想起来我合作过的两个同事，他们在管理上的失败经验。</p>
-<p>两个同事都是极其优秀的业务单兵，个人效率和质量无可挑剔。</p>
-<p>同事A，一直单挑业务大梁,后来萌生退意，找了一个天赋不错的一两年经验的新人，盯着他做了一两个月，就把手头上的事情分批交过去。这显然超出了新人的负载能力，一时间鸡飞狗跳，直到这一次创业挂掉为止。</p>
-<p>同事B，打算从单挑业务大梁转移到管理角色上，招了4个人各司其职，结果1+4&lt;5，研发效率大约相当于1.8个同事B。看起来新人都很忙，经常加班，但每个人其实只负责一小块领地，bug层出不穷，效率也老牛推车。我很确定B一两周能完成的事儿，新人(来了半年之后)一个月都做不完。</p>
-<p>看上去，A和B都希望复制自己的几个分身，但未能如愿。</p>
-<p>“复制自己的几个分身”也是管理上的大忌，而我的团队管理逻辑是是，把做产品分成五个步骤。</p>
-<ol>
-<li>确定正确的目标</li>
-<li>在目标之下，从庞杂的信息里梳理出清晰的逻辑线</li>
-<li>在逻辑线之下，划分阶段性重点，再分解出来环环相扣的任务</li>
-<li>完成任务</li>
-<li>对任务复盘，修正环环相扣的路径，甚至修正逻辑线与目标，发起下一个距离目标的弹道更准确的任务</li>
-</ol>
-<p>如果管理对象是优秀的P7，那么我来做1-2，我和他一起做3-5，他独立完成4。</p>
-<p>如果管理对象是优秀的P6，那么我来做1-2-3-5，他独立完成4。</p>
-<p>如果管理对象是合格或者不那么合格的P6，或者任务难度过高，那么我除了做1-2-3-5之外，还会把复杂任务的难点打下来，再交给他完成4。</p>
-<p>总之，分解步骤，根据对象和任务的情况，我来分担一部分(最难也是最重要的)职责，确保效率与质量，再把耗费大量时间，但难度在对方承受范围内的职责交出去。</p>
-<p>这就是我教给产品leader的经验之谈。这个方法，几乎是我为自己定制的，鲜见有人使用。大多数主管总是希望招到自己的分身，独当一面，为自己分担压力。但以我所见，哪来这么多的“独当一面”，更多的情况是A级招B级，B级招C级，C级招D级，但全都要求下属独当一面，又当不住，效率和质量打着滚地跌落悬崖。</p>
-<p>独当一面，本质上是管理者的偷懒行为，希望付出尽可能低的管理成本，仅仅是利用好奖惩规则就能做好管理职责。</p>
-<p>而偷懒的结果是任务每向下传递一层，效率和质量就低一档；又或者管理者传递下去的原本是阶段性目标错误的任务，因为他对实现过程不深入不了解，便把实现不好甩锅给下属执行不力。</p>
-<hr>
-<p>其实这段总结里，最重要就是讲了两个方面：</p>
-<ol>
-<li>你得会做任务分解，也就是他说的5个步骤。任务分解的好坏直接决定了这个事情推进的效率。好的任务分解应该是：<code>逻辑清晰的、相互独立的</code>。</li>
-<li>任务的安排，要因人而异。能力强的下属就多让他担当一些，能力弱的就多给予帮助。但是，<code>目标和任务分解</code>需要自己来。</li>
-</ol>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/09/28/team-management-chunyin/">https://jamesyyang.github.io/2023/09/28/team-management-chunyin/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E7%AE%A1%E7%90%86/">管理</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/10/07/sp-intro/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">社会心理学——导论</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/09/18/cognition-thinking-concepts/">  
-        <span class="next-text nav-default">思考的框架--笔记</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

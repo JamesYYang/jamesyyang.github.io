@@ -184,149 +184,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      内容产品
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-06-05
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E4%BA%A7%E5%93%81%E5%BE%AE%E8%A8%80/">产品微言</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%85%E5%AE%B9%E4%BA%A7%E5%93%81"><span class="toc-number">1.</span> <span class="toc-text">什么是内容产品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E4%BA%A7%E5%93%81%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">内容产品的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%81%9A%E5%86%85%E5%AE%B9%E4%BA%A7%E5%93%81"><span class="toc-number">3.</span> <span class="toc-text">怎么做内容产品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E6%B4%BC%E5%9C%B0"><span class="toc-number">3.1.</span> <span class="toc-text">内容洼地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E7%94%9F%E4%BA%A7"><span class="toc-number">3.2.</span> <span class="toc-text">内容生产</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91"><span class="toc-number">3.3.</span> <span class="toc-text">内容分发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E7%94%B5%E5%95%86"><span class="toc-number">4.</span> <span class="toc-text">内容电商</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>最近看了一些关于内容产品的资料，今天做一些梳理。</p>
-<span id="more"></span>
-
-<h2 id="什么是内容产品"><a href="#什么是内容产品" class="headerlink" title="什么是内容产品"></a>什么是内容产品</h2><p>一句话定义：通过内容聚集用户，打造流量平台，用户在产品中主要是进行内容消费，一般具有kill time（消耗时间）的属性。</p>
-<p>通俗来说，我们能够用<code>刷</code>来形容的产品，基本都是内容产品。比如：抖音，小红书，头条等等。</p>
-<h2 id="内容产品的分类"><a href="#内容产品的分类" class="headerlink" title="内容产品的分类"></a>内容产品的分类</h2><p>分类的话，就看用户消费内容要达到一个什么目的。比如下面几种场景：</p>
-<ul>
-<li>获得资讯：网易新闻，今日头条等。</li>
-<li>寻找认同：社区，社交型，比如微博，豆瓣。</li>
-<li>购买消费：内容电商，比如最近很火的小红书，点评也算。</li>
-<li>影音娱乐：腾讯视频，网易云音乐等。</li>
-<li>学习进步：网课类的，比如极客时间，知识星球等。</li>
-</ul>
-<p>当然，也可能几种场景同时存在的。</p>
-<h2 id="怎么做内容产品"><a href="#怎么做内容产品" class="headerlink" title="怎么做内容产品"></a>怎么做内容产品</h2><p>好了，其实概念很简单，但是，如果想自己做一个内容产品，应该如何下手呢？</p>
-<h3 id="内容洼地"><a href="#内容洼地" class="headerlink" title="内容洼地"></a>内容洼地</h3><p>我们需要靠内容来聚集一批用户，那么首先得找到一个<code>用户感兴趣的话题，这就是内容洼地</code>。</p>
-<p>但是，既然要投入成本做一个产品，那么这个话题还要具备一定的ROI。</p>
-<p>所以，这个内容洼地应该具备下面几个特征：</p>
-<ul>
-<li>对这个话题感兴趣的用户，<code>基数不能太小</code>。</li>
-<li>这个话题你能找到<code>高质量</code>的创作者。</li>
-<li>这个话题具备<code>持续性</code>的消费能力，不是一次性的。</li>
-</ul>
-<p>这个时候，你闭眼想一下，是不是好像你生活的方方面面都有一个甚至几个APP可以照顾到了？衣食住行娱乐各个方面都有。</p>
-<p>所以，这样的内容洼地其实已经很少了。当然，不排除随着科技的进步，在很多比较隐秘的细分领域，可能还存在这样的洼地，就看大家是不是足够敏感。</p>
-<p>比如最近火起来的ChatGPT，连搬运账号可能都做了不少产品。</p>
-<h3 id="内容生产"><a href="#内容生产" class="headerlink" title="内容生产"></a>内容生产</h3><p>找到了内容洼地后，如何来生产内容呢？这里就提到了大家熟悉的几个名词：</p>
-<ul>
-<li>PGC：专业生产内容。提供内容的是专业的团队。</li>
-<li>UGC：用户产生内容。普通业余用户。</li>
-<li>AIGC：最近流行的，由人工智能生产内容。</li>
-</ul>
-<p>不管哪种方式，在产品冷启动的阶段，一定是需要质量的。并且在产品起步的初期，往往这个阶段的内容，就决定了整个产品的<code>调性</code>。而这个调性才能吸引一批“志同道合”的用户进来。</p>
-<p>人与类聚，物以群分。能够靠内容聚集在一起的，至少都是对这个内容有一定的认同感的。所以高质量的种子用户，对产品的起步非常重要。</p>
-<p>当然，在产品运营到一定规模后，用户多了，那么对于内容的需求也就比较多样了，可能初期的种子用户已经不能够提供足够消费的内容了。这个时候就需要去挖掘优秀的站内作者，办法也比较多。关键就是需要去找到这样的作者，给他们的内容足够的曝光率，让内容的成功给他们提供足够的创作动力。</p>
-<h3 id="内容分发"><a href="#内容分发" class="headerlink" title="内容分发"></a>内容分发</h3><p>有了内容后，就需要让喜欢这个内容的用户去看到这个内容。</p>
-<p>也就是如何让内容和用户产生高效的连接。通常的做法有几种：</p>
-<ul>
-<li>通过问答</li>
-<li>通过搜索</li>
-<li>通过推荐</li>
-</ul>
-<p>当然，目前事实已经证明，随着算法的逐步优化，推荐已经完胜。代表性的就是字节系的产品。毕竟，推荐是唯一用户不用动脑子的方式。</p>
-<p>这个世界上，能提好问题，善于使用搜索引擎的用户，毕竟还是少数。而且，人的大脑的特征也是<code>节能型</code>的，能少用一下就一定不会多转一圈。</p>
-<p>不过，我们要认识到，好的推荐都是基于非常完备的<code>用户画像</code>的，所以如何高质量的采集用户的行为数据，这个就是要做好的功课了。</p>
-<h2 id="内容电商"><a href="#内容电商" class="headerlink" title="内容电商"></a>内容电商</h2><p>最后说一下内容电商，毕竟我们是做电商的。</p>
-<p>首先要想明白一点，在交易这个事情上，内容有什么作用？主要是两个方向：</p>
-<ul>
-<li>辅助决策时，已有购买意愿，参考内容表达来增强购买的决策力，大众点评和知乎是典型案例</li>
-<li>消费内容时，发现认知之外的商品，被通过内容传导的商品体验打动，视频电商是典型案例</li>
-</ul>
-<p>前者的转化率比较好，因为用户已经有购买的意愿了，属于<code>人找货</code>的范畴。所以用户点评一定要做好啊，当年为什么Amazon花那么大力气让顾客写点评就这个原因，这个东西一旦积累起来了，对于转化用户的购买意愿，效果是非常好的。</p>
-<p>后者就是最近非常流行的<code>种草</code>行为了。通过拓展用户的消费认知，同时获取流量与转化。但是，种草是在内容平台，不是在电商平台。因为只有内容平台才有这么大的流量，才能聚集起那么高的人气。</p>
-<p>综合来看，电商平台如果要做内容，思路不应该是和内容平台抢资源，而应该是通过和内容平台合作做好引流。同时在自己的电商平台提供<code>多样化的商品发现</code>的能力。这一点，可以看看网易云音乐的<code>心动</code>模式，反馈非常的好。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在内容为王的时代，一切皆内容。本篇只是一个提纲挈领、抛砖引玉，后续还会继续深入探讨。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/06/05/product-content-based/">https://jamesyyang.github.io/2023/06/05/product-content-based/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/06/20/thinking-beyond-cycle/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">35岁危机是因为活久见？</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/05/28/thinking-what-vp-should-do/">  
-        <span class="next-text nav-default">高管应该具备怎样的素质</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

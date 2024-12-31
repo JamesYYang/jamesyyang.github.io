@@ -184,104 +184,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      增长的本质
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2019-11-20
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E7%95%A5%E8%AF%B4%E5%A2%9E%E9%95%BF/">略说增长</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>好了，我这个关于增长的小专栏就快结束了，我们来稍微做一个总结。</p>
-<span id="more"></span>
-<p>我们讲了增长要先定位，然后找目标，接着建立合适的模式，最后调整自己的组织。</p>
-<p>大家有没有发现，这其实是做任何事情的一个方法？</p>
-<ul>
-<li>定位：找到自己的现状。</li>
-<li>目标：找到自己的方向。</li>
-<li>模式：找到适合的方法。</li>
-<li>组织：调整自己的状态。</li>
-</ul>
-<p>这个过程你可以套在任何要做的事情上，特别是自己没经历过的事情上，你可以闭着眼回忆一下。</p>
-<p>我们如果再抽象一点，可以把这个过程称作：<code>应对变化之道</code>。</p>
-<p>其实中国人特别擅长这个，从最古老的《易经》开始，就是讲这个的。64卦，事情变化的64种可能性，非常细致的分析给你。</p>
-<p>所以，古人在做重大决策前要占卜，其实目的不一定是要问结果的吉凶，而是看一下变化的各种可能性，便于自己做好各种可能的准备。</p>
-<p>所以，在第一讲的时候我提到：<code>增长的本质是：如何面对变化，作出判断。增长能力，就是持续做出正确决定的能力</code>。</p>
-<p>那么，现在这个办法我已经告诉你了，当然，内容其实不是很细致，还有很多东西没覆盖到，但是基本的框架已经有了。</p>
-<p>最后，中国人有一句话叫做：<code>以不变应万变</code>。到底不变的是什么？</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2019/11/20/growth-core/">https://jamesyyang.github.io/2019/11/20/growth-core/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2020/03/12/thinking-how-to-solve-problem/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">解决问题的关键</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2019/11/19/growth-organization/">  
-        <span class="next-text nav-default">增长的组织</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

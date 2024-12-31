@@ -186,125 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      企业文化
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2022-04-20
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%87%E5%8C%96%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是文化？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E6%96%87%E5%8C%96%E5%9B%9B%E8%B1%A1%E9%99%90"><span class="toc-number">2.</span> <span class="toc-text">企业文化四象限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E6%96%87%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text">产品文化</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <h3 id="什么是文化？"><a href="#什么是文化？" class="headerlink" title="什么是文化？"></a>什么是文化？</h3><span id="more"></span>
-<p>说的简单一点，<code>就是在一个组织内做什么事情，会被大家认可、鼓励</code>。这就是文化。</p>
-<p>文化没有对错，文化的最大价值就是辅助组织达到目标。</p>
-<p>杰克.韦尔奇说过一句话：”<code>如果你不能时常传达你的目标，不能通过奖励巩固你的目标，那么，你的愿景还不如打印愿景的纸有价值。</code>“</p>
-<p>所以，文化就是巩固目标的。</p>
-<h3 id="企业文化四象限"><a href="#企业文化四象限" class="headerlink" title="企业文化四象限"></a>企业文化四象限</h3><p>目前最权威的企业文化分类, 是The Reengineering Alternative中提出的模型。在这个模型中, 作者从多种企业属性中抽取了最关键的两个维度作为企业文化的核心因素: 企业的关注点, 以及企业的决策方式。</p>
-<img src="/images/thinking-2.png" class="" width="700">
-
-<ul>
-<li>Control: 控制型文化。典型代表是军队：强调等级、汇报线、 关注现实, 理性的决策。</li>
-<li>Collaboration: 合作型文化。典型代表是球队：强调集体智慧, 关注现实、人性化的决策（协作、创新）。</li>
-<li>Cultivation: 培育型文化。典型代表是宗教：强调意义, 关注可能性, 人性化决策（培养机制）。</li>
-<li>Competence: 能力型文化。典型代表是大学： 强调能力, 关注可能性, 理性决策（胜任力模型）。</li>
-</ul>
-<p>大部分公司都是Control + Competence类型，因为树形组织架构本身就是为了实现自上而下的控制，而基于KPI的考核，就是在强调不同的能力等级。</p>
-<p>工程师文化是Cultivation + Competence，因为工程师文化还需要强调能力的传承。</p>
-<p>志愿者或者非盈利型组织是Collaboration，更多的通过协作来达到目标，强调集体智慧。</p>
-<h3 id="产品文化"><a href="#产品文化" class="headerlink" title="产品文化"></a>产品文化</h3><p>同理可得，产品的文化就是辅助组织研发出符合预期的产品。那如何判断一个组织有没有产品文化呢？</p>
-<ul>
-<li>第一，有没有产品愿景和产品战略？</li>
-<li>第二，有没有快速试错（迭代）的制度？这个迭代不是指开发，而是从需求，设计，实现，上线，验证的全过程迭代。</li>
-<li>第三，技术团队有没有快速落地的能力？</li>
-</ul>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2022/04/20/thinking-culture/">https://jamesyyang.github.io/2022/04/20/thinking-culture/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E6%9C%AC%E8%B4%A8/">本质</a>
-      
-      <a href="/tags/%E6%96%87%E5%8C%96/">文化</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2022/06/18/education-student/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">作为学生</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2022/04/02/deep-distribute/">  
-        <span class="next-text nav-default">聊聊分布式</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

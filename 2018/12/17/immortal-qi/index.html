@@ -186,110 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      炼气法门
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2018-12-17
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E6%BC%AB%E8%B0%88%E4%BF%AE%E4%BB%99/">漫谈修仙</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>我们今天补充一个“武功秘籍”（开玩笑）。</p>
-<span id="more"></span>
-
-<p>之前我们说了，调理气息，比如数息，可以帮助摈弃杂念，帮我们入定。所以，《阴符经》上有一句话——“<code>禽之制在气</code>”，这是一个重要的口诀，也就是方法。念头抓不住，会乱跑，思想不能专一，就因为你的气在散乱，气散乱，心就散乱了。</p>
-<p>真正入定的人，应该是“<code>气停脉住</code>”，完全没有呼吸了。</p>
-<p>不管道家还是佛家，隋唐以后，练气的多起来了，各种法门都有，那么今天给大家提供一个这些法门的源头，是晋代传入中国的《增一阿含经》，其中有一个章节，就是佛教他的公子罗云通过气息入定的方法。</p>
-<p>原文如下：</p>
-<blockquote><p>尔时，世尊作是教敕已，便舍而去，还诣静室。</p>
-<p>是时，尊者罗云复作是念：“今云何修行安般，除去愁忧，无有诸想？”是时，罗云即从座起，便往世尊所；到已，头面礼足，在一面坐；须臾退坐，白世尊曰：“云何修行安般，除去愁忧，无有诸想，获大果报，得甘露味？”</p>
-<p>世尊告曰：“善哉！善哉！罗云，汝乃能于如来前而师子吼，问如此义：‘云何修行安般，除去愁忧，无有诸想，获大果报，得甘露味？’汝今，罗云，谛听！谛听！善思念之，吾当为汝具分别说。”</p>
-<p>对曰：“如是，世尊。”尔时，尊者罗云从世尊受教。</p>
-<p>世尊告曰：“如是，罗云，<code>若有比丘乐于闲静无人之处，便正身正意，结跏跌坐，无他异念，系意鼻头，出息长知息长，入息长亦知息长；出息短亦知息短，入息短亦知息短；出息冷亦知息冷，入息冷亦知息冷；出息暖亦知息暖，入息暖亦知息暖。尽观身体入息、出息，皆悉知之。有时有息亦复知有，有时无息亦复知无。若息从心出亦复知从心出，若息从心入亦复知从心入。如是，罗云，能修行安般者，则无愁忧恼乱之想，获大果报，得甘露味。</code>”</p>
-<p>尔时，世尊具足与罗云说微妙法已，罗云即从座起，礼佛足，绕三匝而去。往诣安陀园，在一树下，正身正意，结跏跌坐，无他余念，系心鼻头，出息长亦知息长，入息长亦知息长；出息短亦知息短，入息短亦知息短；出息冷亦知息冷，入息冷亦知息冷；出息暖亦知息暖，入息暖亦知息暖。尽观身体入息、出息，皆悉知之。有时有息亦复知有，有时无息亦复知无。若息从心出亦复知从心出，若息从心入亦复知从心入。</p>
-<p>尔时，罗云作如是思惟，欲心便得解脱，无复众恶。有觉、有观，念持喜安，游于初禅。</p>
-</blockquote>
-<p>口诀都已经标注。</p>
-<p>好了，法门已有，大家可以实践了哦。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2018/12/17/immortal-qi/">https://jamesyyang.github.io/2018/12/17/immortal-qi/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E9%81%93/">道</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2018/12/18/immortal-wisdom/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">生慧</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2018/12/14/immortal-meditation/">  
-        <span class="next-text nav-default">寻定</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

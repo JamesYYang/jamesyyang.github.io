@@ -186,124 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      科技 连接 商业
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-12-01
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%95%86%E4%B8%9A%E5%92%8C%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">商业和连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E6%8A%80%E5%92%8C%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">科技和连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E6%8A%80-%E8%BF%9E%E6%8E%A5-%E5%95%86%E4%B8%9A"><span class="toc-number">3.</span> <span class="toc-text">科技 连接 商业</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">小结</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>每一次商业的浪潮，背后或多或少都有技术在推波助澜，那么他们之间到底有什么关系呢？</p>
-<span id="more"></span>
-
-<h2 id="商业和连接"><a href="#商业和连接" class="headerlink" title="商业和连接"></a>商业和连接</h2><p>商业最核心的是交易。</p>
-<p>交易是一个双方参与的过程，所以，买卖双方要能产生连接。那么换句话说 <code>商业的本质是连接</code>。</p>
-<p>比如在零售行业，从最古老的集市，到后来的实体商场，再到现在的网上商城，交易场所的变化体现了连接的变化：从不固定的地点，到固定的地点，再到虚拟的地点。</p>
-<p>比如在内容出版行业，从竹简，到纸质图书，到无线电，到电视，到现在的公众号，短视频。载体的变化体现了人和信息的连接变化：从少量和有形，到大量和无形。</p>
-<p>所以，整个商业的发展史，就是连接的变化过程，从低效到高效，从有形到无形。一个社会商业的发达程度，间接说明了这个社会中人与人之间的可连接性有多高。</p>
-<p>而推动这个连接变化的原动力，就是科技。</p>
-<h2 id="科技和连接"><a href="#科技和连接" class="headerlink" title="科技和连接"></a>科技和连接</h2><p>蒸汽时代和电气时代两次技术的进步，让人类可以大量的生产商品，连接的量上来了。同时由于交通方式的进步，让人与人的连接可以扩大到更广阔的范围，连接的广度上来了。</p>
-<p>而信息时代的技术进步，让很多连接可以发展到线上，进入虚拟场景，连接的时间限制没有了。</p>
-<p>所以，每一次技术的进步，都可以促进连接的效率，在连接的广度、深度、频次上逐步突破，从而形成了7*24小时的全天候连接。</p>
-<h2 id="科技-连接-商业"><a href="#科技-连接-商业" class="headerlink" title="科技 连接 商业"></a>科技 连接 商业</h2><p>所以，科技、连接、商业三者的关系：<code>科技提升连接，连接促进商业。</code></p>
-<p>但是，要注意的是，连接促进商业的同时，其实是在<code>重塑商业</code>。因为连接的方式往往决定了交易的渠道。</p>
-<p>线下交易的时代，商超是渠道。当交易搬到线上的时候，渠道被重塑，大量商超就会被取代。</p>
-<p>传统媒体的时代，电视台是渠道，出版社是渠道。当内容变成公众号和短视频时，电视台和出版社也面临被取代。</p>
-<p>所以，每次科技的进步，渠道的重塑就会带来一波风口，释放一波红利，一直到达渠道重塑完成，技术普及。现在所谓的很多大厂就是在一次次技术风口起来的时候杀入红海，抢得一席之地，寻找到可行的商业模式，构建出自己的护城河，等到红利退去的时候也能立于不败。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>所以，不管我们是要创业也好，还是要开拓新的业务模块也好，我们都要回归到本质上：</p>
-<ul>
-<li>我们的业务模式是建立在怎样的连接上？</li>
-<li>我们对技术的运用是否会提升连接的效率？</li>
-<li>我们是否可以有稳定的商业模式（交易）？</li>
-</ul>
-<p>这三个问题回答了，才能让我们成功的几率更高。结合今年兴起的AI浪潮，如果你也想用AI来搞点事情，不妨结合这三点来思考一下。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/12/01/thinking-tech-connect-business/">https://jamesyyang.github.io/2023/12/01/thinking-tech-connect-business/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E5%A2%9E%E9%95%BF/">增长</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2024/02/19/thinking-caoz-2023-final-1/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">穿越周期的能力</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/10/22/sp-summary/">  
-        <span class="next-text nav-default">社会心理学杂评</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

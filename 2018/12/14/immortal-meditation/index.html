@@ -186,108 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      寻定
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2018-12-14
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E6%BC%AB%E8%B0%88%E4%BF%AE%E4%BB%99/">漫谈修仙</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>上次说到了求静，如果能静下来，那么就可以下一步了。</p>
-<p>我们知道，对于打坐好的人，有一个词来形容他，叫“入定”。所以，我们静下来以后，就要去“寻定”。把这个定找到。</p>
-<span id="more"></span>
-
-<p>为什么叫寻呢？就说明从静到定需要一定的摸索过程，没那么容易。你想，要和宇宙接通，那有那么简单，对吧。</p>
-<p>不过，首先要把这个定搞清楚，我们才不会搞错。</p>
-<p><code>什么叫定？第六意识定住了，不动了，没有念头，甚至自己也没有了</code>。</p>
-<p>听起来是不是感觉就像睡着了？完全不是哈，比如打坐的时候觉得很困，睡过去了，30分钟后醒来，还挺高兴，觉得入定了。这个不是哈，睡着了或者打瞌睡了，那叫昏沉。</p>
-<p>意识定住了，不是说意识不清楚，这个是两个概念。<code>做个比喻，就好像镜子，周围发生什么事，自己都知道，但是和自己无关，自己完全不起任何念头，甚至有人拿刀来割你一下，也不动念</code>。</p>
-<p>很难吧？所以，如果自己身体不健康，或者很困的时候，不要来打坐，因为身体是最容易让你产生念头的，初学的人不可能完全忘我，不是这痛就是那痒，这很难入定。</p>
-<p>当然，反过来说，真正入定了，可以促进身体的健康，气脉肯定是可以通的，气脉通了以后，虽然不可能坐到完全不生病，但是小病是不会有的，甚至生病以后也很快就好了。</p>
-<p>另外，如果对道家稍有了解的，都知道他们有“意守丹田”一说，这个实际上也是帮你入定的一种方法，叫做“系心一缘”，就好像拿个绳子把心栓住。但是需要注意，意识如果集中到身体某个部分，气血是真的会往那个地方去的哦。如果你有高血压，那么建议不要这么干，容易出事。</p>
-<p>还有，有些号称练气功的，说发功以后，身体会不自主的乱动，而自己不知道，以此说明自己功力高强。这个肯定是骗人的。身体会不受控的舞动，理论上是有可能的，但是，这不代表入定，也不代表功力高深。两码事。</p>
-<p>所以，大家应该记住，不管儒释道哪家，都有很多武功秘籍，实际上都是在身体上做文章，也就是我上次说的“有为中寻无为”，但是这些都不是究竟。</p>
-<p>那么，定了后又该如何呢？且听下回分解。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2018/12/14/immortal-meditation/">https://jamesyyang.github.io/2018/12/14/immortal-meditation/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E9%81%93/">道</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2018/12/17/immortal-qi/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">炼气法门</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2018/12/13/immortal-quietly/">  
-        <span class="next-text nav-default">求静</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

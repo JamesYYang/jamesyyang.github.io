@@ -131,68 +131,121 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      微信的产品观
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2021-07-09
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7"><span class="toc-number">1.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF"><span class="toc-number">3.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">4.</span> <span class="toc-text">解决方案</span></a></li></ol>
+    </div>
+  </div>
+  
 
+  <div class="post-content">
+    
+    <p>本文是《微信背后的产品观》的书摘</p>
+<span id="more"></span>
+
+<h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><p>用户的反馈只是帮助你了解到他们的想法，而用户的需求是零散的，解决方案是归纳抽象的过程。</p>
+<p>这个理论来自一本书——《乌合之众》。如果我们聚集在一起去做一件事情，那我们就是乌合之众。群体智商必然是不如个体智商的，因为大家都喜欢趋同，向别人看齐。</p>
+<p>之前跟某产品的负责人聊天，说他们的产品口号是“发现新的知识，发现更多的世界”，其实不太对。因为人没有学习知识的爱好，都是被动学习的。假定用户很喜欢学习很喜欢知识，这个出发点可能就错了。</p>
+<p>可以看到，用户的一些心态，很多时候跟我们预想的是不一样的，如果我们把事情一步到位，做细了，可能会出问题。</p>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>所以，需求只来自你对用户的了解，这里非常想强调几点：第一，需求不来自调研；第二，需求不来自分析；第三，需求不来自讨论；第四，需求不来自竞争对手。</p>
+<p>所以，对于新点子，99% 的情况下把它否定掉总是对的。当你要去判定这个点子该不该做的时候，很简单，否定、不做，就可以了。</p>
+<p>情感上的需求，也是产品中除技术以外很重要的一点。伟大的产品应该满足人的情感需求，而不仅是提供一些功利上的好处。</p>
+<h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>对于产品来说，从中受到一个很大的启发是，要营造一个“环境”，然后由这个环境来决定用户来做什么样的反应，用户会被你营造的“环境”牵引。这是决定用户应该做什么的重要因素。</p>
+<p>这句话说明一个问题，就是我们在做产品设计的时候，到底是面向场景来做，还是面向某个功能来做？因为功能脱离了场景是没有意义的。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>如果一个问题的解决方案太复杂，一定是问题本身错了。事实上就是这样的。</p>
+<p>我想跟大家说，其实没有设计，只有解决问题。我们很害怕的一点是，很多人把设计工作想得非常高端，觉得这是一个很高尚的职业。其实我们每天都是在解决问题，而不是从事设计工作，只有把问题解决好了，才是做了一个好的设计，但不是为了去做设计而去解决问题。这是本末倒置的。</p>
+<p>我们做一个产品的时候，结构是最重要的，然后才是一些细节。大家常常会听到这样一句话：“赢在细节”，让人以为把细节做好就可以了，其实不是的。微信是一个值得研究的产品，因为微信里面包含的功能非常多，如果做一个列表把微信的所有功能列出来的话，会发现这是很恐怖的，里面包含的东西特别多。但目前大家用到的微信并没有显得很复杂，看起来还是挺简单的，以至于我们做了一个新版本，你都找不到它有什么新功能。那是因为我们先把微信的骨骼梳理清楚了，枝叶的东西藏得很深也没有关系，这样整个产品才不会乱掉。</p>
+<p>我们说设计就是分类的意思是，我们发现在做很多产品的时候，做得不好往往是分类分得不好，几乎大部分的工作都可以归结到这一点上。哪怕是写一篇简单的文案、一个用户的通知，到怎么去定义一个产品特性，最终都可以归结为分类有没有分得很好。只有分类分得好，对用户才能显得亲切易懂，对产品才显得结构清晰。</p>
+<p>因为我们做新功能的时候，总是喜把新功能摆出来，总是怕用户不知道我们做了什么新功能。这都是新手的做法。</p>
+<p>新功能的罗列是坚决不可接受的，是极端不好的。我记得苹果以前的发布会，是不会罗列一堆功能指标、一堆性能指标的，但是现在开始罗列一些指标了，感觉这是不好的趋势。苹果的产品买的是整体的体验，</p>
+<p>所以我们认为，好的产品应该是自然增长的，而不应该为KPI而改变产品。KPI只是一个好产品的副产品，好的产品自然会产生好的增长曲线。</p>
+<p>所以说，战略行为不一定来自需求层面，更多来自战略任务，战略任务可能放在任何一个时代都成立，但是在真实场景下不一定成立。所以我们看到很多大公司，它的战略很厉害，但是最终还是走向失败。</p>
+<p>有DNA的产品才会进化。DNA到底是什么东西呢？DNA是产品的价值观和认知，产品在进化的过程中，怎么才能看起来像个生物体那样，有自己的内在？这些都是我们在不断思考的问题。</p>
+<p>如果我们非要用一个词来表达一个产品有灵魂的话，它应该像人一样，有很多面。它是有机联系的，表现出的产品结构是很好的；它有肌肉的东西，是功能；有产品的气质，背后是价值观；它的反应应该很敏捷，应该很理性；它的理性表现在逻辑很清晰、交互很合理上；它的谈吐(文案)要好。对应到人身上，它是整体和谐而不是精神分裂的。</p>
+<p>当我们可以跳出非常功利的目标之外，再想一下初心，重新用另外的角度来看我们的产品，可能你会觉得你的工作会变得很有乐趣，充满了挑战，并且很有成就感。</p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2021/07/09/thinking-wechat-product-view/">https://jamesyyang.github.io/2021/07/09/thinking-wechat-product-view/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2021/08/12/thinking-5-laws/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">每个开发者都应该知道的5条定律</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2020/10/04/deep-seckill/">  
+        <span class="next-text nav-default">乱谈秒杀</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -202,84 +255,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

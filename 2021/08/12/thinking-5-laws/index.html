@@ -131,68 +131,115 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      每个开发者都应该知道的5条定律
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2021-08-12
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Murphy-%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">Murphy 定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Knuth-%E5%AE%9A%E5%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">Knuth 定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#North-%E5%AE%9A%E5%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">North 定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conway-%E5%AE%9A%E5%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">Conway 定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parkinson-%E5%AE%9A%E5%BE%8B"><span class="toc-number">5.</span> <span class="toc-text">Parkinson 定律</span></a></li></ol>
+    </div>
+  </div>
+  
 
+  <div class="post-content">
+    
+    <p>每个开发者都应该知道的5条定律</p>
+<span id="more"></span>
+<h3 id="Murphy-定律"><a href="#Murphy-定律" class="headerlink" title="Murphy 定律"></a>Murphy 定律</h3><blockquote><p>“If anything can go wrong, it will.”<br>“如果有什么事情可能出错，那就一定会出错。”</p>
+</blockquote>
+<p>老杨点评：设计系统一定要健壮，即使在成本考量下暂时不能做到健壮，也需要有灾备方案，也就是传说中的Plan B。</p>
+<h3 id="Knuth-定律"><a href="#Knuth-定律" class="headerlink" title="Knuth 定律"></a>Knuth 定律</h3><blockquote><p>“Premature optimization is the root of all evil (or at least most of it) in programming.”<br>“过早的优化是编程中所有问题(或者至少是大部分问题)的根源。”</p>
+</blockquote>
+<p>老杨点评：优化是需要成本的，过早优化就表示后期变动几率非常大，一旦变动了，优化的成本就无法收回了。</p>
+<h3 id="North-定律"><a href="#North-定律" class="headerlink" title="North 定律"></a>North 定律</h3><blockquote><p>“Every decision is a trade off.”<br>“每一个决定都是一种权衡。”</p>
+</blockquote>
+<p>老杨点评：项目中我们随时都要做出决策，做出选择，任何选择都是对其他选项的放弃，这些选项我们要记录下来。决定都会犯错，这不可怕，可怕的是我们忘记了当初为什么要做这个决策，还有哪些选项可供我们使用。</p>
+<h3 id="Conway-定律"><a href="#Conway-定律" class="headerlink" title="Conway 定律"></a>Conway 定律</h3><blockquote><p>“Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.”<br>“系统设计的架构受限于生产设计，反映出公司组织的沟通架构”</p>
+</blockquote>
+<p>老杨点评：组织架构决定系统架构。</p>
+<h3 id="Parkinson-定律"><a href="#Parkinson-定律" class="headerlink" title="Parkinson 定律"></a>Parkinson 定律</h3><blockquote><p>“Members of an organization give disproportionate weight to trivial issues.”<br>“一个组织的成员过分重视琐碎的问题。”</p>
+</blockquote>
+<p>老杨点评：人们更愿意把注意力和观点放在他们熟悉的事物上，而不是复杂的问题上。所以，为什么会议要有一个组织者，主要是确保不跑偏。</p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2021/08/12/thinking-5-laws/">https://jamesyyang.github.io/2021/08/12/thinking-5-laws/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2021/10/28/thinking-selling-redundancy/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">变现你的冗余能力</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2021/07/09/thinking-wechat-product-view/">  
+        <span class="next-text nav-default">微信的产品观</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -202,84 +249,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

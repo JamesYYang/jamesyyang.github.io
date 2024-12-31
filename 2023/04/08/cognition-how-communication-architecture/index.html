@@ -133,68 +133,128 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      如何说清楚软件架构
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2023-04-08
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AE%A4%E7%9F%A5%E6%9D%82%E8%AF%B4/">认知杂说</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%B1%82%E6%AC%A1"><span class="toc-number">2.</span> <span class="toc-text">结构层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E8%BF%9B%E4%B8%80%E6%AD%A5"><span class="toc-number">3.</span> <span class="toc-text">更进一步</span></a></li></ol>
+    </div>
+  </div>
+  
 
+  <div class="post-content">
+    
+    <p>最近参加了几次设计评审，感觉大家对如何说清楚一个系统架构不是很清楚。很多同学上来就讲表结构，或者上来就讲API接口文档。也不知道参会的其他同学是什么感觉，反正我是听得一头雾水。</p>
+<p>那么怎么才能说清楚一个软件架构呢？</p>
+<span id="more"></span>
+
+<h3 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h3><p>我猜很多人肯定会想到画图呀，架构图。没错，关键是怎么画呢？</p>
+<p>在这里，介绍一个<a target="_blank" rel="noopener" href="https://c4model.com/">C4模型</a>。</p>
+<p>C4模型是一种用于可视化软件架构的方法，它由Simon Brown提出，旨在帮助软件开发团队描述和沟通软件架构，无论是在前期设计阶段还是在回顾现有代码库时。C4模型的名称来源于它包含的<code>四种抽象层次</code>：Context（上下文）、Container（容器）、Component（组件）和Code（代码）。</p>
+<p><code>Context层</code>描述了软件系统所处的环境和范围，以及与之交互的人员和其他系统。Context层可以用一个系统上下文图来表示，显示出软件系统的名称、边界、职责、用户和外部依赖。</p>
+<p><code>Container层</code>放大了软件系统内部，展示了系统由哪些高级技术构建块组成，例如Web应用程序、移动应用程序、数据库、消息队列等。Container层可以用一个容器图来表示，显示出容器的名称、类型、技术选择、职责和关系。</p>
+<p><code>Component层</code>进一步放大了容器内部，展示了容器由哪些组件组成，以及组件之间是如何协作的。组件可以根据不同的标准进行划分，例如职责、功能、模式或者框架。Component层可以用一个组件图来表示，显示出组件的名称、类型、职责和关系。</p>
+<p><code>Code层</code>最终放大了组件内部，展示了组件是如何实现的。Code层可以用一个代码图来表示，例如UML类图，显示出类的名称、属性、方法和关系。</p>
+<p>每一个层次它都有一种类型的图，具体可以去官网看一下。四个层次的关系大概是这样</p>
+<img src="/images/c4.png" class="" width="800">
+
+<h3 id="结构层次"><a href="#结构层次" class="headerlink" title="结构层次"></a>结构层次</h3><p>所以，软件架构属于用来说清楚一个事物的结构的，而C4模型告诉我们，<code>谈结构的时候一定要说清楚在什么样的抽象层次来谈</code>。这非常的重要。</p>
+<p>现实生活中，很常见的说层次结构的图就是<code>地图</code>。而每张地图上面一定会有一个<code>比例尺</code>，比例尺其实就告诉了我们这个地图是在什么样的一个抽象层次上来描述地理位置。</p>
+<p>我们通过地图来查找一个地方的时候，也通常会从一个抽象层次较高的位置开始，逐层展开。这符合人的思维习惯，由高至低，由大到小。</p>
+<p>C4模型其实就是干了这么一个事，只不过它明确了架构图应该有的几个层次是什么，如果大家都follow这么一个规范，那么交流架构会变的比较轻松。</p>
+<h3 id="更进一步"><a href="#更进一步" class="headerlink" title="更进一步"></a>更进一步</h3><p>我们把这个话题再推进一步，其实要说清楚任何一个事情都是有技巧的。</p>
+<p>如果你是要解释一个解决问题的方案，那么可以遵循：SCQA框架。</p>
+<p>如果你是在讲一个故事，那么可以抓住：时间，地点，人物，情节。</p>
+<p>如果你是在表达一个观点，那么可以围绕：论点，论据，结论。</p>
+<p>…………</p>
+<p>那么再进一步，如果你要说清楚一个事，请抓住它的<code>脉络</code>。</p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2023/04/08/cognition-how-communication-architecture/">https://jamesyyang.github.io/2023/04/08/cognition-how-communication-architecture/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E6%9E%B6%E6%9E%84/">架构</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2023/05/04/thinking-digital-transformation/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">关于数字化转型</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2023/03/19/deep-http/">  
+        <span class="next-text nav-default">图说HTTP</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -204,84 +264,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

@@ -133,68 +133,115 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      CMMI or Sprint
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2019-07-30
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
 
+  <div class="post-content">
+    
+    <p>问题就在标题上了？你的答案是什么？</p>
+<span id="more"></span>
+<p>CMMI和Sprint都属于软件工程范畴，说白了也就是<code>流程</code>。</p>
+<p>所以换个问法，能不能做好软件和流程有关系吗？</p>
+<p>合适的流程会对软件开发起到正面的促进作用，但是不是决定性作用。也就是说<code>流程需要吗？需要的；重要吗？看情况</code>。</p>
+<p>我比较喜欢用做菜来打比方，菜谱上记录的是什么？是不是就是每个菜的步骤，也就是流程。那你以为大厨就是背了很多菜谱吗？显然不是。但是对于初学者来说，菜谱是很重要的，按照菜谱来，至少能够做出来，但是好不好就不一定了。</p>
+<p>我们总结一下，<code>流程是什么：软件开发过程中固化下来的最佳实践</code>。</p>
+<p>所以，流程只有合不合适，没有好不好，并且流程只是一个辅助因素，不是决定因素。</p>
+<p>好了，那么回到正题，如何才能做好软件？</p>
+<p>回答这个问题之前，需要先搞清楚软件是什么？从本质上说，<code>软件就是：识别问题然后解决问题</code>。</p>
+<p>解决问题可能还好说，这个世界不乏解决问题的高手，但是识别问题现在越来越难。特别在互联网时代，任何信息都可能被放大，被加速，当然有可能这个信息真的是问题，但更有可能的是干扰。所以，这个时代才有了这么多对产品经理的需求，他们就是去识别问题，发现问题的。</p>
+<p>解决问题的能力是程序员的高层能力，架构师和程序员多半的区别就在这里。<code>解决问题的过程本质上都是怎么把复杂问题分层次，分模块，化繁为简的过程</code>，这是一个综合能力。底层开发、基础设施建设为什么吸引了很多自命热爱编程的人，不是因为它们有挑战，相反，它们更纯粹，更简单，更容易做取舍。精益求精的人更容易做出成绩。当然，我不是说代码能力不重要，毕竟不管怎么化繁为简，最终都要落实到代码上去实现，代码是一个软件质量的根基。</p>
+<p>好了，说到最后，总结一下，</p>
+<ul>
+<li>如果你只对代码感兴趣，做底层开发吧</li>
+<li>如果你化繁为简的能力比较强，做架构师吧</li>
+<li>如果你识别问题的能力比较强，那你有机会去改变世界哦</li>
+</ul>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2019/07/30/thinking-cmmi-sprint/">https://jamesyyang.github.io/2019/07/30/thinking-cmmi-sprint/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E6%9C%AC%E8%B4%A8/">本质</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2019/09/19/team-management/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">管理的本质</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2019/06/04/thinking-about-share/">  
+        <span class="next-text nav-default">谈谈分享</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -204,84 +251,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

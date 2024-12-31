@@ -131,68 +131,107 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      Azure中的App如何访问数据库
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2023-06-26
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/Azure/">Azure</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
 
+  <div class="post-content">
+    
+    <p>Azure中你部署的任何东西都叫做资源，比如VM，container等。那么资源间如何互联互通呢？</p>
+<span id="more"></span>
+
+<p>当然是通过网络，不过这个网络不是真的我们理解中的网络，而是虚拟网络（VNET），类似K8S中的网络一样。</p>
+<img src="/images/azure-vnet.png" class="">
+
+<p><code>需要记住的是，VNET间默认不互通，但VNET中的Subnet是默认互通的</code></p>
+<p>那么回到标题的问题，比如我部署了一个App和一个数据库，App如何访问到数据库呢？</p>
+<p>有下面三种方式。</p>
+<p><strong>第一种，数据库暴露在公网，App通过公网访问。</strong> 安全起见，可以为App添加白名单。</p>
+<img src="/images/App-Mysql-Public-Net.png" class="">
+
+<p><strong>第二种，App和数据库都添加到一个VNET中。</strong> </p>
+<img src="/images/App-Mysql-VNet-Endpoint.png" class="">
+
+<p><strong>第三种，App和数据库都添加到一个VNET中，但是通过专用endpoint访问。</strong> </p>
+<img src="/images/App-Mysql-VNet--Private-Endpoint.png" class="">
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2023/06/26/azure-app-connect-mysql/">https://jamesyyang.github.io/2023/06/26/azure-app-connect-mysql/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2023/07/18/thinking-unix-philosophy/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">Unix编程哲学</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2023/06/26/azure-subscription-ad/">  
+        <span class="next-text nav-default">Azure订阅和租户的关系</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -202,84 +241,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

@@ -133,68 +133,244 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      白话微服务
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2023-02-15
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">深入理解</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">什么是分布式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">什么是服务化？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">什么是微服务？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-number">1.4.</span> <span class="toc-text">中间件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B"><span class="toc-number">2.</span> <span class="toc-text">分而治之</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86"><span class="toc-number">2.1.</span> <span class="toc-text">分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%BB"><span class="toc-number">2.2.</span> <span class="toc-text">治</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">部署模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%B9%E8%BD%A6%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">边车模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC"><span class="toc-number">3.2.</span> <span class="toc-text">服务网格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E5%85%B3%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">网关模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">3.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F"><span class="toc-number">4.</span> <span class="toc-text">云原生</span></a></li></ol>
+    </div>
+  </div>
+  
 
+  <div class="post-content">
+    
+    <p>整理了以前一些自己对微服务的理解</p>
+<span id="more"></span>
+
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>研究一个东西之前，我喜欢先追本溯源，看清它的本质，然后再来研究，就不会迷失方向。</p>
+<p>所以，我们先从分布式开始研究。</p>
+<h3 id="什么是分布式？"><a href="#什么是分布式？" class="headerlink" title="什么是分布式？"></a>什么是分布式？</h3><p>为什么会出现分布式？</p>
+<ol>
+<li>软件功能越来越复杂，需要分。</li>
+<li>计算资源跟不上，需要分。</li>
+</ol>
+<p>所以，用一个简单的定义来说明分布式：</p>
+<blockquote><p>分布式就是指多进程协作提供一个完整功能。</p>
+</blockquote>
+
+<p>两个重点：</p>
+<ol>
+<li>多进程：意味着要把原有功能做一个拆分，怎么拆？如何拆？这非常重要。</li>
+<li>协作：意味着各个进程要通信、要管理、要协调，这个就涉及到分布式后面的一系列原理，包括CAP，这个是治理的部分。</li>
+</ol>
+<p>所以，分布式就是一个“分治”的过程。（更多关于分布式的思考请看旧文：<a href="/2022/04/02/deep-distribute/" title="聊聊分布式">聊聊分布式</a>）</p>
+<h3 id="什么是服务化？"><a href="#什么是服务化？" class="headerlink" title="什么是服务化？"></a>什么是服务化？</h3><p>所以，接下来我们来看服务化，了解了分治这个概念，那么就会明白服务化的出现时一个顺理成章的事情。</p>
+<p>服务化就是在讨论怎么拆的问题。回顾一下我们写代码的学到的OOP原则。OOP的世界里充满了对象，如何来组织对象是一个很重要的话题。所以有很多模式，很多原则。</p>
+<p>所以，我们得到一个结论，叫做：<code>高内聚，低耦合</code>。这样的拆分是最高效的，并且复用率应该是最好的。</p>
+<p>同时，满足这个特性的服务应该是接口简单的，职责单一的，大家想想是不是？同时，如果服务的复用率越高，那么整个系统的效率应该也是越高。</p>
+<p>接下来说到正题了。</p>
+<h3 id="什么是微服务？"><a href="#什么是微服务？" class="headerlink" title="什么是微服务？"></a>什么是微服务？</h3><p>首先来说，微服务肯定是服务化的一种延续，一种新的体现形式。并且你其实很难给它一个定义，但是他一定会有一些特征。</p>
+<ul>
+<li>粒度更细——产品思维的转变</li>
+<li>独立部署</li>
+<li>独立维护</li>
+<li>运维复杂</li>
+</ul>
+<p>粒度更细意味着拆得更小，为什么？大家玩过搭积木吧，如果都给你一些体积较大的积木，你能够搭建出来的图形其实是有限的。体积小的积木可塑性更强。</p>
+<p>所以，这说明我们的产品交付时间要求更短，版本更新更快，这也说明我们做产品的思路在发生改变，我们要更靠近用户，更快的响应用户的需要，更多的去试错。</p>
+<p><code>软件开发从最初的瀑布模型，到后来的敏捷，再到现在的DevOps，体现了对迭代速度要求越来越快，我们需要更快的响应用户的需求，这是产品思维最大的转变。</code></p>
+<p>独立部署、独立维护、运维复杂：这是我们刚才提到的分治里的治。为什么到微服务我们才开始提到治？因为分的粒度小了，那么模块数量就会大大上升，怎么去治理它？治理的好坏很大程度上决定了你微服务的成败。所以，如果没有一个好的治理或者说管理平台，那么就不要去实施微服务。</p>
+<h3 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h3><p>分布式系统里不得不提一下中间件：<code>为提供通信标准而生</code>。</p>
+<p>从名字上就可以形象的看到，这个就是分布式中夹在各个分开了的模块中的东西。它用来干什么？</p>
+<p>我们刚才就提到了，分布式中各个进程，各个模块间要通信，但是如果大家没有一个通信标准，那就乱套了，中间件的出现就是来提供这么一个标准。</p>
+<p>你只要按照我的标准来，那么就可以顺利的通信。</p>
+<p>所以你会看到有这么一些中间件的出现：RPC通信，数据库访问，消息队列等等。</p>
+<h2 id="分而治之"><a href="#分而治之" class="headerlink" title="分而治之"></a>分而治之</h2><h3 id="分"><a href="#分" class="headerlink" title="分"></a>分</h3><p>再正式说分之前，首先我们必须有一个观念：<code>微服务不是银弹</code>，并不是所有系统都要做成微服务。</p>
+<p>任何产品在雏形期，模型验证期的时候，不需要微服务，甚至不需要分布式，怎么简单怎么来，简单就快，复杂就慢，这个是基本道理。</p>
+<p>反过来说，分布式，服务化，微服务一定是产品进入稳步发展期的产物。那么什么时候开始分呢？</p>
+<ul>
+<li>团队人开始变多</li>
+<li>开发周期开始变长</li>
+<li>发布必加班</li>
+<li>上线必出bug</li>
+</ul>
+<p>这些情况是不是有一种似曾相识的感觉？</p>
+<p>搞不定怎么办？加人。加人还不行？Schedule太短了，多给点时间吧。一到发布就一片混乱，加班、熬夜家常便饭，甚至发版前还要烧香。上线后不是这出问题就是那出问题，频繁打补丁。</p>
+<p>这就说明服务复杂度太高，耦合太紧密，这个时候就要考虑做拆分了，将模块拆分小一点，每个模块的复杂度降低，并且每个服务单独部署，也降低了发布和运维的复杂度。</p>
+<p>当然，复杂度这个其实不太好衡量，我们也可以换一个思路。应该说，当你需要“<code>弹性</code>”的时候，你就需要分，你就需要微服务。</p>
+<p>这里的弹性指两个方面：</p>
+<ul>
+<li>第一，各个模块的性能要求不同，有的模块访问量大，有的模块性能要求低。如果对单体整体扩容，那么资源浪费比较大。</li>
+<li>第二，各个模块的发布周期不同，有的模块需求频繁变动，发布周期较短。如果每次发布都是整个单体的发布，那么发布复杂度太大，容易出错。</li>
+</ul>
+<p>为了应对这两个弹性要求，业界提出了微服务的架构方式。而容器的出现，加速了微服务的普及程度。</p>
+<p>当系统微服务化比较彻底的时候，你可以想象一下容器的数量是很庞大的，如何运维？这个时候K8S就出来了。</p>
+<p>当然，如果没有K8S的出现，也会有K9S，哈哈。因为必须要有这么一个东西出来一统江湖，否则各大公有云厂商就有可能有不同的容器编排方案，那么通用性就不够好。</p>
+<p>那么怎么分呢？</p>
+<p>不管怎么分，我们的原则没有变：高内聚，低耦合。这也是检验我们分的好坏的一个标准。</p>
+<p><code>第一种分法就是纵向分，按照业务维度分，将不同的功能模块服务化，独立部署和运维。</code></p>
+<p>这个很好理解，我们现在MIS的团队基本上是按业务维度来的，比如SO，PO等。只是这个维度很多年不变，这个维度现在是否还是最佳维度，这个就不好评判了，大家可以自行思考。</p>
+<p><code>第二种分法是横向的，按照依赖关系。</code>这个怎么理解？举个例子，比如我们的网站，任何模块都需要显示用户昵称，那么这个用户昵称的模块就可以做成一个微服务。也就是所谓的公共模块。</p>
+<p>具体在实践中如何分，可能没有一个定论，总之一个最高原则就是：<code>高内聚，低耦合，分完后，看看我们的服务是不是达到了这个标准。</code></p>
+<p>在实施过程中可以两种分法综合使用。</p>
+<p>需要注意的是：当你的团队决定要对业务进行微服务架构改造时，要避免一上来就妄想将整个业务进行服务化拆分、追求完美。这种想法是很危险的，一切的技术改造都应当以给业务创造价值为宗旨，所以业务的稳定性要放在第一位，切忌好高骛远。正确的方法是首先从众多业务中找到一个小的业务进行试点，前期的技术方案以满足这个小的业务需求为准，力求先把这个小业务的微服务架构落地实施，从中发现各种问题并予以解决，然后才可以继续考虑更大规模的推广。</p>
+<p><code>另外，要分就要彻底分干净，不要藕断丝连。连数据库也一定要分出去。</code></p>
+<h3 id="治"><a href="#治" class="headerlink" title="治"></a>治</h3><p>先上一个地图：</p>
+<img src="/images/micro-service-1.png" class="" width="500">
+
+<p>微服务到底包含些什么东西。</p>
+<ul>
+<li>服务描述：如何对外介绍自己，告诉对方如何调用自己。比如我们常见的Swagger。也有用XML描述自己的，比如以前的web service或者WCF。</li>
+<li>注册中心：有了自我介绍，那么下一步就是告诉别人可以在哪找到自己。通常来说，服务在启动的时候可以主动告诉注册中心，自己上线了。当自己发生变更或者销毁时，也通知注册中心。那么消费者在启动的时候从注册中心订阅服务，就可以开始消费了。注册中心可以想象成一个电话黄页。</li>
+<li>服务框架：不是我们说的Framework哈，Framework是开发类库。框架是定义了如何通信，TCP还是HTTP，数据如何传输？JSON还是Protobuffer？</li>
+<li>服务监控：因为微服务数量多，调用量大，所以需要实时监控服务是否正常。那么一个监控系统包括几个部分：收集所有调用数据，处理数据，数据展示。处理数据主要是说按照一定的指标来汇总，比如按秒来计算访问量，平均响应时间等等。</li>
+<li>服务追踪：除了监控，还需要记录服务调用经过的每一层链路，以便出问题时快速定位故障位置。</li>
+<li>服务治理：治理是一个大头。总的来说，治理就是通过各种手段保证服务的正常运转。包括路由、负载、心跳、限流等等。</li>
+</ul>
+<p>好了，这个图就是微服务的所有组成部分，但是在实施的过程中是有差异的，<code>具体如何落地，需要看我们的部署方式，架构模式，包括：RPC方式，边车（网格）模式，网关模式。</code></p>
+<h2 id="部署模式"><a href="#部署模式" class="headerlink" title="部署模式"></a>部署模式</h2><p>不同的部署，会造成在治理上的方式有所不同。</p>
+<h3 id="边车模式"><a href="#边车模式" class="headerlink" title="边车模式"></a>边车模式</h3><img src="/images/micro-service-2.png" class="" width="500">
+
+<p>边车模式就是用来改进传统的RPC的，对于像 “ 监视、日志、限流、熔断、服务注册、协议转换……” 这些功能，其实都是大同小异，甚至是完全可以做成标准化的组件和模块的，所以把它们分离出去，就变成了边车。</p>
+<p>一般来说，我们有两种方式实现边车：</p>
+<ol>
+<li>一种是通过 SDK、Lib 或 Framework 软件包方式，在开发时与真实的应用服务集成起来。</li>
+<li>另一种是通过像 Sidecar 这样的方式，在运维时与真实的应用服务集成起来。</li>
+</ol>
+<p>这两种方式各有优缺点。</p>
+<ol>
+<li>以软件包的方式可以和应用密切集成，有利于资源的利用和应用的性能，但是对应用有侵入，而且受应用的编程语言和技术限制。同时，当软件包升级的时候，需要重新编译并重新发布应用。</li>
+<li>以 Sidecar 的方式，对应用服务没有侵入性，并且不用受到应用服务的语言和技术的限制，而且可以做到控制和逻辑的分开升级和部署。但是，这样一来，增加了每个应用服务的依赖性，也增加了应用的延迟，并且也会大大增加管理、托管、部署的复杂度。</li>
+</ol>
+<p>实现的重点：</p>
+<ul>
+<li>进程通信问题，是用进程间消息？还是远程调用拦截？</li>
+<li>部署问题，最好用docker。</li>
+<li>边车只负责控制，不能写业务逻辑。</li>
+</ul>
+<h3 id="服务网格"><a href="#服务网格" class="headerlink" title="服务网格"></a>服务网格</h3><img src="/images/micro-service-3.png" class="" width="500">
+
+<p>边车形成集群就变成了网格。</p>
+<img src="/images/micro-service-4.png" class="" width="500">
+
+<p>加上对整个集群的管理控制面板，就成了我们整个的 Service Mesh 架构。</p>
+<p>目前开源界最流行的解决方案就是Istio，我们看它的架构图：</p>
+<img src="/images/micro-service-5.png" class="" width="500">
+
+<p>其核心的 Sidecar 被叫做 Envoy（使者），用来协调服务网格中所有服务的出入站流量，并提供服务发现、负载均衡、限流熔断等能力，还可以收集大量与流量相关的性能指标。在 Service Mesh 控制面上，有一个叫 Mixer 的收集器，用来从 Envoy 收集相关的被监控到的流量特征和性能指标。然后，通过 Pilot 的控制器将相关的规则发送到 Envoy 中，让 Envoy 应用新的规则。最后，还有一个为安全设计的 lstio-Auth 身份认证组件，用来做服务间的访问安全控制。</p>
+<p>Service Mesh和Sidecar模式最大的区别就是，在网格中，sidercar是不需要和服务统一打包统一部署的，所以，Service Mesh可以是一个独立的基础设施，就像一个平台一样。甚至，我们可以想象一下，在Service Mesh中，由于Sidecar是独立的，那么其实可以一组服务共用一个Sidercar，而不需要一一对应，对不对？</p>
+<h3 id="网关模式"><a href="#网关模式" class="headerlink" title="网关模式"></a>网关模式</h3><img src="/images/micro-service-6.png" class="" width="500">
+
+<p>总的来说，Gateway 是一个服务器，也可以说是进入系统的唯一节点。这跟面向对象设计模式中的 Facade 模式很像。Gateway 封装内部系统的架构，并且提供 API 给各个客户端。它还可能有其他功能，如授权、监控、负载均衡、缓存、熔断、降级、限流、请求分片和管理、静态响应处理，等等，也就是我们说的服务治理。</p>
+<p>在谈 Service Mesh 的时候，个人觉得并不需要为每个服务的实例都配置上一个 Sidecar。因为复杂度很高，其实，一个服务集群配上一个 Sidecar 就可以了，或是一组类似的服务配置上一个 Sidecar。所以，Gateway的数量决定了系统的复杂程度，极端情况就是Gateway会退变为一个Service Mesh。</p>
+<p>当然，由于Gateway变成进入系统的唯一节点，就需要它具有几个特性：</p>
+<ul>
+<li>高性能：gateway不做业务逻辑处理，尽量和后端服务器在同一个内网中。</li>
+<li>高可用：使用devops，快速部署。</li>
+<li>高扩展：要么用DNS轮询，要么Gateway前面还有一个反向代理。</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>大家都清楚三种模式了吗？</p>
+<p>它们的本质都是：<code>逻辑和控制的分离。逻辑由服务来提供，访问控制和治理由代理来完成</code>。</p>
+<p>边车是在当前服务器上，将远程调用的控制以独立进程的方式进行分离。</p>
+<p>当边车太多，需要对边车进行统一管理的时候就变成了服务网格。</p>
+<p>当网格中需要管理的边车过多，我们可以让很多服务共用一个边车，如果系统中最后大家都使用同一个边车时，就会变成网关模式。</p>
+<h2 id="云原生"><a href="#云原生" class="headerlink" title="云原生"></a>云原生</h2><p>最后简单看一下云原生。CNCF云原生计算基金会如此定义云原生：</p>
+<blockquote><p>“云原生技术有利于各组织在公有云、私有云和混合云等新型动态环境中，构建和运行可弹性扩展的应用。云原生的代表技术包括容器、服务网格（Service Mesh）、微服务、不可变基础设施和声明式API。这些技术能够构建容错性好、易于管理和便于观察的松耦合系统。结合可靠的自动化手段，云原生技术使工程师能够轻松地对系统作出频繁和可预测的重大变更。”</p>
+</blockquote>
+
+<p>实际上，我认为，如果用一句话来说清楚云原生就是：<code>如何让微服务更好的落地</code>。</p>
+<p>还记得刚才我们说的<code>弹性</code>吗？所以，与其说云原生架构，不如说是<code>弹性架构</code>更为形象。</p>
+<p>从开发人员开始写代码开始，一直到测试、上线、运维等等，云原生提供了一个整体的思路和解决方案。</p>
+<p>当然，最核心的基础，就是<code>容器，它是一切的基石</code>。</p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2023/02/15/deep-micro-service/">https://jamesyyang.github.io/2023/02/15/deep-micro-service/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+      
+      <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2023/02/16/thinking-why-goals/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">为什么制定目标</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2022/12/12/deep-essence-of-software/">  
+        <span class="next-text nav-default">软件研发中的本质</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -204,84 +380,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

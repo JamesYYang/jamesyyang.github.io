@@ -133,68 +133,113 @@
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-      <div class="logo-wrapper">  
-  <a href="/." class="logo">老杨说</a>  
-</div>  
-  
-<nav class="site-navbar">  
     
-    <ul id="menu" class="menu">  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/">  
-              
-              
-              首页  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/archives/">  
-              
-              
-              归档  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/categories/">  
-              
-              
-              分类  
-              
-          </a>  
-        </li>  
-        
-        <li class="menu-item">  
-          <a class="menu-item-link" href="/about/">  
-              
-              
-              关于  
-              
-          </a>  
-        </li>  
-        
-    </ul>  
-    
-</nav>  
-
-    </header>
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      认知的场景
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2020-05-20
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AE%A4%E7%9F%A5%E6%9D%82%E8%AF%B4/">认知杂说</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
 
+  <div class="post-content">
+    
+    <p>那么，一个人在接受到信息的时候，会怎么去思考呢？下面介绍一个框架：Cynefin Framework.</p>
+<span id="more"></span>
+<p>Cynefin Framework是用于描述问题、情景和系统的模型。该模型提供了一个情景分类指南，你接收到的信息，大脑首先就会先给它分个类，不同的类型用不同的解决方法。</p>
+<p>下图是一个详细的分类和描述。</p>
+<p>用通俗的话解释一下：</p>
+<ol>
+<li>明显的问题：都是我遇到过的问题，我知道怎么解决。</li>
+<li>繁杂的问题：通过分析我知道如何解决，如何获取到解决问题的资源。</li>
+<li>复杂的问题：从没遇到过的问题，摸着石头过河，一步一步尝试解决。</li>
+<li>混沌的问题：从没遇到过的问题，即使解决了，也不知道如何解决的。</li>
+</ol>
+<p>顺便多说一点，为什么伟大的公司多数涌现在20世纪呢？因为这些公司大部分遇到的都是第一类问题，少量第二类问题，这些公司有能力快速的将解决方案流程化，制度化。</p>
+<p>另外，树形结构或者说金字塔型组织结构的公司，天然适合流程化制度化的管理，因为这样最高效。</p>
+<p>但是，进入21世纪，第三类和第四类问题增多，所以，能够长期存活下去，对公司来说挑战就很大，一定需要组织结构的调整，让自己具备创新能力和探索能力。</p>
+<p>特别是互联网行业，市场瞬息万变。那些依然死守金字塔型组织的公司，一定会越来越少，并且逐步被淘汰。</p>
+<p>实际上，正在进行组织结构中台化的公司，就是想探索一条新的道路。</p>
+<img src="/images/cynefin-framework.png" class="" width="800">
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2020/05/20/cognition-scenario/">https://jamesyyang.github.io/2020/05/20/cognition-scenario/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/Cynefin/">Cynefin</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2020/05/21/cognition-reuse/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">认知中的复用</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2020/05/19/cognition-what-is/">  
+        <span class="next-text nav-default">什么是认知</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  
@@ -204,84 +249,7 @@
 
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <!-- Social Links -->
-
-<div class="social-links">
-  
-  
-  
-  
-  <a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-  
-</div>
-
-
-
-<div class="copyright">
-  
-
-  <span class="copyright-year">
-    <span>
-      
-      &copy;
-      
-      2017 - 2024      
-    </span>
-
     
-
-    <span class="author">by James Yang</span>
-  </span>
-
-</div>
-    </footer>
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     

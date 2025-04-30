@@ -82,7 +82,7 @@
   
   <title>Unix编程哲学 - 老杨说</title>
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 <body>
   <div class="scrollPercentage"></div>
@@ -184,116 +184,35 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <!DOCTYPE html>
-<html lang="zh-CN">
-  <head><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      Unix编程哲学
+      
+    </h1>
 
+    <div class="post-meta">
+      <span class="post-time">
+        2023-07-18
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+  
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-<meta name="description" content="Unix编程哲学"/><link rel="alternate" href="/atom.xml" title="老杨说" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
-<link rel="canonical" href="https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/"/>
-
-<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" /><script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-  </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
-
-<script id="baidu_analytics">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?75499164864a64af46a799af7f74dd36";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script><script>
-  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":true};
-</script>
-
-    <title>Unix编程哲学 - 老杨说</title>
-  </head>
-
-  <body><div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/." class="logo">老杨说</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><a href="/">
-        <li class="mobile-menu-item">首页
-          </li>
-      </a><a href="/archives/">
-        <li class="mobile-menu-item">归档
-          </li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">分类
-          </li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于
-          </li>
-      </a></ul>
-</nav>
-<div class="container" id="mobile-panel">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">老杨说</a>
-</div>
-
-<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
-          <a class="menu-item-link" href="/">
-            首页
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
-            归档
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/categories/">
-            分类
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/about/">
-            关于
-            </a>
-        </li>
-      </ul></nav>
-</header>
-
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content"><article class="post">
-    <header class="post-header">
-      <h1 class="post-title">Unix编程哲学
-        </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2023-07-18
-        </span><span class="post-category">
-            <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-            </span>
-        </div>
-    </header>
-
-    <div class="post-content"><p>记录一下Unix哲学的几条准则，看似简单，但是往往我们容易忽视他的重要性。</p>
+  <div class="post-content">
+    
+    <p>记录一下Unix哲学的几条准则，看似简单，但是往往我们容易忽视他的重要性。</p>
 <span id="more"></span>
 
 <p>(1) <code>小即是美</code>。相对于同类庞然大物，小巧的事物有着无可比拟的巨大优势。其中一点就是它们能够以独特有效的方式结合其他小事物,而且这种方式往往是最初的设计者没能预见到的。</p>
@@ -306,55 +225,58 @@
 <p>(8) <code>避免强制性的用户界面</code>。Unix开发人员非常了解，有一些命令用户界面为什么会被称为是“强制性的”(captive)用户界面。这些命令在运行的时候会阻止用户去运行其他命令，这样用户就会成为这些系统的囚徒。在图形用户界面中,这样的界面被称为“模态”(modal)。</p>
 <p>(9) <code>让每一个程序都成为过滤器</code>。所有软件程序共有的最基本特性就是，它们只修改而从不创造数据。因此，基于软件的过滤器本质，人们就应该把它们编写成执行过滤器任务的程序。</p>
 
-      </div>
-      <div class="post-copyright">
-    <p class="copyright-item">
-      <span>原文作者: </span>
-      <a href="https://jamesyyang.github.io">James Yang</a>
-    </p>
-    <p class="copyright-item">
-      <span>原文链接: </span>
-      <a href="https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/">https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/</a>
-    </p>
-    <p class="copyright-item">
-      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-    </p>
+    
   </div>
-      <footer class="post-footer">
-        
-        <nav class="post-nav"><a class="prev" href="/2023/07/31/AI-what-is/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">对于AI的认识--Caoz</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
-    <a class="next" href="/2023/06/26/azure-app-connect-mysql/">
-        <span class="next-text nav-default">Azure中的App如何访问数据库</span>
-        <span class="prev-text nav-mobile">下一篇</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-    </nav></footer>
-    </article></div><div class="comments" id="comments"></div></div>
-      </main>
 
-      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:james.yang516@outlook.com" class="iconfont icon-email" title="email"></a>
-        <a target="_blank" rel="noopener" href="https://github.com/JamesYYang" class="iconfont icon-github" title="github"></a>
-        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-    </div><div class="copyright">
-  <span class="copyright-year">&copy;2017 - 2025<span class="author"> by James Yang</span>
-  </span>
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/">https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
 </div>
-</footer>
 
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
-      </div>
-    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
-</body>
-</html>
+    
 
+  
+
+  
+  <footer class="post-footer">
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2023/07/31/AI-what-is/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">对于AI的认识--Caoz</span>  
+        <span class="prev-text nav-mobile">上一篇</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2023/06/26/azure-app-connect-mysql/">  
+        <span class="next-text nav-default">Azure中的App如何访问数据库</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  

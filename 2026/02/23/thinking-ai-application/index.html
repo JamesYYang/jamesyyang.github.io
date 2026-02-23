@@ -18,7 +18,7 @@
 
 <!-- Website description -->
 
-<meta name="description" content="思考和写作" />
+<meta name="description" content="AI应用如何落地" />
 
 
 <!-- Website keywords -->
@@ -37,7 +37,7 @@
 
 
 <!-- Canonical, good for google search engine -->
-<link rel="canonical" href="https://jamesyyang.github.io/archives/2020/05/" />
+<link rel="canonical" href="https://jamesyyang.github.io/2026/02/23/thinking-ai-application/" />
 
 <!-- Fancybox styling -->
 
@@ -80,7 +80,7 @@
   window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"latex":true};
 </script>
   
-  <title>归档 - 2020/5 · 老杨说</title>
+  <title>AI应用如何落地 - 老杨说</title>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -184,111 +184,105 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      AI应用如何落地
+      
+    </h1>
 
-<section id="archive" class="archive">
+    <div class="post-meta">
+      <span class="post-time">
+        2026-02-23
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
   
-  
-  <div class="archive-title">
-    <span class="archive-post-counter">
-      目前共计 113 篇日志
-    </span>
+
+  <div class="post-content">
+    
+    <p>春节假期看了一本书《AI工程》，记录一下。</p>
+<span id="more"></span>
+
+<img src="/images/ai-engineering.jpg" class="" width="500">
+
+<p>整本书其实介绍了如何落地AI应用，没有代码，就讲一些实践和方法，包含落地AI应用的各个方面，挺不错的。</p>
+<p>毕竟大部分公司都不会去搞基础模型，极少数公司会去对模型进行微调，大部分公司还是会选择基于基础模型搞应用，提升自己的业务的效率。</p>
+<p>顺便摘录一张图，包含了落地AI应用的各个模块：</p>
+<img src="/images/ai-application.png" class="" width="800">
+
+<p>稍微解释一下：</p>
+<ul>
+<li>不管是RAG还是Agent，其实都是在为大模型准备<code>上下文</code>，让大模型能够更好地理解和处理问题。</li>
+<li>在大模型处理前的路由还是很有必要的，可以做一些<code>意图识别</code>，如果根本不是自己业务范围内的问题，可以直接拒绝。这个路由可以由内部小模型来承担。</li>
+<li>输入输出的防护也是很有必要的，可以防止公司的<code>敏感信息泄露</code>，同时也不要让缓存里有敏感信息。</li>
+<li>缓存可以分两种，精确缓存和语义缓存。</li>
+<li>最终输出的结果可以由Agent完成一些写入动作，不过一定要控制好<code>权限和范围</code>。</li>
+</ul>
+
+    
   </div>
+
   
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2026/02/23/thinking-ai-application/">https://jamesyyang.github.io/2026/02/23/thinking-ai-application/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
   
 
   
-  
-  
-  
-  
-  
-  <div class="collection-title">
-    <h2 class="archive-year">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </h2>
-  </div>
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
+  <footer class="post-footer">
+    
       
-      05-22
+  <nav class="post-nav">  
       
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/22/cognition-concepts/" class="archive-post-link">
-        概念和套路
-      </a>
-    </span>
-  </div>
-  
-  
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
       
-      05-21
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/21/cognition-reuse/" class="archive-post-link">
-        认知中的复用
-      </a>
-    </span>
-  </div>
-  
-  
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      05-20
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/20/cognition-scenario/" class="archive-post-link">
-        认知的场景
-      </a>
-    </span>
-  </div>
-  
-  
-  
-  
-  
-
-  <div class="archive-post">
-    <span class="archive-post-time">
-      
-      05-19
-      
-    </span>
-    <span class="archive-post-title">
-      <a href="/2020/05/19/cognition-what-is/" class="archive-post-link">
-        什么是认知
-      </a>
-    </span>
-  </div>
-  
-</section>
-
-  
-  <nav class="pagination">  
-      
+      <a class="next" href="/2026/02/22/fs-2026-chinese-new-year/">  
+        <span class="next-text nav-default">散打——2026春节小记</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
       
   </nav>  
   
 
+  </footer>
+  
+
+</article>
         </div>
           
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
 
       </div>
     </main>
@@ -373,6 +367,13 @@
     <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
   </div>
     
+    
+    
+    
+    
+    
+    
+  
 
   
 

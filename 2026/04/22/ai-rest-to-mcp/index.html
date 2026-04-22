@@ -184,15 +184,135 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          {%- extends "_layout.swig" -%}
-{%- import '_macro/post.swig' as post_template -%}
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      听说要把所有REST API封成MCP
+      
+    </h1>
 
-{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
+    <div class="post-meta">
+      <span class="post-time">
+        2026-04-22
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/AI/">AI</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
 
-{%- block content -%}
-  {{ post_template.render(page) }}
-{%- endblock -%}
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%A4%AA%E5%A4%9A%EF%BC%8C%E5%8F%8D%E8%80%8C%E6%98%AF%E8%B4%9F%E6%8B%85"><span class="toc-number">1.</span> <span class="toc-text">工具太多，反而是负担</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REST-API%E7%9A%84%E8%AE%BE%E8%AE%A1%E9%80%BB%E8%BE%91%EF%BC%8C%E5%92%8CAI%E8%B0%83%E7%94%A8%E7%9A%84%E9%9C%80%E6%B1%82%E9%80%BB%E8%BE%91%EF%BC%8C%E5%A4%A9%E7%84%B6%E6%98%AF%E9%94%99%E4%BD%8D%E7%9A%84"><span class="toc-number">2.</span> <span class="toc-text">REST API的设计逻辑，和AI调用的需求逻辑，天然是错位的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E6%84%8F%E5%9B%BE%E5%AF%B9%E9%BD%90%EF%BC%8C%E5%B7%A5%E5%85%B7%E8%A6%86%E7%9B%96%E8%B6%8A%E5%85%A8%EF%BC%8C%E5%89%AF%E4%BD%9C%E7%94%A8%E8%B6%8A%E5%A4%A7"><span class="toc-number">3.</span> <span class="toc-text">没有意图对齐，工具覆盖越全，副作用越大</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E7%93%B6%E8%A3%85%E6%97%A7%E9%85%92%E7%9A%84%E7%86%9F%E6%82%89%E5%91%B3%E9%81%93"><span class="toc-number">4.</span> <span class="toc-text">新瓶装旧酒的熟悉味道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%A3%E5%88%B0%E5%BA%95%E8%AF%A5%E6%80%8E%E4%B9%88%E5%81%9A"><span class="toc-number">5.</span> <span class="toc-text">那到底该怎么做</span></a></li></ol>
+    </div>
+  </div>
+  
 
+  <div class="post-content">
+    
+    <p>公司最近在搞一个大动作：把内部所有的REST API，全部封装成MCP工具。</p>
+<p>目标是让AI助手能直接调用。全量，不筛选，统统上。</p>
+<p>我听完，第一反应是：这个方向不错，但这个做法，可能又是一场AI时代的大跃进。</p>
+<p>为什么？</p>
+<span id="more"></span>
+
+<p>MCP是什么？MCP是一个协议，是AI模型和外部工具之间的沟通规范。它本质上在解决的问题是：让AI知道有哪些工具可以用，工具长什么样，怎么调用。</p>
+<p>但光知道工具在哪，不等于会用工具。</p>
+<p>这就像你给一个新来的员工，把公司所有的系统权限都开了，所有的文档都共享了，所有的接口都告诉他了。然后你说：好，你去干活吧。</p>
+<p>他能干什么？大概率是懵的。</p>
+<p>因为工具多不等于任务清晰，权限全不等于判断力有了。</p>
+<p>说到底，API转MCP这件事，真正的问题不在于”能不能封”，而在于”为什么封、封了之后让AI做什么”。</p>
+<p>大多数公司现在的做法是什么？把能封的都封上，先做到全量覆盖，觉得覆盖到了，AI就能用上了，用上了就能提效了。</p>
+<p>这个逻辑链，每一步都有问题。</p>
+<h2 id="工具太多，反而是负担"><a href="#工具太多，反而是负担" class="headerlink" title="工具太多，反而是负担"></a>工具太多，反而是负担</h2><p>一个典型的互联网公司，REST API少则几百，多则几千。这些API设计的初衷，是为了让不同系统之间能够稳定通信，它们遵循的是机器间的交互逻辑——路径参数、请求体结构、分页机制、错误码约定。</p>
+<p>但AI Agent在调用工具的时候，遵循的是另一套逻辑：它要基于当前的任务意图，判断应该用哪个工具、传什么参数、怎么处理返回结果、下一步怎么走。</p>
+<p>这是两套完全不同的语言。</p>
+<p>把几百个REST API直接封成MCP，扔给Agent，它面对的不是”一个清晰的工具箱”，而是”一个堆满了零件的仓库”。</p>
+<p>工具多了，Agent的选择路径就变长，推理成本就上升，出错概率就增加。</p>
+<p><code>工具的数量，和AI的能力，并不是正比关系。</code></p>
+<h2 id="REST-API的设计逻辑，和AI调用的需求逻辑，天然是错位的"><a href="#REST-API的设计逻辑，和AI调用的需求逻辑，天然是错位的" class="headerlink" title="REST API的设计逻辑，和AI调用的需求逻辑，天然是错位的"></a>REST API的设计逻辑，和AI调用的需求逻辑，天然是错位的</h2><p>REST API通常是细粒度的。你有一个”查询用户信息”的接口，一个”查询订单列表”的接口，一个”查询库存状态”的接口。它们各自很完整，但它们之间没有业务意图的连接。</p>
+<p>但Agent要完成的任务，往往是”帮我看一下这个用户最近三个月的订单，如果有退货记录，顺便看看客服记录”。</p>
+<p>这是一个有意图、有边界、有优先级的复合任务。它需要的不是三个独立的接口，而是一个能理解这个意图、懂得怎么把三个接口串起来的工具设计。</p>
+<p>把REST API封成MCP，只是给了AI一堆原材料，没有给它食谱。</p>
+<h2 id="没有意图对齐，工具覆盖越全，副作用越大"><a href="#没有意图对齐，工具覆盖越全，副作用越大" class="headerlink" title="没有意图对齐，工具覆盖越全，副作用越大"></a>没有意图对齐，工具覆盖越全，副作用越大</h2><p>这是最容易被忽视的一点。</p>
+<p>当Agent在一个拥有几百个MCP工具的环境里工作，它每次做决策，都要在这几百个工具里推断”哪个最合适”。</p>
+<p>稍微复杂一点的任务，这个推断链条会非常长。很容易出现的结果是：它调用了一个看起来对的接口，但参数不对；或者接口返回了一堆它处理不了的格式；或者它陷入了一个循环调用的死胡同。</p>
+<p>我见过一些团队，把MCP工具接入之后，发现Agent比以前更不可控了，而不是更强了。</p>
+<p>原因就在这里：你给它的是信息量，不是判断力。</p>
+<p>你可能会说，那是因为模型还不够强，等模型更强，这些问题不都解决了？</p>
+<p>也许。但在那一天到来之前，我们还是得在现实里做决策。</p>
+<p>况且，哪怕模型更强了，<code>设计清晰的工具，永远比设计混乱的工具好用</code>。这不是模型的问题，这是工程的问题。</p>
+<h2 id="新瓶装旧酒的熟悉味道"><a href="#新瓶装旧酒的熟悉味道" class="headerlink" title="新瓶装旧酒的熟悉味道"></a>新瓶装旧酒的熟悉味道</h2><p>我之前聊过一个问题：企业内部用AI提效，最大的误区不是员工不会用AI，而是把工具升级当成了流程再造。</p>
+<p>把REST API全封成MCP，本质上是同一类问题。</p>
+<p>它解决的是”AI能不能访问这些能力”，它没有回答”AI应该在什么任务下，以什么方式，访问哪些能力”。</p>
+<p>前者是接入问题，后者才是设计问题。</p>
+<p>接入问题解决之后，设计问题不会自动消失，它只会变得更加显眼。</p>
+<p>AI时代最危险的一个思维陷阱，就是把”形式上的AI化”当成了”能力上的提升”。FOMO之下，大家很容易把”我们做了”和”我们做对了”混为一谈。</p>
+<h2 id="那到底该怎么做"><a href="#那到底该怎么做" class="headerlink" title="那到底该怎么做"></a>那到底该怎么做</h2><p><code>不是先问&quot;哪些API可以封成MCP&quot;，而是先问&quot;我想让AI Agent完成哪些真实任务&quot;。</code></p>
+<p>从任务出发，倒推需要哪些工具。从工具出发，再想怎么设计这些MCP接口——包括命名要不要语义化，描述要不要对齐任务意图，参数要不要合并简化，返回格式要不要针对AI消费做优化。</p>
+<p>这是两条完全不同的路。</p>
+<p>从API出发，你得到的是一个庞大的工具列表，Agent不一定用得动。</p>
+<p>从任务出发，你得到的是一个精炼的工具集，每一个工具都是为了让Agent完成某类具体任务而存在的。</p>
+<p>数量不是关键，意图对齐才是。</p>
+<p>所以，把所有REST API封成MCP这件事，方向对，但战术大概率会让团队忙半天，效果平平。</p>
+<p>真正值得做的，是先把AI Agent要承担的核心场景想清楚，再针对这些场景，认认真真设计十个、二十个高质量的MCP工具。</p>
+<p>少即是多。在AI工具设计这件事上，这句话尤其成立。</p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>原文作者: </span>
+    <a href="https://jamesyyang.github.io">James Yang</a>
+  </p>
+  <p class="copyright-item">
+    <span>原文链接: </span>
+    <a href="https://jamesyyang.github.io/2026/04/22/ai-rest-to-mcp/">https://jamesyyang.github.io/2026/04/22/ai-rest-to-mcp/</a>
+  </p>
+  <p class="copyright-item">
+    <span>许可协议: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+      
+  <nav class="post-nav">  
+      
+      
+      <a class="next" href="/2026/04/19/growth-SellingPilot/">  
+        <span class="next-text nav-default">SellingPilot 营销策略</span>  
+        <span class="prev-text nav-mobile">下一篇</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
         </div>
           
   <div class="comments" id="comments">  

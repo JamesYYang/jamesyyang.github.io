@@ -186,105 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      关于阴阳
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2018-11-24
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E8%80%81%E6%9D%A8%E8%AF%B4%E5%85%BB%E7%94%9F/">老杨说养生</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>今天想和大家很粗浅的聊聊：阴阳。</p>
-<span id="more"></span>
-
-<p>阴阳是古人对这个世界的一个高度抽象的认识，而人也是这个世界的一部分，所以，把阴阳弄清楚了，也是非常有助于我们了解人体的。</p>
-<p>世间的万事万物有很多，每个事物都有自己的特性，如何来认识这些事物，古代人发明了一种很简单的办法，就是分阴阳。正如我们看电影，可以将电影里的人分为两种，即好人和坏人！根据人的性别可以分为男人和女人！根据人的身高，可以分为高和矮！根据天气，可以分为晴天和阴天！我们对气温的感觉，可以分为热和冷！这些都是按照阴阳来划分的，男人、高个子、晴天、热属于阳；女人、矮个子、阴天、冷属于阴！</p>
-<p>这个时候你应该要问了：那么矮个子男人又属于什么？高个子女人又属于啥？男人属阳，男人中再按照高矮来份，矮个子就属于阴，综合来讲矮个子男人就属于阳中之阴了！</p>
-<p><code>阴阳本身是对立的，但没有阴就无法谈阳，没有阳也无法谈阴，正因为阴阳的存在，才使世界有了变化，有了相互制约，在制约中发展、成熟</code>。没有夏天的炎热，就没有植物的生长旺盛，没有冬天的寒冷，植物第二年春天就不能健康成长。</p>
-<p><code>但是在特定的情况下阴阳是可以转化的，阴可以转阳，阳也可以转阴</code>。冬天到夏天是阴转阳，夏天到冬天是阳转阴。阴阳在相互转化的同时，也是可以相互制约的，我们往往利用阴阳的相互制约来达到调整机体平衡的目的，这也是养生治病的基础。如果是阳病就得用阴药，而阴病就得用阳药。</p>
-<p>回顾下我们的蒸笼，蒸笼底的水在火的加热下，由液体变为气体就是一个由阴转阳的过程；在到达蒸笼顶部，遇到蒸笼盖由气体变为液体又是一个阳转阴的过程。没有了水，蒸笼就会破裂，干枯；没有了火，蒸笼就会冷却，失去生机。</p>
-<p>所以，我们的人体时时刻刻都在上演着阴阳制约，阴阳转化的过程。</p>
-<p>只要搞清楚了你身体内阴阳是否失衡？阴多还是阳多？那么养生治病就有了方向，基本上不会出大的差错了。</p>
-<p>今天就到这，大家可以好好理解一下阴阳哈，下次继续。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2018/11/24/health-about-yinyang/">https://jamesyyang.github.io/2018/11/24/health-about-yinyang/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E5%85%BB%E7%94%9F/">养生</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2018/11/25/health-about-emotion/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">关于情绪</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2018/11/23/health-about-prevention/">  
-        <span class="next-text nav-default">关于疾病预防</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

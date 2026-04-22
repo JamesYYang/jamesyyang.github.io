@@ -186,103 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      关于疾病预防
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2018-11-23
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E8%80%81%E6%9D%A8%E8%AF%B4%E5%85%BB%E7%94%9F/">老杨说养生</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>最近季节交替，生病的人真不少。今天想和大家聊聊如何预防疾病。</p>
-<span id="more"></span>
-
-<p>疾病从成因来看，分两种：<code>外感和内伤</code>。</p>
-<p>外感很好理解，由于外部环境的变化，人体感受到了这个变化，由于自身抵抗力不足，病了。比如感冒。</p>
-<p>内伤是什么意思呢？人体由于情绪不当，饮食失衡造成的疾病。一般慢性病基本都是内伤引起，比如胃病之类。</p>
-<p>所以我们预防疾病就要从外感和内伤两个方面下手。</p>
-<p>先说外感。外感大部分是天气变化造成，所以我们只要起居作息符合自然变化之规律，基本上会很少感冒。比如每天出门的时候看看天气预报，选择合适的衣服，如果有雨，记得带把伞，那么患感冒的几率是非常低的。另外，需要了解二十四节气。古人用<code>五日为候，三候为气，六气为时，四时为岁</code>来描述一年的气候变化。所以每五日天气都会有一些细微的变化，15天（节气）就是一个大的变化。那么对于相应的变化我们可以在饮食和作息上做对应的调整，这样外感几乎就可以避免了。对于二十四节气的养身方法，详细可以看我很早发过的几篇文章：二十四节气与中医养生（一）、（二）、（三）。如果不幸感冒了怎么办？用好中成药也会有非常好的疗效，比西药效果好太多了，具体可以看我后面讲中成药的文章。</p>
-<p>好了，现在再说内伤。内伤一般的原因就两个：坏情绪和不良的饮食习惯。这两点已经在我的分享和文章中屡次提到了，怎么预防大家应该很清楚了。我只是想说，任何的慢性病都不是一天两天形成的，都是长期对身体的损伤造成的，包括肿瘤和癌症。另外，人体的自愈能力是很强的，只要你把不良的习惯纠正以后，逐步都是会康复的。所以，不管你得了什么病，都不要惊慌，首先应该想想自己有哪些坏习惯，然后立刻纠正他们。对于我们年轻人来说，时刻损伤我们的，基本上就是饮食，无辣不欢，无肉不吃，暴饮暴食都是对我们消化系统的沉重负担。并且吃了以后又很少运动，所以各种三高（高血压、高血脂、高血糖）疾病的发病率都有年轻化的趋势。在这里强烈给大家推荐一个日常保健的食物：山楂。 山楂可以促进脂肪类食物消化，也就是说可以帮我们把蒸笼里堵起来的地方疏通一下。药店里面都有药用的山楂卖，很便宜。日常保健可以用它来泡水喝，但是不要过量。另外，如果某一天你觉得吃多了，不舒服，那么推荐同仁堂的中成药：大山楂丸，这个药很安全，老少皆宜。我们家长期都有，小朋友如果吃多了，也会让她吃一颗，所以我们家小朋友很少有积食的问题。</p>
-<p>好了，今天到这里，下次继续。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2018/11/23/health-about-prevention/">https://jamesyyang.github.io/2018/11/23/health-about-prevention/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E5%85%BB%E7%94%9F/">养生</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2018/11/24/health-about-yinyang/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">关于阴阳</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2018/11/22/health-about-qi/">  
-        <span class="next-text nav-default">关于气血</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

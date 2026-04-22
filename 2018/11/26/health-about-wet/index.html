@@ -186,119 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      关于湿气
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2018-11-26
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E8%80%81%E6%9D%A8%E8%AF%B4%E5%85%BB%E7%94%9F/">老杨说养生</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>今天继续和大家聊聊蒸笼堵的问题，昨天说了由于情绪造成的堵，今天说说另外一种情况：由于饮食造成的堵。</p>
-<span id="more"></span>
-
-<p>这个情况其实我在分享的时候提到过，由于整天肥甘厚味地吃，营养过盛，导致代谢产物潴留而形成的湿气，把蒸笼堵起来了。中医就说你这个人呀，湿气太重。</p>
-<p>如何判断你有湿气？最简单的办法，看看舌苔：</p>
-<img src="/images/tongue.png" class="" width="300">
-
-<p>这舌苔有两个特征：</p>
-<ul>
-<li>舌体胖大</li>
-<li>舌苔厚腻且发黄</li>
-</ul>
-<p>如果你和这个类似，那么多半也有湿气了。另外，湿气重的人还有这么一些症状：</p>
-<ul>
-<li>体形面色：体形肥胖，尤其是腹部肥满而松软，四肢容易出现浮肿，面部皮肤油脂较多，面色淡黄而暗，眼泡微浮，容易困倦，睡觉时鼾声如雷。</li>
-<li>口中与肢体的感觉：口中粘腻，口唇色淡，很少感觉口渴，不想喝水。容易出汗，汗粘腻，汗出后皮肤多凉，头身重困，经常感觉头昏昏沉沉，关节疼痛重着、肌肤麻木，易出现耳鸣。</li>
-<li>感觉及睡眠：身体酸乏无力，慵懒，容易困倦。胸闷，痰多，容易出现肠胃不适，喜欢吃肥甘厚味。</li>
-<li>大小便：大便次数多，不成形，容易粘马桶，小便浑浊。</li>
-<li>在西医体检中，痰湿体质者的胆固醇、甘油三酯、低密度脂蛋白、血糖显著高于非痰湿体质者。</li>
-</ul>
-<p>好了，你是不是已经中招了？那怎么办呢？</p>
-<p>首先，第一点，不要进补，滋补的东西也属于肥甘厚腻，所以，越补越堵。</p>
-<p>调理的办法就很简单了，<code>清淡饮食，加强运动</code>。坚持素食的话，几个月就可以调理回来。</p>
-<p>另外就是我之前提到过的，在办公室可以买点山楂来泡水喝。</p>
-<p>运动的话，可以看我之前关于运动的文章。</p>
-<p>好了，今天就到这，下次继续。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2018/11/26/health-about-wet/">https://jamesyyang.github.io/2018/11/26/health-about-wet/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E5%85%BB%E7%94%9F/">养生</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2018/11/27/health-about-tongue/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">关于舌苔</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2018/11/25/health-about-emotion/">  
-        <span class="next-text nav-default">关于情绪</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

@@ -186,135 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      在AI时代，公司的组织架构应该如何适配
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2026-04-18
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/AI/">AI</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%9F%E6%AD%A3%E7%9A%84%E9%97%AE%E9%A2%98%E6%98%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">真正的问题是结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E5%AD%97%E5%A1%94%E7%9A%84%E6%AD%BB%E7%A9%B4"><span class="toc-number">2.</span> <span class="toc-text">金字塔的死穴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E7%9C%8B%E7%9C%8B%E7%89%B9%E7%A7%8D%E9%83%A8%E9%98%9F%E6%80%8E%E4%B9%88%E6%89%93%E4%BB%97"><span class="toc-number">3.</span> <span class="toc-text">去看看特种部队怎么打仗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E8%80%8C%E5%BC%BA%EF%BC%8C%E6%89%8D%E6%98%AFAI%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BB%84%E7%BB%87%E5%8D%95%E5%85%83"><span class="toc-number">4.</span> <span class="toc-text">小而强，才是AI时代的组织单元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%A3%E7%9C%9F%E6%AD%A3%E8%AF%A5%E6%8A%93%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">那真正该抓什么？</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>上次我们讲了如何用AI提升企业效率，今天我们来聊聊另一个重要的话题：AI时代的组织架构。</p>
-<span id="more"></span>
-
-<h2 id="真正的问题是结构"><a href="#真正的问题是结构" class="headerlink" title="真正的问题是结构"></a>真正的问题是结构</h2><p>我们大多数公司的组织方式，本质上是工业时代的产物。</p>
-<p>金字塔结构，层层审批，条线分明。这套东西在生产汽车、管理工厂的时代是合理的——那时候，信息是稀缺的，决策权需要集中在少数”掌握全局”的人手里，执行层只需要按指令动作。</p>
-<p>但是今天呢？</p>
-<p>AI把个体的执行能力放大了至少一个数量级。一个懂得用AI的工程师，可以同时完成以前三个人才能完成的代码工作。一个会用AI的产品经理，从竞品分析到文档输出，速度是以前的五倍不止。</p>
-<p>个体变强了，组织的逻辑就应该变。</p>
-<p>可现实是，大多数公司还在用旧地图走新路。</p>
-<h2 id="金字塔的死穴"><a href="#金字塔的死穴" class="headerlink" title="金字塔的死穴"></a>金字塔的死穴</h2><p>传统金字塔结构有三个致命问题，在AI时代会被无限放大。</p>
-<p><strong>第一，决策链条太长。</strong></p>
-<p>一个需求，从一线员工提出，到中层汇总，再到高层拍板，可能要经历五个节点。等方案批下来，市场窗口早就过了。AI时代，竞争速度以天计，这套流程是慢性自杀。</p>
-<p><strong>第二，协作成本过高。</strong></p>
-<p>大团队做事，最大的成本不是人工，而是沟通损耗。十个人开会讨论，真正产出决策的往往是两三个人，剩下的是在表态、在观望、在等会散。人越多，这个问题越严重。</p>
-<p><strong>第三，责任边界模糊。</strong></p>
-<p>大组织里，成功是集体的，失败是客观的。没有人真正对结果负责，因为每一层都有理由说”我已经尽力了”。这种结构不是在激励创造，是在保护平庸。</p>
-<h2 id="去看看特种部队怎么打仗"><a href="#去看看特种部队怎么打仗" class="headerlink" title="去看看特种部队怎么打仗"></a>去看看特种部队怎么打仗</h2><p>我常说，想理解一个组织该怎么运转，就去看看真正高效的团队是什么样子的。</p>
-<p>美国特种部队是个很好的参照。海豹突击队、三角洲部队，他们执行任务时，一个小队通常只有六到十二个人。没有冗余指挥层，每个人都是多面手，进得了前线，撤得了后方。</p>
-<p>任务开始前，有完整的情报和方案。任务开始后，队长可以实时决策，不需要向上级请示每一步。</p>
-<p>这就是关键：<strong>他们是任务导向的，而不是部门导向的。</strong></p>
-<p>任务结束，小队解散，各自归建，下次重新组队，配合新任务。</p>
-<p>反观我们很多公司：一个项目立项，拉来十几个部门参与，每个部门派两个人，结果组了一个二十人的”虚拟团队”。看起来阵容豪华，实际上没有一个人全力以赴，因为每个人的KPI还在自己的部门。</p>
-<p>这不是在打仗，这是在走秀。</p>
-<h2 id="小而强，才是AI时代的组织单元"><a href="#小而强，才是AI时代的组织单元" class="headerlink" title="小而强，才是AI时代的组织单元"></a>小而强，才是AI时代的组织单元</h2><p>说到底，AI时代的组织竞争，比的不是规模，是密度。</p>
-<p><strong>用少量顶尖的人，配上AI工具，做以前需要大团队才能完成的事。</strong></p>
-<p>这意味着什么？</p>
-<p>意味着一个三到五人的小团队，可以完成完整的产品从0到1：产品、技术、设计、运营，每个人都借助AI撑起一块，互相补位，快速迭代。</p>
-<p>意味着项目导向而非部门导向——为一个目标拉一支队伍，目标达成，团队解散，人才流向下一个任务，而不是守着一个部门的编制原地等待。</p>
-<p>意味着决策权必须下沉——给一线的人真正的授权，让他们能看到全局、做出判断，而不是只执行上级切割好的那一块任务。</p>
-<h2 id="那真正该抓什么？"><a href="#那真正该抓什么？" class="headerlink" title="那真正该抓什么？"></a>那真正该抓什么？</h2><p>组织变革从来不是发一个架构图的事。</p>
-<p>真正的变革，是从考核机制开始的。</p>
-<p>你考核的是”把流程走完”，还是”把结果拿到”？你的晋升路径，奖励的是熬年头的人，还是真正创造价值的人？</p>
-<p>如果机制不变，喊再多”小团队”、”特种部队”，不过是换个PPT里的词而已。</p>
-<p>AI时代的组织，核心逻辑只有一句话：<strong>把最强的人聚在一起，给他们清晰的目标，给他们足够的工具，然后让他们去打。</strong></p>
-<p>其他的，都是障碍。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2026/04/18/ai-organiaztion/">https://jamesyyang.github.io/2026/04/18/ai-organiaztion/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86/">组织管理</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2026/04/19/growth-SellingPilot/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">SellingPilot 营销策略</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2026/04/16/fs-book-club/">  
-        <span class="next-text nav-default">散打——在公司参加读书会</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

@@ -186,139 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      认知中的复用
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2020-05-21
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E8%AE%A4%E7%9F%A5%E6%9D%82%E8%AF%B4/">认知杂说</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>上一篇里我们提到了面对信息的4个场景以及每个场景我们可能的解决方案。</p>
-<p>实际上，人类日常生活中解决最多的就是：<code>明显的问题</code>。</p>
-<p>因为明显的问题你不需要太多思考，使用已有的套路即可。用程序员的行话就是：<code>复用。复用是提升效率最有用的办法</code>。</p>
-<span id="more"></span>
-
-<p>人类几千年以来的发展史，其实都是在积累可复用的知识。</p>
-<p>大到社会分工，组织架构，自然科学，小到你自己的行为方式，都是一样的。</p>
-<p>举个栗子。为什么公司里会单独设立一个HR部门？因为复用了人事的相关职能。为什么你去提请假需要走这么一个审批流程？因为复用了一个处理单据的套路。</p>
-<p>所以，4个场景中，人们通常在解决2和3类问题过程中，逐步总结和积累，沉淀了一系列经验和流程，那么2和3类的问题就会变成第1类问题，人类就成长了。</p>
-<p>换句话说，一个人的认知能力强，也可以认为这个人第1类场景的覆盖面很大，并且有效的复用比较多。</p>
-<p>什么叫有效的复用？</p>
-<p>做过程序员的都知道，复用是有一定设计原理的，这个在很多书上都有写过，最重要的莫过于：<code>DRY，正交性</code>。</p>
-<ul>
-<li>DRY：Don’t Repeat Yourself。就是同一个事情别在系统里到处都是，否则一个逻辑修改，到处都要去改。</li>
-<li>正交性：模块间是松耦合的，不相互依赖。</li>
-</ul>
-<p>如果一个模块满足这两个特性，那么它的复用度就很高了。</p>
-<p>扩展到认知里，如果知识经验，满足DRY和正交性，那么这个部分的知识复用度就很高了，复用度高了，那么这部分知识就可以解决各种各样的问题，那么效率的提升是非常快的。</p>
-<p><code>相同的知识储备，高复用度的知识就比低复用度的知识可以解决的问题更多</code>。</p>
-<p>比如还是HR这个例子，如果HR部门的职能复用度不高，每个业务部分都还需要再增设一个人事接口专员去和HR部门做业务对接，那么这样效率会高吗？</p>
-<p>其实<code>我们整个世界都是建立在一个个可复用的知识上的</code>。</p>
-<p>比如自然科学，每次科学的进步，那么它一定建立在已知的可复用的知识上，你可以一层层往下找，找到最底层的最基础的理论知识，它们通常叫公理。</p>
-<p>比如经济，当代的经济运行都建立在一定的理论基础上，不管是市场经济，还是计划经济，都有一定可复用的理论知识。</p>
-<p>之前提到，这个世界，高度可复用的知识越多，效率越高，所以当然是鼓励大家去创造这种可复用的知识。但是，因为当今是经济（金钱）社会，万事都和利益挂钩。所以，越是被大家依赖，越是底层的可复用知识，越能带来巨大的商业利益。当然就有眼红的人，他们就会去盗版，或者模仿。</p>
-<p>为了保护初创人员，同时也鼓励大家的创新，怎么办？我们就树立<strong>知识壁垒</strong>。比较常见的就是专利，知识产权等等。</p>
-<p>那么，在这样的情况下，如果你创建的可复用知识，具有较高的知识壁垒，同时又很容易被复用，那么就是成功的。程序员的你可能已经理解了，这不就是<code>高内聚，低耦合</code>吗？是的，很多道理在各行各业都是相通的。</p>
-<p>高内聚，低耦合，通俗来说就是：<code>我有非常友好简单的接口，你用就是，但是完全不用关心我的实现细节</code>。</p>
-<p>你可以闭目思考一下，所有好用的产品是不是都有这个特点？所有高效的组织是不是有这个特点？</p>
-<p>所以，凡是成功的企业，就看这两点：</p>
-<ul>
-<li>要么是它的产品已经是高度可复用，且已经被很多用户依赖的。</li>
-<li>如果他做的产品和大家没什么区别，那么就是他的组织架构比其他公司更高效。</li>
-</ul>
-<p>好的，接下来，我们反过来思考一下。</p>
-<p>既然道理是这样的，那么我们不管做任何事情，都要心里有这个意识。</p>
-<p>比如，在工作中，我们对于复杂的周期较长的工作，通常要做任务拆解，那么怎么拆呢？<code>最佳方案就是将任务拆解为一个一个独立的模块，相互不依赖，但是分别完成后可以将整个任务顺利完成</code>。</p>
-<p>如果你有这样的能力，那么你就会是一个非常高效靠谱的人。即使你带团队，也会很轻松。因为你将任务拆解后，安排不同的人去完成也会非常容易，他们互不干扰，各做各的，最后完成整个事情。</p>
-<p>还有，在一个组织中，岗位的划分，团队的划分也可以遵循这样的原则。团队之间一定要做到高内聚低耦合。即使是涉及到多个团队间协作完成的任务，他们之间也应该是通过简单友好的接口完成，而不应该去了解对方的实现细节。</p>
-<p>其实，最近几年说的微服务也是这么要求的。服务的拆分一定要彻底，连数据库都要分出去。为什么？就是要让服务间树立很高的知识壁垒，从而达到高内聚低耦合的效果。</p>
-<p>否则我们会非常低效。</p>
-<p>那么你可能要说了，不是任何东西都可以分的这么干净呀，知识壁垒那么容易树立起来吗？的确，不可能。</p>
-<p>比较典型的反面例子就是软件行业的岗位划分：产品，开发，测试，运维。这样的划分合理吗？完全不合理，知识壁垒根本树立不起来。</p>
-<p>产品需求难道开发不用了解吗？测试不用了解吗？</p>
-<p>开发用到的技术测试不用了解吗？运维不用了解吗？</p>
-<p>分不开怎么办？就不分，把这些岗位的人组织成一个小团队。所以Amazon就这样干了，一个团队负责需求到上线，这样反而很高效。</p>
-<p><code>而在团队内部，我们要想尽办法抹平知识壁垒，让大家充分了解所有相关的知识，这样才有可能形成自组织团队</code>。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2020/05/21/cognition-reuse/">https://jamesyyang.github.io/2020/05/21/cognition-reuse/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E6%9C%AC%E8%B4%A8/">本质</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2020/05/22/cognition-concepts/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">概念和套路</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2020/05/20/cognition-scenario/">  
-        <span class="next-text nav-default">认知的场景</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

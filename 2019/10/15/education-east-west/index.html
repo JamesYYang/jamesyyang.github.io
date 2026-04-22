@@ -184,103 +184,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      中学 or 西学
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2019-10-15
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E6%BC%AB%E8%B0%88%E6%95%99%E8%82%B2/">漫谈教育</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>写到这里，其实也还没开始谈到如何来进行教育，因为教育这个话题确实非常大，我们需要对很多问题有一个清晰的认知。</p>
-<span id="more"></span>
-
-<p>当今世界，由于自然科学和工商业的迅猛发展，所以地球变小了，间接的增加了各种文化的碰撞。</p>
-<p>当然，客观来说现在统治地球的不管是自然科学，还是经济体制，还是政治体制，统统都是西方的。这一套东西好不好现在下结论还为时过早，不过不影响我们来简单探讨一下。</p>
-<p>所以，就像我标题上写的，中学 or 西学？中国的学术文化和西方的学术文化到底应该如何选择？</p>
-<p>这个问题在100多年前就由张之洞提出来了，满清末年，大家也看到了西方的先进，所以一些有紧迫感的人士觉得我们天朝应该学习一下西方的科技，但是我们自己的文化部能丢。所以给的结论是：<code>中学为体，西学为用</code>。实际他们想要达到的效果是保留封建制度，引入西方科技。</p>
-<p>后来的事情大家都知道了，清朝垮台以后，五四运动彻底推翻了中国的封建体制，顺便否定了中国的传统文化。然后就变成了：西学为体，西学为用，一直到今天。</p>
-<p>其实一个民族的兴衰是有周期性的，比如汉朝，唐朝的繁荣，分久必合，合久必分嘛。把近代中国的落后归结到传统文化，实际上是没有必要的。而且造成近代中国人才缺乏的原因主要还是基于八股文的科举制度，和传统文化没有任何关系。</p>
-<p>事实上，中国的文化是生命力非常强大的，中国几千年的历史里，从来没有被吞并过或者消亡过，这是什么原因？</p>
-<p>我在以前的专栏里说过，如果要高度浓缩中国文化，那么就三个字：<code>实用性</code>。中国人知道，一切事物都是变化的，所以我们自古就有了这个认知，我们要<code>寻求的是变化的规律，掌握变化的法则</code>。</p>
-<p>所以，你发现，任何事物中国人都会去思考正反两个方面，因为我们知道物极必反的原则。</p>
-<p>总体而言，这样的文化适应性很好，可以驾驭任何学术。</p>
-<p>写到这里，我们的结论也要出来了，现代西方的学术发展的非常快，所以我们现在的教育制度还是有可取之处的，至少能够让知识技能得以很好的传承。但是，我们的传统文化不能丢弃，否则容易迷失自我。</p>
-<p>我比较喜欢用的比喻就是：内功和招式。招式再漂亮，没有内功做基础，发挥不了最大的作用。</p>
-<p>中学和西学的关系我觉得也是如此：<strong>中学为道，西学为术</strong>。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2019/10/15/education-east-west/">https://jamesyyang.github.io/2019/10/15/education-east-west/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2019/10/17/education-teacher/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">作为老师</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2019/10/11/education-about-human/">  
-        <span class="next-text nav-default">谈谈人</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

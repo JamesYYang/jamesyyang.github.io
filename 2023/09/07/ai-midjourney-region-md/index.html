@@ -186,106 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      体验Midjourney局部重绘
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-09-07
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/AI/">AI</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>据说Midjourney出了一个炸裂的功能：局部重绘。今天有空来体验一下。</p>
-<span id="more"></span>
-
-<p>先画一个图（最近对林肯比较有好感呀^_^）。</p>
-<p>Promot：<br><code>a orange lincoln Nautilus, driving on a road in desert, midday, sunny, realistic photograph, global illumination, depth of view --s 500</code></p>
-<p>选了一张比较满意的</p>
-<img src="/images/mj_lincoln_Nautilus.png" class="">
-
-<p>好，接下来就体验局部重绘了。要先打开<code>Setting</code>中的<code>Remix Mode</code>。</p>
-<p>点击图片下方的<code>Vary(Region)</code>，再弹出的编辑框中选中一片区域后，直接把promot删了重写。<br><code>a beautify girl with long yellow hair, looking at the car</code></p>
-<img src="/images/mj_region.png" class="">
-
-<p>看看效果把，确实比较惊艳，关键在于重绘的部分竟然毫无违和感。</p>
-<img src="/images/mj_girl_lincoln.png" class="">
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/09/07/ai-midjourney-region-md/">https://jamesyyang.github.io/2023/09/07/ai-midjourney-region-md/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/midjourney/">midjourney</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/09/18/cognition-thinking-concepts/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">思考的框架--笔记</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/08/26/thinking-great-work/">  
-        <span class="next-text nav-default">How to Do Great Work - 精简版</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

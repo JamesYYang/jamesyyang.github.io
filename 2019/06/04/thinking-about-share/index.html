@@ -186,116 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      谈谈分享
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2019-06-04
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>上周听了公司组织的关于分享技巧的课程，最近又再次思考了一下这个话题，有几点心得，跟大家分享一下。</p>
-<span id="more"></span>
-<p>分享的技巧很重要，可以让我们分享的时候，把听众的注意力抓住，同时当课程氛围很好，但是如果你的课程内容本身不行，那么大家的注意力最多集中那么几分钟，然后就不想听了。</p>
-<p>所以，最近流行一句话：<code>内容大于形式</code>。对吧？</p>
-<p>那么你可能会说，我不要分享了，因为我没什么好分享的，我没料。但是，你错了，真正的本质是：<code>你有料是因为你爱分享</code>。当你去分享的时候，实际上也是一种学习的过程。不论是线上，还是线下，总会有人跟你沟通，跟你交流，或者补充一些案例来佐证，或者挑你的刺，找你的把柄，但无论如何，这些交流不管是正向，还是反向，都是让你更好的认识这个领域，更好的认识自己的不足。</p>
-<p>所以，当你有想法，有经验的时候就去分享吧。但是，不是说你什么都不准备就去分享。不准备就去分享，是对听众的不负责任。</p>
-<p>分享有三种境界：</p>
-<ol>
-<li>让别人明白你说什么。</li>
-<li>让别人相信你说的是真的。</li>
-<li>让别人拥护你的主张。</li>
-</ol>
-<p>你对比一下传销，别人完全是做到第三层的对不？能让听众拥护你，这才叫洗脑嘛。</p>
-<p>不过，我们大部分技术人员，能做到第一层就不错了。</p>
-<p>我们通常都有这样的经验，面对自己的家人的时候，通常一个眼神对方就知道你想说什么了，根本不用语言，怎么做到的？因为家人完全了解你，了解你的性格，了解你的想法。</p>
-<p>所以，我们在做培训和分享之前，一定要了解你的听众，了解他们对你分享的话题是一个什么认知水平，了解他们期望从你的分享中获得什么。</p>
-<p>我们常说的换位思考就这个意思，知己知彼，百战不殆嘛。</p>
-<p>那么了解你的听众后，一定要做充分的准备。</p>
-<p>首先你一定要对你分享的内容很熟悉，不然怎么说给别人听？上台前怎么也得演练个4~5次吧？熟能生巧。</p>
-<p>然后，你一定要把你的内容根据你的听众的认知做一定的调整。人类的思维模式就是会选择性吸收，选择相信那些和自己认知模式不冲突的知识。</p>
-<p>所以即使是同一个话题，面对不一样的人群，你分享的内容也要调整。不要妄图颠覆听众的认知，一定要润物细无声式的灌输，逐步让听众理解你的内容，然后让他们相信你的内容。</p>
-<p>最后，如果要感染你的听众，让大家拥护你的主张，这个就靠个人魅力了，我反正还做不到。</p>
-<p>以上内容也适用于各种沟通形式。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2019/06/04/thinking-about-share/">https://jamesyyang.github.io/2019/06/04/thinking-about-share/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2019/07/30/thinking-cmmi-sprint/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">CMMI or Sprint</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2018/12/18/immortal-wisdom/">  
-        <span class="next-text nav-default">生慧</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

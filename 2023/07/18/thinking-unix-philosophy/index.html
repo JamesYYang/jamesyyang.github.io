@@ -184,99 +184,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      Unix编程哲学
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-07-18
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>记录一下Unix哲学的几条准则，看似简单，但是往往我们容易忽视他的重要性。</p>
-<span id="more"></span>
-
-<p>(1) <code>小即是美</code>。相对于同类庞然大物，小巧的事物有着无可比拟的巨大优势。其中一点就是它们能够以独特有效的方式结合其他小事物,而且这种方式往往是最初的设计者没能预见到的。</p>
-<p>(2) <code>让每一个程序只做好一件事情</code>。通过集中精力应对单一任务，程序可以减少很多冗余代码，从而避免过高的资源开销、不必要的复杂性和缺乏灵活性。</p>
-<p>(3) <code>尽快建立原型</code>。大多数人都认同“建立原型”(prototyping)是任何项目的一个重要组成部分。在其他方法论中，建立原型只是设计阶段中一个不太重要的组成部分，然而，在Unix环境下它却是达成完美设计的主要工具。</p>
-<p>(4) <code>舍高效率而取可移植性</code>。当Unix作为第一个可移植系统而开创先河时，它曾经掀起过轩然大波。今天，可移植性早被视作现代软件设计中一个理所当然的特性，这更加充分说明这条Unix准则早就在Unix之外的系统中获得了广泛认可。</p>
-<p>(5) <code>使用纯文本文件来存储数据</code>。舍高效率而取可移植性强调了可移植代码的重要性。其实可移植性数据的重要性绝不亚于可移植代码。在关于可移植性的准则中，人们往往容易忽视可移植性数据。</p>
-<p>(6) <code>充分利用软件的杠杆效应</code>。很多程序员对可重用代码模块的重要性只有一些肤浅的认识。代码重用能帮助人们充分利用软件的杠杆效应。一些Unix的开发人员正是遵循这个强大的理念，在相对较短的时间内编写出了大量应用程序。</p>
-<p>(7) <code>使用shell脚本来提高杠杆效应和可移植性</code>。shell脚本在软件设计中可谓是一把双刃剑，它可以加强软件的可重用性和可移植性。无论什么时候，只要有可能,编写shell脚本来替代C语言程序都不失为一个良好的选择。</p>
-<p>(8) <code>避免强制性的用户界面</code>。Unix开发人员非常了解，有一些命令用户界面为什么会被称为是“强制性的”(captive)用户界面。这些命令在运行的时候会阻止用户去运行其他命令，这样用户就会成为这些系统的囚徒。在图形用户界面中,这样的界面被称为“模态”(modal)。</p>
-<p>(9) <code>让每一个程序都成为过滤器</code>。所有软件程序共有的最基本特性就是，它们只修改而从不创造数据。因此，基于软件的过滤器本质，人们就应该把它们编写成执行过滤器任务的程序。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/">https://jamesyyang.github.io/2023/07/18/thinking-unix-philosophy/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/07/31/AI-what-is/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">对于AI的认识--Caoz</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/06/26/azure-app-connect-mysql/">  
-        <span class="next-text nav-default">Azure中的App如何访问数据库</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

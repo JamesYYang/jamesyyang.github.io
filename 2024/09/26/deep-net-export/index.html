@@ -186,133 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      记一个前端性能问题
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2024-09-26
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">深入理解</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%97%87%E7%8A%B6"><span class="toc-number">1.</span> <span class="toc-text">症状</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API%E6%80%A7%E8%83%BD%E5%B4%A9%E4%BA%86"><span class="toc-number">2.</span> <span class="toc-text">API性能崩了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stalled-%E6%97%B6%E9%97%B4%E8%BF%87%E9%95%BF"><span class="toc-number">3.</span> <span class="toc-text">Stalled 时间过长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E6%A1%88%E4%BA%86"><span class="toc-number">4.</span> <span class="toc-text">破案了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">小结</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>昨天系统发了一个版，结果发上去后发现了严重的性能问题，排查的过程还是挺有意思的，记录一下。</p>
-<span id="more"></span>
-
-<h2 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h2><p>页面上有一个tab空间，每个tab里有一个data table。用户切换tab的时候，会去服务端请求数据做展示。</p>
-<p>发版后，我照例去点击一下，看看效果。结果让人吃惊，切换tab后，20多秒后页面才加载完成。</p>
-<p>怎么回事？开始排查。</p>
-<h2 id="API性能崩了"><a href="#API性能崩了" class="headerlink" title="API性能崩了"></a>API性能崩了</h2><p>第一时间就去查后端服务。</p>
-<p>当然，公司后端服务的监控已经很健全了，不到一分钟就确认了，后端服务是OK的，不到1s请求就完成了。</p>
-<p>那问题一定是在前端了。</p>
-<h2 id="Stalled-时间过长"><a href="#Stalled-时间过长" class="headerlink" title="Stalled 时间过长"></a>Stalled 时间过长</h2><p>浏览器debug窗口打开，找到了那个非常慢的请求，在Timing窗口中看到了，Stalled占据了99%的时间。</p>
-<img src="/images/net-export-1.png" class="" width="700">
-
-<p>Stalled既然被划分在了Connection里，那说明建立连接受阻。关键切换tab的时候就只发出去了一个请求呀，也没有并发太多，为什么无法建立连接？</p>
-<p>前端同学看了一眼说，肯定是界面上DOM元素太多，浏览器是单线程的，一定是在渲染DOM的时候，阻碍了TCP的连接。</p>
-<p>这个时候已经比较晚，负责这个模块的同学已经下班。所以回家。</p>
-<h2 id="破案了"><a href="#破案了" class="headerlink" title="破案了"></a>破案了</h2><p>今天上班后，由于早上基本是开会的时间，就把这个事情安排给了前端同学。</p>
-<p>在开了三个无聊的会后，前端同学已经对代码做了不少优化，前后发了三个版本。可是，对性能的提升几乎没有。</p>
-<p>不得不说：元芳，看来这里的水很深啊。</p>
-<p>看来需要换思路了，还是得从网络方面下手。</p>
-<p>网络排查，首先想到的是wireshark，很可惜，没有管理员权限。在申请管理员权限的同时，我在想，难道浏览器没有更好的网络排查工具吗？</p>
-<p>结果还真被我找到了，就是<a target="_blank" rel="noopener" href="https://www.chromium.org/for-testers/providing-network-details/">NetLog Dump</a>。</p>
-<p>启用 NetLog 的方法很简单，在网址栏输入 <code>edge://net-export/</code> 或 <code>chrome://net-export/</code></p>
-<img src="/images/net-export-2.png" class="">
-
-<p>后面就是开始和结束记录即可。</p>
-<p>要查看 Log 内容，可开启 <code>https://netlog-viewer.appspot.com/#events</code> 网页，导入json文件（文件只会在浏览器端处理，不会上传到网站）。</p>
-<p>结果打开我自己记录的Log文件，找到对应的event，就立即破案了。</p>
-<img src="/images/net-export-3.png" class="">
-
-<p>就是连接池满了，因为浏览器都会限制对同一个主机名的站点的连接数。</p>
-<p>另外，还发现了大量并发的对同一个站点的请求的event。这个时候把前端同学喊过来问，不是切tab只有一个请求吗？其他请求哪来的？结果他才想起来，是一个记录日志的程序，使用的sharedworker，所以在debug窗口里看不到。</p>
-<p>既然找到了原因，修改也就很容易了。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这个case其实也不是很复杂，只是最近业务项目做太多，已经很少解决这种类型的case了，于是记录一个。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2024/09/26/deep-net-export/">https://jamesyyang.github.io/2024/09/26/deep-net-export/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/HTTP/">HTTP</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2024/09/30/thinking-founder-can-save/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">公司不行了创始人能挽救吗？</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2024/08/19/product-low-growth-time/">  
-        <span class="next-text nav-default">低增长时代产品怎么运营？</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

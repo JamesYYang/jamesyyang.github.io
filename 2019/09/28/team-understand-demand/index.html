@@ -186,135 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      了解下属的诉求
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2019-09-28
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%B8%A6/">团队如何带</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">了解什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BA%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">如何了解？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%B0%8F%E7%BB%93%E4%B8%80%E4%B8%8B"><span class="toc-number">3.</span> <span class="toc-text">我们小结一下</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>当一个人加入一个组织的时候，他对于组织能给他什么，他需要付出什么，是有一个期望的。</p>
-<p>如果你觉得你的下属没有诉求，那么一定是你没了解到！</p>
-<span id="more"></span>
-
-<p>那么了解下属的诉求真的那么重要吗？</p>
-<p><code>如果员工看到通过自己的努力工作，自己的诉求能够被满足，那么他就会认为是为自己在工作，不是被动的为公司在工作。</code></p>
-<p>那么你还需要每天去盯他的考情吗？你还需要去管他吗？</p>
-<p>所以，了解下属的诉求非常重要。</p>
-<h3 id="了解什么？"><a href="#了解什么？" class="headerlink" title="了解什么？"></a>了解什么？</h3><p><strong>首先，了解他想要什么</strong></p>
-<p>不同家庭情况的人有不同的诉求。比如结婚了吗？有小孩吗？买房了吗？工作多久了？这些基本信息，你对你的下属都了解吗？这些信息在平时吃饭闲聊的时候，都可以获取到，不需要太正式。当然，我们的HR在招聘的时候一般都会作为背景了解，你也可以通过HR了解到一些基本情况。</p>
-<p>另外，我还需要告诉大家，三种不同阶段的人他们的不同诉求，也就是：<code>新手，熟手，高手</code>。大家知道这三类人的诉求吗？</p>
-<p><code>新手需要学习和成长，努力变为熟手。熟手需要挑战，让自己加深理解，拓展视野，努力变成高手。高手需要变现，取得成就，实现人生价值。</code></p>
-<p>所以，你可以判断一下你自己属于哪类？你的下属属于哪类？你安排的工作能够满足他们对应的需要吗？</p>
-<p><strong>其次，明确告知下属能给他什么和对他的期望</strong></p>
-<p>搞清楚下属想要什么，那么接下来就要让他知道公司有什么，你有什么。</p>
-<p>大家觉得你有什么可以给到下属的？</p>
-<p>公司通常能提供的：加薪、晋升。但是别这么狭隘，<code>工作本身也是能给到下属的资源，因为只有通过工作才能实现他的诉求</code>。</p>
-<p>另外很多主管会犯一个毛病，就是只会给下属说你去干个什么事情，但是不解释工作的目的、背景和价值。</p>
-<p>解释工作的目的、背景和价值有什么用？是建立员工的责任感。很多主管说某某人没有责任感，这哪是员工的问题，请问你解释了这个工作和事情的价值了吗？</p>
-<h3 id="如何了解？"><a href="#如何了解？" class="headerlink" title="如何了解？"></a>如何了解？</h3><p>总原则是什么？对，让他说。</p>
-<p>有哪些让他表达自己诉求的方式？</p>
-<p>除了一对一沟通外，其实还有很多方式，我这里列举几个大家不太注意的。</p>
-<p><strong>首先，可以有定期的分享会。</strong></p>
-<p>如何开分享会？不要设定主题，只规定方向，团队中轮流主持。</p>
-<p>你需要通过了解员工关注点来间接知道他在想什么，一个人的关注点往往和期望是有关联度的。</p>
-<p><strong>其次，可以让下属写总结。</strong></p>
-<p>总结怎么写？不要罗列工作，这些都有系统可以拿到数据，要写自己的收获、问题和建议，题材不限，字数不限。</p>
-<p>通过总结，了解员工的状态，也能侧面知道他的能力。逻辑思维强的人，通常文章写的都不差。如果团队里有文章写的好的人，你可以重点培养一下哦。</p>
-<p><strong>最后就是暗中观察。</strong></p>
-<p>观察什么？观察他最近在忙什么，看什么，谈论什么，情绪如何？</p>
-<p>主管不能一直在座位埋头苦干，你需要观察大家的工作状态。当然不是让你背着手在大家周围巡视，而是可以借助例如上洗手间啊，接水的机会，顺便看看每个同事在座位上干什么，看看大家的状态如何。总之就是观察大家在自然状态下的表现。</p>
-<p>中医讲究望闻问切，对吧，望和闻就是讲究观察，一个人的状态通常都会在言语行为中表现出来，如果你能不需要问就知道员工所思所想，这是最牛的。</p>
-<h3 id="我们小结一下"><a href="#我们小结一下" class="headerlink" title="我们小结一下"></a>我们小结一下</h3><p>工作本身其实也是一个交易的过程，员工交易了自己的辛苦工作，公司交易了相应的酬劳。</p>
-<p>但是任何动物都是需要激励的，大家都看过海豚表演吧？没吃的它会卖力的表演吗？但是人是高级动物，除了物质的激励也需要情感的激励，所以人的诉求很复杂，且会变化。</p>
-<p>所以领导需要经常和员工沟通，了解他们的诉求。还是那句话，多听，少说。只有公司和员工双方的需求都匹配得很好了，那么才有可能形成自组织团队。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2019/09/28/team-understand-demand/">https://jamesyyang.github.io/2019/09/28/team-understand-demand/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E7%AE%A1%E7%90%86/">管理</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2019/09/29/team-help-grow/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">帮助下属成长</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2019/09/27/team-talk/">  
-        <span class="next-text nav-default">与人打交道</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  

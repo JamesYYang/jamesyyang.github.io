@@ -186,133 +186,15 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      35岁危机是因为活久见？
-      
-    </h1>
+          {%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-    <div class="post-meta">
-      <span class="post-time">
-        2023-06-20
-      </span>
-      
-      
-      <span class="post-category">
-        
-        <a href="/categories/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/">随想杂谈</a>
-        
-      </span>
-      
-      
-    </div>
-  </header>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-  
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#35%E5%B2%81%E5%8D%B1%E6%9C%BA%E6%98%AF%E6%B4%BB%E5%A4%AA%E4%B9%85%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">35岁危机是活太久？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%91%A8%E6%9C%9F%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">什么是周期？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%A9%BF%E8%B6%8A%E5%91%A8%E6%9C%9F%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">如何穿越周期？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E7%86%B5%E5%87%8F%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">如何做熵减？</span></a></li></ol>
-    </div>
-  </div>
-  
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
 
-  <div class="post-content">
-    
-    <p>今天看到了35岁危机的另外一个解释，很有趣，也蕴含了一定的道理。</p>
-<span id="more"></span>
-
-<h2 id="35岁危机是活太久？"><a href="#35岁危机是活太久？" class="headerlink" title="35岁危机是活太久？"></a>35岁危机是活太久？</h2><p>先引用一下那段有意思的文字。</p>
-<blockquote><p>你知道为啥古人没有35岁危机?</p>
-<p>因为他们活不到35。</p>
-<p>你真正的问题没有那么多，你真正的问题就一个,你活的太长了。你活得那么长,问题不可能不暴露。</p>
-<p>你活得比行业的寿命都长，你活得比爱情的保质期都长，你活得比技术的周期，产品的周期都长。</p>
-<p>那怪谁?</p>
-<p>你本来不用学那么多的,你随便学一样东西，产品周期还没到,你先挂了,啥问题都没有。</p>
-<p>古人活30多岁就挂了,换句话说,他一出生,距离自己挂,中间只需要在这个世界上熬30多年。我所在城市的人均寿命80多岁，我现在才40多,换算过去，我相当于一个古代的婴儿，甚至是胎儿。</p>
-<p>我可以觉得自己已经40多了，所以不用思考了，不用学习了，不用拥抱变化了，可以吗?</p>
-</blockquote>
-
-<p>这个文字虽然有一点戏谑的成分，不过暗含了一个道理，就是<code>周期</code>。</p>
-<h2 id="什么是周期？"><a href="#什么是周期？" class="headerlink" title="什么是周期？"></a>什么是周期？</h2><p>周期原本是一个物理概念，意思是：<strong>事物周而复始的变化过程中循环一次所经历的时间</strong>。例如，地球绕太阳公转一圈的时间就是一个公转周期，大约是365天。</p>
-<p>后面人们发现，大部分事务发展的规律其实都是一个周期循环的过程。例如经济。经济周期是指经济运行中周期性出现的经济扩张与经济紧缩交替更迭、循环往复的一种现象。当然，细分到经济活动中的各个行业也是一样。</p>
-<p>但是，在经济活动中的周期和地球围绕太阳转还不一样，两个周期并不会是完全重合的。也就是说每个周期都会有扩张，但是扩张的原因和行业可能不一样。也就是俗话说的<code>风口</code>是不一样的。</p>
-<p>正是由于每次的风口不一样，我们的社会才会呈现多样性，人才和资源才能够流动起来，不会变成一潭死水。</p>
-<p>由于现在是和平年代，科技发达了，人的寿命增加了，退休年龄延迟了。所以，在你的职业生涯中，一定会遇到几个完整的经济周期。</p>
-<p>所以，不是35岁的你遇到了危机，而是35岁的你遇到经济周期调整时，应当如何应对，如何穿越？</p>
-<h2 id="如何穿越周期？"><a href="#如何穿越周期？" class="headerlink" title="如何穿越周期？"></a>如何穿越周期？</h2><p>其实<code>穿越周期</code>这个提法我觉得不准确，穿越是目的，关键是怎么穿越？</p>
-<p>回答这个问题之前，我们要先想明白一个问题，为什么经济就不能一直扩张呢？不说经济学上的大道理，最简答的一个答案就是，它不符合熵增定律。所以，事物发展到一定阶段，一定是混乱的，无序的。要想不走向灭亡，必须对抗熵增。</p>
-<p>所以，经济紧缩就是一个对抗熵增的必然结果，剔除冗余，剔除腐朽，重获新生。</p>
-<p>讲到这里，就是想说明一个问题，<code>周期其实就是熵增到熵减的一个自然规律</code>。既然是自然规律，我们就不要去对抗它，而应该顺从它。</p>
-<p>当整个大环境的熵很高的时候，当行业都开始做熵减运动的时候，你就应该和大家一起同流合污，不要擅自妄动。<code>穿越周期的前提是你得熬过去，活下去。</code></p>
-<h2 id="如何做熵减？"><a href="#如何做熵减？" class="headerlink" title="如何做熵减？"></a>如何做熵减？</h2><p>我们经常说，风来的时候猪都能飞。那没风的时候呢？如果你学不会飞，那么会摔得很惨。</p>
-<p>熵减的时候就是没风的时候，没有了外力的推动，就得全靠自己了。个人如此，企业也一样。</p>
-<p>所以，最近有个说法，产品经理必须转型运营了。为什么？如果说产品是决定做什么的话，那运营就是洞察如何做得更好。</p>
-<p>在没风的时候，比拼的就是内力，<code>谁能做的更好，更有效率，谁就能活下去</code>。</p>
-<p>当然，在修炼内力的同时，也需要蛰伏待机，观察下一个周期出现的时间和位置，<code>提前进入这个生态，占一个有利位置，这样你才能再次随风飞翔</code>。</p>
-
-    
-  </div>
-
-  
-  <!-- Post Copyright -->
-
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span>原文作者: </span>
-    <a href="https://jamesyyang.github.io">James Yang</a>
-  </p>
-  <p class="copyright-item">
-    <span>原文链接: </span>
-    <a href="https://jamesyyang.github.io/2023/06/20/thinking-beyond-cycle/">https://jamesyyang.github.io/2023/06/20/thinking-beyond-cycle/</a>
-  </p>
-  <p class="copyright-item">
-    <span>许可协议: </span>
-    
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-  </p>
-</div>
-
-    
-
-  
-
-  
-  <footer class="post-footer">
-    
-    <div class="post-tags">
-      
-      <a href="/tags/%E5%A2%9E%E9%95%BF/">增长</a>
-      
-      <a href="/tags/%E5%91%A8%E6%9C%9F/">周期</a>
-      
-    </div>
-    
-      
-  <nav class="post-nav">  
-      
-      <a class="prev" href="/2023/06/21/product-info-architec/">  
-        <i class="iconfont icon-left"></i>  
-        <span class="prev-text nav-default">从产品架构谈开拓新业务</span>  
-        <span class="prev-text nav-mobile">上一篇</span>  
-      </a>  
-      
-      
-      <a class="next" href="/2023/06/05/product-content-based/">  
-        <span class="next-text nav-default">内容产品</span>  
-        <span class="prev-text nav-mobile">下一篇</span>  
-        <i class="iconfont icon-right"></i>  
-      </a>  
-      
-  </nav>  
-  
-
-  </footer>
-  
-
-</article>
         </div>
           
   <div class="comments" id="comments">  
